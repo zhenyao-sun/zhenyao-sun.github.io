@@ -1,1 +1,0 @@
-someonedomath.github.io
