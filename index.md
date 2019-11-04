@@ -32,7 +32,7 @@ Office: 411 Cooper Building, Haifa, Isreal.
 
 ## Talks
 
-- [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](http://someonedomath.github.io/StableSuperCLT/representation/representation.pdf)
+- [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](StableSuperCLT/representation/representation.pdf)
   - Workshop on non-local operators and related topics, Peking University, Aug. 2019.
   - The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.
   - Probability Seminar, Beijing Normal University, Apr. 2019.
