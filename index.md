@@ -14,7 +14,11 @@ Email: zhenyao.sun@gmail.com
 
 Office: 411 Cooper Building, Haifa, Isreal.
 
-## Publications
+## Preprints
+
+1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.*](https://arxiv.org/pdf/2001.06697.pdf) 
+
+## *Publications*
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1007/s10440-019-00243-7)
 1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math (2019).](https://doi.org/10.1007/s10440-019-00243-7)
@@ -41,7 +45,7 @@ Office: 411 Cooper Building, Haifa, Isreal.
 
 ## Other stuff
 
-- My [Phd Thesis](https://someonedomath.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
+- My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
 
 - I am the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
 - I am one of the organizer of [Probability Welcome Seminar, Peking University, September, 2018](Files/Prob_Welcome_Seminar.html)
