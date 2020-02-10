@@ -1,6 +1,6 @@
 # Solutions to the Selected Exercises in R. Durrett's Probability: Theory and Examples, 5th edition.
 
-The 2rd part of those solutions  can be find [in this pdf file.](<https://someonedomath.github.io/Teaching/PKU2019/HW2.pdf>) 
+The 2rd part of those solutions  can be find [in this pdf file.](<https://zhenyao-sun.github.io/Teaching/PKU2019/HW2.pdf>) 
 
 **4.1.2.** Prove Chebyshev‘s inequality. If $a>0$ then
 $$
