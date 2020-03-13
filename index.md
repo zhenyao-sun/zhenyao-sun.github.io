@@ -27,6 +27,9 @@ Office: 411 Cooper Building, Haifa, Israel.
 
 ## Slides
 
+* [Quasi-stationary distributions for subcritical superprocesses](subyaglom/subyaglom_talk.pdf)
+  * The 3rd Haifa Probability School, Technion, Feb. 2020.
+
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](StableSuperCLT/representation/representation.pdf)
   - Workshop on non-local operators and related topics, Peking University, Aug. 2019.
   - The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.
