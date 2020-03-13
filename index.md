@@ -8,18 +8,18 @@ title: Zhenyao Sun's Home Pag
 
 
 
-I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html). Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](http://www.math.pku.edu.cn/en) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). I got my B.S. at the [School of Mathematical Sciences at Peking University.](http://www.math.pku.edu.cn/en) My research interest is probability theory, with a focus on models related to population dynamics. 
+I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html). Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](http://english.math.pku.edu.cn/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). I got my B.S. at the [School of Mathematical Sciences at Peking University.](http://english.math.pku.edu.cn/) My research interest is probability theory, with a focus on models related to population dynamics. 
 
 Email: zhenyao.sun@gmail.com
 
-Office: 411 Cooper Building, Haifa, Isreal.
+Office: 411 Cooper Building, Haifa, Israel.
 
 ## Preprints
 
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.*](https://arxiv.org/pdf/2001.06697.pdf) 
 
 ## *Publications*
-1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1007/s10440-019-00243-7)
+1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001)
 1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math (2019).](https://doi.org/10.1007/s10440-019-00243-7)
 2. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. (2018)](https://doi.org/10.1214/18-ECP143)
