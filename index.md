@@ -2,11 +2,7 @@
 title: Zhenyao Sun's Home Pag
 ---
 
-# Zhenyao Sun's Home Page
-
-![selfie](selfie.jpg)
-
-
+# Zhenyao Sun's Home Page <img src="selfie2020.jpg" alt="selfie" style="zoom:2%;" /> 
 
 I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html). Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](http://english.math.pku.edu.cn/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). I got my B.S. at the [School of Mathematical Sciences at Peking University.](http://english.math.pku.edu.cn/) My research interest is probability theory, with a focus on models related to population dynamics. 
 
@@ -16,9 +12,10 @@ Office: 411 Cooper Building, Haifa, Israel.
 
 ## Preprints
 
-1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.*](https://arxiv.org/pdf/2001.06697.pdf) 
+1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
+2.  [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.*](https://arxiv.org/pdf/2001.06697.pdf) 
 
-## *Publications*
+## Publicationss
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001)
 1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math (2019).](https://doi.org/10.1007/s10440-019-00243-7)
@@ -46,7 +43,7 @@ Office: 411 Cooper Building, Haifa, Israel.
   - The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.
   - Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.
 
-## Other stuff
+## Other things
 
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
 
