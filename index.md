@@ -6,13 +6,15 @@ title: Zhenyao Sun's Home Pag
 
 I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html). Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](http://english.math.pku.edu.cn/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). I got my B.S. at the School of Mathematical Sciences at Peking University. My research interest is probability theory, with a focus on models related to population dynamics. 
 
-Email: zhenyao.sun@gmail.com
+Email: zhenyao.sun at gmail.com
 
 Office: 411 Cooper Building, Haifa, Israel. 
 
+Home: 2rd. Apt., Ha-tor 6, Haifa, Israel. (WFH most of the time.)
+
 ## Preprints
 
-1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf) (There is a mathematical error in this version when we are applying Proposition 2.1 on the top of page 10. This mistake can be and will be resoved in the next version. The main result of the paper will be unchanged in the next version. )
+1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
 2. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.*](https://arxiv.org/pdf/2001.06697.pdf) 
 
 ## Publications
