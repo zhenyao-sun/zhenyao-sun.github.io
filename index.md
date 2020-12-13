@@ -10,7 +10,7 @@ Email: zhenyao.sun at gmail.com
 
 Office: 411 Cooper Building, Haifa, Israel. 
 
-Home: 2rd. Apt., Ha-tor 6, Haifa, Israel. (WFH most of the time.)
+Home: 3rd. Apt., Ehud 13, Haifa, Israel. (WFH most of the time.)
 
 ## Preprints
 
@@ -25,6 +25,9 @@ Home: 2rd. Apt., Ha-tor 6, Haifa, Israel. (WFH most of the time.)
 3. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 
 ## Slides
+
+- [Effect of noise on front propagation in reaction-diffusion equations](Files/WaveSpeed.pdf)
+  - Webinar probability seminar, Zoom, Nov. 2020. 
 
 * [Quasi-stationary distributions for subcritical superprocesses](subyaglom/files/subyaglom_talk.pdf)
   * The Bernoulli-IMS One World Symposium, Youtube, Aug. 2020. 
