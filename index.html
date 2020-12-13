@@ -2,14 +2,15 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Zhenyao Sun&#39;s Home Pag</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+<title>Zhenyao Sun&#39;s Home Pag</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
 #write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
@@ -77,6 +78,7 @@ div.hr:focus { cursor: none; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child, li > :first-child { margin-top: 0px; }
@@ -86,7 +88,6 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
@@ -100,6 +101,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
@@ -150,13 +152,16 @@ table tr th { border-bottom-width: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
 iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 @media print { 
   .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
 }
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
 
 
 :root {
@@ -352,24 +357,24 @@ table tr:nth-child(2n),
 thead {
     background-color: #f8f8f8;
 }
-table tr th {
+table th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
     padding: 6px 13px;
 }
-table tr td {
+table td {
     border: 1px solid #dfe2e5;
     margin: 0;
     padding: 6px 13px;
 }
-table tr th:first-child,
-table tr td:first-child {
+table th:first-child,
+table td:first-child {
     margin-top: 0;
 }
-table tr th:last-child,
-table tr td:last-child {
+table th:last-child,
+table td:last-child {
     margin-bottom: 0;
 }
 
@@ -539,10 +544,10 @@ header, .context-menu, .megamenu-content, footer{
     background: #999;
 }
 
- .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+ :root {--mermaid-font-zoom:1em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export'>
-<div id='write'  class=''><h1><a name="zhenyao-suns-home-page-img-srcselfie2020jpg-altselfie-stylezoom2-" class="md-header-anchor"></a><span>Zhenyao Sun&#39;s Home Page </span><img src="selfie2020.jpg" alt="selfie" style="zoom:2%;" /><span> </span></h1><p><span>I am a Postdoc student of </span><a href='https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html'><span>The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology</span></a><span> hosted by </span><a href='https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html'><span>Prof. Leonid Mytnik</span></a><span>. Before, I got my Ph.D. at the </span><a href='http://english.math.pku.edu.cn/'><span>School of Mathematical Sciences at Peking University</span></a><span> under the supervision of </span><a href='http://www.math.pku.edu.cn/teachers/renyx/indexE.htm'><span>Prof. Yan-Xia Ren</span></a><span>. I also visited </span><a href='https://faculty.math.illinois.edu/~rsong/'><span>Prof. Renming Song</span></a><span> as a joint Ph.D. student at </span><a href='https://math.illinois.edu/'><span>Mathematics at the University of Illinois at Urbana-Champaign</span></a><span>. I got my B.S. at the School of Mathematical Sciences at Peking University. My research interest is probability theory, with a focus on models related to population dynamics. </span></p><p><span>Email: zhenyao.sun at gmail.com</span></p><p><span>Office: 411 Cooper Building, Haifa, Israel. </span></p><p><span>Home: 2rd. Apt., Ha-tor 6, Haifa, Israel. (WFH most of the time.)</span></p><h2><a name="preprints" class="md-header-anchor"></a><span>Preprints</span></h2><ol start='' ><li><a href='https://arxiv.org/pdf/2005.11731.pdf'><span>Y.-X. Ren, R. Song, Z. Sun and J. Zhao: </span><em><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II</span></em></a></li><li><a href='https://arxiv.org/pdf/2001.06697.pdf'><span>R. Liu, Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Quasi-stationary distributions for subcritical superprocesses.</span></em></a><span> </span></li></ol><h2><a name="publications" class="md-header-anchor"></a><span>Publications</span></h2><ol start='' ><li><a href='https://doi.org/10.1016/j.spa.2020.01.001'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Limit theorems for a class of critical superprocesses with stable branching.</span></em><span> Stochastic Process. Appl. 2020.</span></a></li><li><a href='https://projecteuclid.org/euclid.ejp/1576638110'><span>Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: </span><em><span>Stable central limit theorems for super Ornstein-Uhlenbeck processes</span></em><span>. Electron. J. Probab. 2019.</span></a><span> </span></li><li><a href='https://doi.org/10.1007/s10440-019-00243-7'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></em><span> Acta Appl Math 2019.</span></a></li><li><a href='https://doi.org/10.1214/18-ECP143'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom&#39;s theorem.</span></em><span> Electron. Commun. Probab. 2018.</span></a></li><li><a href='Files/胡2011限购.pdf'><span>T. Hu and Z. Sun: </span><em><span>Purchase limit policy and social welfare: A theoretical exploration.</span></em><span>  Economic Science. 2011. (In Chinese)</span></a></li></ol><h2><a name="slides" class="md-header-anchor"></a><span>Slides</span></h2><ul><li><p><a href='subyaglom/files/subyaglom_talk.pdf'><span>Quasi-stationary distributions for subcritical superprocesses</span></a></p><ul><li><span>The Bernoulli-IMS One World Symposium, Youtube, Aug. 2020. </span></li><li><span>The 3rd Haifa Probability School, Technion, Feb. 2020.</span></li></ul></li></ul><ul><li><p><a href='StableSuperCLT/representation/representation.pdf'><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes</span></a></p><ul><li><span>Workshop on non-local operators and related topics, Peking University, Aug. 2019.</span></li><li><span>The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.</span></li><li><span>Probability Seminar, Beijing Normal University, Apr. 2019.</span></li></ul></li><li><p><a href='Files/2018JSNU.pdf'><span>Limit theorems for a class of critical superprocesses with stable branching</span></a><span> </span></p><ul><li><span>Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.</span></li><li><span>The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.</span></li><li><span>Probability Seminar. Beijing Jiaotong University, Sept. 2018.</span></li><li><span>Probability Welcome Seminar, Peking University, Sept. 2018.</span></li></ul></li><li><p><a href='Files/RenSongSun2018Spine.pdf'><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></a></p><ul><li><span>Probability Seminar. Wuhan University, Mar. 2019.</span></li><li><span>Academic luncheon. Peking University, Nov. 2018.</span></li><li><span>Probability Seminar. Jiangsu Normal University, Jul. 2018.</span></li><li><span>The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.</span></li><li><span>Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.</span></li></ul></li></ul><h2><a name="other-things" class="md-header-anchor"></a><span>Other things</span></h2><ul><li><span>My </span><a href='https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf'><span>Phd Thesis</span></a></li><li><span>I am the teaching assistant of class </span><a href='http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm'><em><span>Stochastic processes</span></em></a><span> at Peking University, spring 2019. Here are my </span><a href='Files/HW.html'><span>Solutions to the homeworks</span></a></li><li><span>I am one of the organizer of </span><a href='Files/Prob_Welcome_Seminar.html'><span>Probability Welcome Seminar, Peking University, September, 2018</span></a></li></ul><p><!-- Go to www.addthis.com/dashboard to customize your tools --><span> </span><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script><span> </span></p></div>
+<div id='write'  class=''><h1><a name="zhenyao-suns-home-page-img-srcselfie2020jpg-altselfie-stylezoom2-" class="md-header-anchor"></a><span>Zhenyao Sun&#39;s Home Page </span><img src="selfie2020.jpg" alt="selfie" style="zoom:2%;" /><span> </span></h1><p><span>I am a Postdoc student of </span><a href='https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html'><span>The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology</span></a><span> hosted by </span><a href='https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html'><span>Prof. Leonid Mytnik</span></a><span>. Before, I got my Ph.D. at the </span><a href='http://english.math.pku.edu.cn/'><span>School of Mathematical Sciences at Peking University</span></a><span> under the supervision of </span><a href='http://www.math.pku.edu.cn/teachers/renyx/indexE.htm'><span>Prof. Yan-Xia Ren</span></a><span>. I also visited </span><a href='https://faculty.math.illinois.edu/~rsong/'><span>Prof. Renming Song</span></a><span> as a joint Ph.D. student at </span><a href='https://math.illinois.edu/'><span>Mathematics at the University of Illinois at Urbana-Champaign</span></a><span>. I got my B.S. at the School of Mathematical Sciences at Peking University. My research interest is probability theory, with a focus on models related to population dynamics. </span></p><p><span>Email: zhenyao.sun at gmail.com</span></p><p><span>Office: 411 Cooper Building, Haifa, Israel. </span></p><p><span>Home: 3rd. Apt., Ehud 13, Haifa, Israel. (WFH most of the time.)</span></p><h2><a name="preprints" class="md-header-anchor"></a><span>Preprints</span></h2><ol start='' ><li><a href='https://arxiv.org/pdf/2005.11731.pdf'><span>Y.-X. Ren, R. Song, Z. Sun and J. Zhao: </span><em><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II</span></em></a></li><li><a href='https://arxiv.org/pdf/2001.06697.pdf'><span>R. Liu, Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Quasi-stationary distributions for subcritical superprocesses.</span></em></a><span> </span></li></ol><h2><a name="publications" class="md-header-anchor"></a><span>Publications</span></h2><ol start='' ><li><a href='https://doi.org/10.1016/j.spa.2020.01.001'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Limit theorems for a class of critical superprocesses with stable branching.</span></em><span> Stochastic Process. Appl. 2020.</span></a></li><li><a href='https://projecteuclid.org/euclid.ejp/1576638110'><span>Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: </span><em><span>Stable central limit theorems for super Ornstein-Uhlenbeck processes</span></em><span>. Electron. J. Probab. 2019.</span></a><span> </span></li><li><a href='https://doi.org/10.1007/s10440-019-00243-7'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></em><span> Acta Appl Math 2019.</span></a></li><li><a href='https://doi.org/10.1214/18-ECP143'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom&#39;s theorem.</span></em><span> Electron. Commun. Probab. 2018.</span></a></li><li><a href='Files/胡2011限购.pdf'><span>T. Hu and Z. Sun: </span><em><span>Purchase limit policy and social welfare: A theoretical exploration.</span></em><span>  Economic Science. 2011. (In Chinese)</span></a></li></ol><h2><a name="slides" class="md-header-anchor"></a><span>Slides</span></h2><ul><li><p><a href='Files/WaveSpeed.pdf'><span>Effect of noise on front propagation in reaction-diffusion equations</span></a></p><ul><li><span>Webinar probability seminar, Zoom, Nov. 2020. </span></li></ul></li></ul><ul><li><p><a href='subyaglom/files/subyaglom_talk.pdf'><span>Quasi-stationary distributions for subcritical superprocesses</span></a></p><ul><li><span>The Bernoulli-IMS One World Symposium, Youtube, Aug. 2020. </span></li><li><span>The 3rd Haifa Probability School, Technion, Feb. 2020.</span></li></ul></li></ul><ul><li><p><a href='StableSuperCLT/representation/representation.pdf'><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes</span></a></p><ul><li><span>Workshop on non-local operators and related topics, Peking University, Aug. 2019.</span></li><li><span>The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.</span></li><li><span>Probability Seminar, Beijing Normal University, Apr. 2019.</span></li></ul></li><li><p><a href='Files/2018JSNU.pdf'><span>Limit theorems for a class of critical superprocesses with stable branching</span></a><span> </span></p><ul><li><span>Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.</span></li><li><span>The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.</span></li><li><span>Probability Seminar. Beijing Jiaotong University, Sept. 2018.</span></li><li><span>Probability Welcome Seminar, Peking University, Sept. 2018.</span></li></ul></li><li><p><a href='Files/RenSongSun2018Spine.pdf'><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></a></p><ul><li><span>Probability Seminar. Wuhan University, Mar. 2019.</span></li><li><span>Academic luncheon. Peking University, Nov. 2018.</span></li><li><span>Probability Seminar. Jiangsu Normal University, Jul. 2018.</span></li><li><span>The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.</span></li><li><span>Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.</span></li></ul></li></ul><h2><a name="other-things" class="md-header-anchor"></a><span>Other things</span></h2><ul><li><span>My </span><a href='https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf'><span>Phd Thesis</span></a></li><li><span>I am the teaching assistant of class </span><a href='http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm'><em><span>Stochastic processes</span></em></a><span> at Peking University, spring 2019. Here are my </span><a href='Files/HW.html'><span>Solutions to the homeworks</span></a></li><li><span>I am one of the organizer of </span><a href='Files/Prob_Welcome_Seminar.html'><span>Probability Welcome Seminar, Peking University, September, 2018</span></a></li></ul><p><!-- Go to www.addthis.com/dashboard to customize your tools --><span> </span><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script><span> </span></p></div>
 </body>
 </html>
