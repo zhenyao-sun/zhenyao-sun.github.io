@@ -15,14 +15,15 @@ Home: 3rd. Apt., Ehud 13, Haifa, Israel. (WFH most of the time.)
 ## Preprints
 
 1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
-2. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.*](https://arxiv.org/pdf/2001.06697.pdf) 
 
 ## Publications
+
+1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2020.](https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001)
 1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math 2019.](https://doi.org/10.1007/s10440-019-00243-7)
-2. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](https://doi.org/10.1214/18-ECP143)
-3. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
+1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](https://doi.org/10.1214/18-ECP143)
+1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 
 ## Slides
 
