@@ -22,6 +22,7 @@ title: Zhenyao Sun's Home Page
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 ## Slides
 - [Effect of noise on front propagation in reaction-diffusion equations](Files/WaveSpeed.pdf)
+  - The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May, 2021.
   - Probability seminar of Wuhan University, online, Mar. 2021.
   - Qing-Bei-Shi Probability Webinar, online, Nov. 2020.
   
