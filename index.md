@@ -11,7 +11,11 @@ title: Zhenyao Sun's Home Page
 - Office: 411 Cooper Building, Haifa, Israel. 
 
 ## Preprints
-1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
+
+1. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.*](https://arxiv.org/pdf/2107.09377.pdf)
+
+2. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
+
 ## Publications
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2020.](https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051) [(arXiv link)](https://arxiv.org/abs/2001.06697)
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001) [(arXiv link)](https://arxiv.org/abs/1807.02837)
