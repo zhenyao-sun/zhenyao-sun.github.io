@@ -2,8 +2,8 @@
 title: Zhenyao Sun's Home Page
 ---
 # Zhenyao Sun's Home Page 
-- <img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:10%;margin:100px 300px;"/>I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/en/people/userprofile/leonidm.html). 
-- Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](http://english.math.pku.edu.cn/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
+- <img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:10%;margin:100px 300px;"/>I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
+- Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
 - I got my B.S. at the School of Mathematical Sciences at Peking University. 
 - My research interest is probability theory, with a focus on models related to population dynamics. 
@@ -25,6 +25,7 @@ title: Zhenyao Sun's Home Page
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 ## Slides
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
+  - The 6th Bath-Beijing-Paris meeting on Branching Structure, Sept. 2021.
   - The 7th Workshop on Branching Markov Processes and Relative Topics, June. 2021.
   - The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.
   - Probability seminar of Wuhan University, online, Mar. 2021.
@@ -50,6 +51,6 @@ title: Zhenyao Sun's Home Page
 ## Other things
 - I am maitaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
-- I am the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
-- I am one of the organizer of [Probability Welcome Seminar, Peking University, September, 2018](Files/Prob_Welcome_Seminar.html)
+- I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
+- I was one of the organizer of [Probability Welcome Seminar, Peking University, September, 2018](Files/Prob_Welcome_Seminar.html)
 <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script> 
