@@ -7,7 +7,7 @@ title: Zhenyao Sun's Home Page
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
 - I got my B.S. at the School of Mathematical Sciences at Peking University. 
 - My research interest is probability theory, with a focus on models related to population dynamics. 
-- Email: zhenyao.sun at gmail.com
+- Email: zhenyao dot sun at gmail dot com
 - Office: 411 Cooper Building, Haifa, Israel. 
 
 ## Preprints
@@ -25,13 +25,14 @@ title: Zhenyao Sun's Home Page
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 ## Slides
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
-  - The 6th Bath-Beijing-Paris meeting on Branching Structure, Sept. 2021.
-  - The 7th Workshop on Branching Markov Processes and Relative Topics, June. 2021.
+  - Probability Seminar, NanKai university, Oct. 2021.
+  - The 6th Bath-Beijing-Paris meeting on Branching Structure, University of Bath, Sept. 2021.
+  - The 7th Workshop on Branching Markov Processes and Relative Topics, Peking University, June. 2021.
   - The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.
-  - Probability seminar of Wuhan University, online, Mar. 2021.
-  - Qing-Bei-Shi Probability Webinar, online, Nov. 2020.
+  - Probability seminar, Wuhan University, Mar. 2021.
+  - THU-PKU-BNU Joint Probability Webinar, Nov. 2020.
 - [Quasi-stationary distributions for subcritical superprocesses](subyaglom/files/subyaglom_talk.pdf)
-  - The Bernoulli-IMS One World Symposium, Youtube, Aug. 2020. 
+  - The Bernoulli-IMS One World Symposium, Aug. 2020. 
   - The 3rd Haifa Probability School, Technion, Feb. 2020.
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](StableSuperCLT/representation/representation.pdf)
   - Workshop on non-local operators and related topics, Peking University, Aug. 2019.
@@ -41,16 +42,16 @@ title: Zhenyao Sun's Home Page
   - Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.
   - The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.
   - Probability Seminar. Beijing Jiaotong University, Sept. 2018.
-  - Probability Welcome Seminar, Peking University, Sept. 2018.
+  - Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.
 - [Spine decompositions and limit theorems for a class of critical superprocesses.](Files/RenSongSun2018Spine.pdf)
   - Probability Seminar. Wuhan University, Mar. 2019.
-  - Academic luncheon. Peking University, Nov. 2018.
+  - Academic Luncheon with Math Students. Peking University, Nov. 2018.
   - Probability Seminar. Jiangsu Normal University, Jul. 2018.
   - The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.
   - Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.
-## Other things
+## Links
 - I am maitaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
 - I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
-- I was one of the organizer of [Probability Welcome Seminar, Peking University, September, 2018](Files/Prob_Welcome_Seminar.html)
+- I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
 <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script> 
