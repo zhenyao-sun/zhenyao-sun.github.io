@@ -1,8 +1,8 @@
 ---
 title: Zhenyao Sun's Home Page
 ---
-# Zhenyao Sun's Home Page 
-- <img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:10%;margin:100px 300px;"/>I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
+
+- <img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
 - Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
 - I got my B.S. at the School of Mathematical Sciences at Peking University. 
@@ -11,18 +11,18 @@ title: Zhenyao Sun's Home Page
 - Office: 411 Cooper Building, Haifa, Israel. 
 
 ## Preprints
-
-1. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.*](https://arxiv.org/pdf/2107.09377.pdf)
-
-2. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
+1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.*](https://arxiv.org/pdf/2112.15184.pdf)
+2. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.*](https://arxiv.org/pdf/2107.09377.pdf)
+3. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
 
 ## Publications
-1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2020.](https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051) [(arXiv link)](https://arxiv.org/abs/2001.06697)
-1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001) [(arXiv link)](https://arxiv.org/abs/1807.02837)
-1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) [(arXiv link)](https://arxiv.org/abs/1903.03751)
-1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math 2019.](https://doi.org/10.1007/s10440-019-00243-7) [(arXiv link)](https://arxiv.org/abs/1711.09188)
-1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](https://doi.org/10.1214/18-ECP143) [(arXiv link)](https://arxiv.org/abs/1706.07125)
+1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2021.](https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051) [(arXiv version)](https://arxiv.org/abs/2001.06697)
+1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001) [(arXiv version)](https://arxiv.org/abs/1807.02837)
+1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) [(arXiv version)](https://arxiv.org/abs/1903.03751)
+1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math 2019.](https://doi.org/10.1007/s10440-019-00243-7) [(arXiv version)](https://arxiv.org/abs/1711.09188)
+1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](https://doi.org/10.1214/18-ECP143) [(arXiv version)](https://arxiv.org/abs/1706.07125)
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
+
 ## Slides
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
   - Probability Seminar, NanKai university, Oct. 2021.
@@ -43,12 +43,13 @@ title: Zhenyao Sun's Home Page
   - The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.
   - Probability Seminar. Beijing Jiaotong University, Sept. 2018.
   - Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.
-- [Spine decompositions and limit theorems for a class of critical superprocesses.](Files/RenSongSun2018Spine.pdf)
+- [Spine decompositions and limit theorems for a class of critical superprocesses](Files/RenSongSun2018Spine.pdf)
   - Probability Seminar. Wuhan University, Mar. 2019.
   - Academic Luncheon with Math Students. Peking University, Nov. 2018.
   - Probability Seminar. Jiangsu Normal University, Jul. 2018.
   - The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.
   - Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.
+
 ## Links
 - I am maitaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
