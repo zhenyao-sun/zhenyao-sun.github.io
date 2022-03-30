@@ -1,6 +1,9 @@
 ---
 title: Zhenyao Sun's Home Page
+
 ---
+
+# Zhenyao Sun's Home Page
 
 - <img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
 - Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
@@ -13,9 +16,9 @@ title: Zhenyao Sun's Home Page
 ## Preprints
 1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.*](https://arxiv.org/pdf/2112.15184.pdf)
 2. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.*](https://arxiv.org/pdf/2107.09377.pdf)
-3. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II*](https://arxiv.org/pdf/2005.11731.pdf)
 
 ## Publications
+1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) 2022.](https://link.springer.com/article/10.1007/s10114-022-0559-y) [(arXiv version)](https://arxiv.org/abs/2005.11731)
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2021.](https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051) [(arXiv version)](https://arxiv.org/abs/2001.06697)
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001) [(arXiv version)](https://arxiv.org/abs/1807.02837)
 1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) [(arXiv version)](https://arxiv.org/abs/1903.03751)
