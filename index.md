@@ -27,13 +27,23 @@ title: Zhenyao Sun's Home Page
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 
 ## Slides
+
+* On the coming down from infinity of local time coalescing Brownian motions (available soon)
+
+  * The 42nd Conference on Stochastic Processes and their Applications, June 2022 (upcoming)
+  * Probability Seminar, Technion, June 2022. (upcoming)
+
+  * Branching system, reaction-diffusionequations and Population models, May 2022 (upcoming)
+  * From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.
+  * Probability Seminar, Fujian Normal University, April 2022.
+
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
-  - Probability Seminar, NanKai university, Oct. 2021.
+  - Probability Seminar, NanKai University, Oct. 2021.
   - The 6th Bath-Beijing-Paris meeting on Branching Structure, University of Bath, Sept. 2021.
   - The 7th Workshop on Branching Markov Processes and Relative Topics, Peking University, June. 2021.
   - The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.
   - Probability seminar, Wuhan University, Mar. 2021.
-  - THU-PKU-BNU Joint Probability Webinar, Nov. 2020.
+  - Probability seminar, THU-PKU-BNU Joint Probability Webinar, Nov. 2020.
 - [Quasi-stationary distributions for subcritical superprocesses](subyaglom/files/subyaglom_talk.pdf)
   - The Bernoulli-IMS One World Symposium, Aug. 2020. 
   - The 3rd Haifa Probability School, Technion, Feb. 2020.
