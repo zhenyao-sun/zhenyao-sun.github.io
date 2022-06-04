@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
@@ -201,50 +201,33 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-inline-math-container mjx-container { zoom: 0.95; }
 
 
-@include-when-export url(https://fonts.loli.net/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext);
-
-/* cyrillic-ext */
-/* cyrillic */
 :root {
-	--window-border: none;
-	--typora-center-window-title: true;
-	--active-file-bg-color: #f3f3f3;
-	--bg-color: #fcfcfc;
-	--control-text-color: #777;
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
 }
 
-.mac-seamless-mode #typora-sidebar {
-	top: 20px;
-	padding-top: 0;
-	height: auto;
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 
-html,
-body,
-#write{
-	background: #fcfcfc;
-	background: var(--bg-color);
-	font-family: 'TeXGyreAdventor', "Century Gothic", "Didact Gothic", "Yu Gothic", 'Segoe UI Emoji', sans-serif;
-	font-weight: 300;
-	-webkit-font-smoothing: antialiased;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #111;
-	font-family: 'TeXGyreAdventor', "Century Gothic", "Didact Gothic", "Yu Gothic", sans-serif;
-}
-
-html {
-	font-size:16px;
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
 }
 
 #write {
-	max-width: 914px;
-	text-align: justify;
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -253,322 +236,364 @@ html {
 	}
 }
 
-#write>h1:first-child {
-	margin-top: 2.75rem;
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
 }
-#write>h2:first-child {
-	margin-top: 1.75rem;
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
 }
-#write>h3:first-child {
-	margin-top: 1rem;
+
+a {
+    color: #4183C4;
 }
-#write>h4:first-child {
-	margin-top: 0.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
 }
 h1 {
-	font-weight: normal;
-	line-height: 4rem;
-	margin: 0 0 1.75rem;
-	padding: 20px 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 4rem;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
 }
 h2 {
-	font-weight: normal;
-	line-height: 3rem;
-	margin: 0 0 1.9375rem;
-	padding: 0 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 3rem
-}
-h3 {
-	font-weight: normal;
-}
-h4 {
-	font-weight: normal;
-}
-h5 {
-	font-size: 1.125rem;
-	font-weight: normal;
-}
-h6 {
-	font-size: 1rem;
-	font-weight: bold;
-}
-p {
-	color: #111;
-	font-size: 1rem;
-	line-height: 1.75rem;
-	margin: 0 0 1.25rem;
-}
-#write>h3.md-focus:before {
-	left: -1.875rem;
-	top: 0.5rem;
-	padding: 2px;
-}
-#write>h4.md-focus:before {
-	left: -1.875rem;
-	top: 0.3125rem;
-	padding: 2px;
-}
-#write>h5.md-focus:before {
-	left: -1.875rem;
-	top: 0.25rem;
-	padding: 2px;
-}
-#write>h6.md-focus:before {
-	left: -1.875rem;
-	top: .125rem;
-	padding: 2px;
-}
-@media screen and (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
-	}
-}
-a,
-.md-def-url {
-	color: #990000;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-table {
-	margin-bottom: 20px
-}
-table th,
-table td {
-	padding: 8px;
-	line-height: 1.25rem;
-	vertical-align: top;
-	border-top: 1px solid #ddd
-}
-table th {
-	font-weight: bold
-}
-table thead th {
-	vertical-align: bottom
-}
-table caption+thead tr:first-child th,
-table caption+thead tr:first-child td,
-table colgroup+thead tr:first-child th,
-table colgroup+thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-	border-top: 0
-}
-table tbody+tbody {
-	border-top: 2px solid #ddd
-}
-code, .md-fences {
-	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
-	padding: .1em;
-	font-size: 0.9em;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-}
-.md-fences {
-	margin: 0 0 20px;
-	font-size: 1em;
-	padding: 0.3em 1em;
-  	padding-top: 0.4em;
-}
-.task-list{
-	padding-left: 0;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
 }
 
-.task-list-item {
-	padding-left:2.125rem;
-}
-
-input {
-	border-style: ridge;
-}
-
-.task-list-item input {
-	top: 3px;
-}
-
-.md-task-list-item input {
-	margin-left: -1.5em;
-}
-
-.task-list-item input:before {
-	content: "";
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	vertical-align: middle;
-	text-align: center;
-	border: 1px solid gray;
-	background-color: #fdfdfd;
-	margin-left: 0;
-	-webkit-appearance: none;
-	margin-top: -1rem;
-}
-
-.typora-node .task-list-item input:before {
-	top: 0.3ex;
-	position: absolute;
-}
-
-.task-list-item input:checked:before,
-.task-list-item input[checked]:before{
-	content: '\25FC';
-	/*◘*/
-	font-size: 0.8125rem;
-	line-height: 0.9375rem;
-}
-
-/* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-    .task-list-item input:before {
-    	margin-top: -0.2rem;
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
     }
 
-    .task-list-item input:checked:before,
-	.task-list-item input[checked]:before {
-		margin-top: -0.2rem;
-	}
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
 }
 
-blockquote {
-	margin: 0 0 1.11111rem;
-	padding: 0.5rem 1.11111rem 0 1.05556rem;
-	border-left: 1px solid gray;
+li p.first {
+    display: inline-block;
 }
-blockquote,
-blockquote p {
-	line-height: 1.6;
-	color: #6f6f6f;
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
 }
 #write pre.md-meta-block {
-	min-height: 30px;
-	background: #f8f8f8;
-	padding: 1.5em;
-	font-weight: 300;
-	font-size: 1em;
-	padding-bottom: 1.5em;
-	padding-top: 3em;
-    margin-top: -1.5em;
-	color: #999;
-	
-	width: 100vw;
-	max-width: calc(100% + 60px);
-	margin-left: -30px;
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
 }
-.MathJax_Display {
-	font-size: 0.9em;
-	margin-top: 0.5em;
-	margin-bottom: 0;
-}
-p.mathjax-block,
-.mathjax-block {
-	padding-bottom: 0;
-}
+
 .mathjax-block>.code-tooltip {
-	bottom: 5px;
-	box-shadow: none;
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
 }
 .md-image>.md-meta {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-.md-image>img {
-	margin-top: 2px;
-}
-.md-image>.md-meta:first-of-type:before {
-	padding-left: 4px;
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
 }
 
-#typora-source {
-	color: #555;
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
 }
 
-/** ui for windows **/
-#md-searchpanel {
-    border-bottom: 1px solid #ccc;
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
 }
 
-#md-searchpanel .btn {
-    border: 1px solid #ccc;
+.sidebar-tabs {
+    border-bottom: none;
 }
 
-#md-notification:before {
-	top: 14px;
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
 }
 
-#md-notification {
-	background: #eee;
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
 }
 
-.megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
 }
 
-#typora-sidebar {
-	box-shadow: none;
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
 }
 
-.file-list-item ,
-.show-folder-name .file-list-item {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	line-height: 20px;
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
 }
 
-.file-list-item-summary {
-	height: 40px;
-	line-height: 20px;
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
 }
 
-.ty-table-edit {
-	background: #ededed;
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
 }
 
 .dropdown-menu .divider {
-	border-color: #e5e5e5;
+    border-color: #e5e5e5;
+    opacity: 0.4;
 }
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
 
  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style><title>Zhenyao Sun&#39;s Home Page</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='zhenyao-suns-home-page'><span>Zhenyao Sun&#39;s Home Page</span></h1><ul><li><img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/><span>I am a Postdoc student of </span><a href='https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html'><span>The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology</span></a><span> hosted by </span><a href='https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/'><span>Prof. Leonid Mytnik</span></a><span>. </span></li><li><span>Before, I got my Ph.D. at the </span><a href='https://www.math.pku.edu.cn/puremath_en/'><span>School of Mathematical Sciences at Peking University</span></a><span> under the supervision of </span><a href='http://www.math.pku.edu.cn/teachers/renyx/indexE.htm'><span>Prof. Yan-Xia Ren</span></a><span>. </span></li><li><span>I also visited </span><a href='https://faculty.math.illinois.edu/~rsong/'><span>Prof. Renming Song</span></a><span> as a joint Ph.D. student at </span><a href='https://math.illinois.edu/'><span>Mathematics at the University of Illinois at Urbana-Champaign</span></a><span>. </span></li><li><span>I got my B.S. at the School of Mathematical Sciences at Peking University. </span></li><li><span>My research interest is probability theory, with a focus on models related to population dynamics. </span></li><li><span>Email: zhenyao dot sun at gmail dot com</span></li><li><span>Office: 411 Cooper Building, Haifa, Israel. </span></li></ul><h2 id='preprints'><span>Preprints</span></h2><ol start='' ><li><a href='https://arxiv.org/pdf/2112.15184.pdf'><span>R. Liu, Y.-X. Ren, R. Song, and Z. Sun: </span><em><span>Subcritical superprocesses conditioned on non-extinction.</span></em></a></li><li><a href='https://arxiv.org/pdf/2107.09377.pdf'><span>C. Barnes, L. Mytnik, and Z. Sun: </span><em><span>Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.</span></em></a></li></ol><h2 id='publications'><span>Publications</span></h2><ol start='' ><li><a href='https://link.springer.com/article/10.1007/s10114-022-0559-y'><span>Y.-X. Ren, R. Song, Z. Sun and J. Zhao: </span><em><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.</span></em><span> Acta Math. Sin. (Engl. Ser.) 2022.</span></a><span> </span><a href='https://arxiv.org/abs/2005.11731'><span>(arXiv version)</span></a></li><li><a href='https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051'><span>R. Liu, Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Quasi-stationary distributions for subcritical superprocesses.</span></em><span> Stochastic Process. Appl. 2021.</span></a><span> </span><a href='https://arxiv.org/abs/2001.06697'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1016/j.spa.2020.01.001'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Limit theorems for a class of critical superprocesses with stable branching.</span></em><span> Stochastic Process. Appl. 2020.</span></a><span> </span><a href='https://arxiv.org/abs/1807.02837'><span>(arXiv version)</span></a></li><li><a href='https://projecteuclid.org/euclid.ejp/1576638110'><span>Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: </span><em><span>Stable central limit theorems for super Ornstein-Uhlenbeck processes</span></em><span>. Electron. J. Probab. 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1903.03751'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1007/s10440-019-00243-7'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></em><span> Acta Appl Math 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1711.09188'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1214/18-ECP143'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom&#39;s theorem.</span></em><span> Electron. Commun. Probab. 2018.</span></a><span> </span><a href='https://arxiv.org/abs/1706.07125'><span>(arXiv version)</span></a></li><li><a href='Files/胡2011限购.pdf'><span>T. Hu and Z. Sun: </span><em><span>Purchase limit policy and social welfare: A theoretical exploration.</span></em><span>  Economic Science. 2011. (In Chinese)</span></a></li></ol><h2 id='slides'><span>Slides</span></h2><ul><li><p><span>On the coming down from infinity of local time coalescing Brownian motions (available soon)</span></p><ul><li><span>The 42nd Conference on Stochastic Processes and their Applications, June 2022 (upcoming)</span></li><li><span>Probability Seminar, Technion, June 2022. (upcoming)</span></li></ul><ul><li><span>Branching system, reaction-diffusionequations and Population models, May 2022 (upcoming)</span></li><li><span>From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.</span></li><li><span>Probability Seminar, Fujian Normal University, April 2022.</span></li></ul></li></ul><ul><li><p><a href='Files/WaveSpeed.pdf'><span>Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift</span></a></p><ul><li><span>Probability Seminar, NanKai University, Oct. 2021.</span></li><li><span>The 6th Bath-Beijing-Paris meeting on Branching Structure, University of Bath, Sept. 2021.</span></li><li><span>The 7th Workshop on Branching Markov Processes and Relative Topics, Peking University, June. 2021.</span></li><li><span>The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.</span></li><li><span>Probability seminar, Wuhan University, Mar. 2021.</span></li><li><span>Probability seminar, THU-PKU-BNU Joint Probability Webinar, Nov. 2020.</span></li></ul></li><li><p><a href='subyaglom/files/subyaglom_talk.pdf'><span>Quasi-stationary distributions for subcritical superprocesses</span></a></p><ul><li><span>The Bernoulli-IMS One World Symposium, Aug. 2020. </span></li><li><span>The 3rd Haifa Probability School, Technion, Feb. 2020.</span></li></ul></li><li><p><a href='StableSuperCLT/representation/representation.pdf'><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes</span></a></p><ul><li><span>Workshop on non-local operators and related topics, Peking University, Aug. 2019.</span></li><li><span>The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.</span></li><li><span>Probability Seminar, Beijing Normal University, Apr. 2019.</span></li></ul></li><li><p><a href='Files/2018JSNU.pdf'><span>Limit theorems for a class of critical superprocesses with stable branching</span></a><span> </span></p><ul><li><span>Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.</span></li><li><span>The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.</span></li><li><span>Probability Seminar. Beijing Jiaotong University, Sept. 2018.</span></li><li><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></li></ul></li><li><p><a href='Files/RenSongSun2018Spine.pdf'><span>Spine decompositions and limit theorems for a class of critical superprocesses</span></a></p><ul><li><span>Probability Seminar. Wuhan University, Mar. 2019.</span></li><li><span>Academic Luncheon with Math Students. Peking University, Nov. 2018.</span></li><li><span>Probability Seminar. Jiangsu Normal University, Jul. 2018.</span></li><li><span>The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.</span></li><li><span>Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.</span></li></ul></li></ul><h2 id='links'><span>Links</span></h2><ul><li><span>I am maitaining </span><a href='https://space.bilibili.com/151014650'><span>the bilibili channel</span></a><span> for </span><a href='https://www.owprobability.org'><span>the One World Probability Seminar</span></a></li><li><span>My </span><a href='https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf'><span>Phd Thesis</span></a></li><li><span>I was the teaching assistant of class </span><a href='http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm'><em><span>Stochastic processes</span></em></a><span> at Peking University, spring 2019. Here are my </span><a href='Files/HW.html'><span>Solutions to the homeworks</span></a></li><li><span>I was the organizer of the </span><a href='Files/Prob_Welcome_Seminar.html'><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></a>
+<div id='write'  class=''><h1 id='zhenyao-suns-home-page'><span>Zhenyao Sun&#39;s Home Page</span></h1><ul><li><img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/><span>I am a Postdoc student of </span><a href='https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html'><span>The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology</span></a><span> hosted by </span><a href='https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/'><span>Prof. Leonid Mytnik</span></a><span>. </span></li><li><span>Before, I got my Ph.D. at the </span><a href='https://www.math.pku.edu.cn/puremath_en/'><span>School of Mathematical Sciences at Peking University</span></a><span> under the supervision of </span><a href='http://www.math.pku.edu.cn/teachers/renyx/indexE.htm'><span>Prof. Yan-Xia Ren</span></a><span>. </span></li><li><span>I also visited </span><a href='https://faculty.math.illinois.edu/~rsong/'><span>Prof. Renming Song</span></a><span> as a joint Ph.D. student at </span><a href='https://math.illinois.edu/'><span>Mathematics at the University of Illinois at Urbana-Champaign</span></a><span>. </span></li><li><span>I got my B.S. at the School of Mathematical Sciences at Peking University. </span></li><li><span>My research interest is probability theory, with a focus on models related to population dynamics. </span></li><li><span>Email: zhenyao dot sun at gmail dot com</span></li><li><span>Office: 411 Cooper Building, Haifa, Israel. </span></li></ul><h2 id='preprints'><span>Preprints</span></h2><ol start='' ><li><a href='https://arxiv.org/pdf/2112.15184.pdf'><span>R. Liu, Y.-X. Ren, R. Song, and Z. Sun: </span><em><span>Subcritical superprocesses conditioned on non-extinction.</span></em></a></li><li><a href='https://arxiv.org/pdf/2107.09377.pdf'><span>C. Barnes, L. Mytnik, and Z. Sun: </span><em><span>Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.</span></em></a></li></ol><h2 id='publications'><span>Publications</span></h2><ol start='' ><li><a href='https://link.springer.com/article/10.1007/s10114-022-0559-y'><span>Y.-X. Ren, R. Song, Z. Sun and J. Zhao: </span><em><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.</span></em><span> Acta Math. Sin. (Engl. Ser.) 2022.</span></a><span> </span><a href='https://arxiv.org/abs/2005.11731'><span>(arXiv version)</span></a></li><li><a href='https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051'><span>R. Liu, Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Quasi-stationary distributions for subcritical superprocesses.</span></em><span> Stochastic Process. Appl. 2021.</span></a><span> </span><a href='https://arxiv.org/abs/2001.06697'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1016/j.spa.2020.01.001'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Limit theorems for a class of critical superprocesses with stable branching.</span></em><span> Stochastic Process. Appl. 2020.</span></a><span> </span><a href='https://arxiv.org/abs/1807.02837'><span>(arXiv version)</span></a></li><li><a href='https://projecteuclid.org/euclid.ejp/1576638110'><span>Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: </span><em><span>Stable central limit theorems for super Ornstein-Uhlenbeck processes</span></em><span>. Electron. J. Probab. 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1903.03751'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1007/s10440-019-00243-7'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></em><span> Acta Appl Math 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1711.09188'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1214/18-ECP143'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom&#39;s theorem.</span></em><span> Electron. Commun. Probab. 2018.</span></a><span> </span><a href='https://arxiv.org/abs/1706.07125'><span>(arXiv version)</span></a></li><li><a href='Files/胡2011限购.pdf'><span>T. Hu and Z. Sun: </span><em><span>Purchase limit policy and social welfare: A theoretical exploration.</span></em><span>  Economic Science. 2011. (In Chinese)</span></a></li></ol><h2 id='slides'><span>Slides</span></h2><ul><li><p><span>On the coming down from infinity of Shiga&#39;s coalescing Brownian motions (available soon)</span></p><ul><li><span>The 42nd Conference on Stochastic Processes and their Applications, June 2022 (upcoming)</span></li><li><span>Probability Seminar, Technion, June 2022. (upcoming)</span></li><li><span>Branching system, reaction-diffusionequations and Population models, May 2022.</span></li><li><span>From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.</span></li><li><span>Probability Seminar, Fujian Normal University, April 2022.</span></li></ul></li></ul><ul><li><p><a href='Files/WaveSpeed.pdf'><span>Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift</span></a></p><ul><li><span>Probability Seminar, NanKai University, Oct. 2021.</span></li><li><span>The 6th Bath-Beijing-Paris meeting on Branching Structure, University of Bath, Sept. 2021.</span></li><li><span>The 7th Workshop on Branching Markov Processes and Relative Topics, Peking University, June. 2021.</span></li><li><span>The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.</span></li><li><span>Probability seminar, Wuhan University, Mar. 2021.</span></li><li><span>Probability seminar, THU-PKU-BNU Joint Probability Webinar, Nov. 2020.</span></li></ul></li><li><p><a href='subyaglom/files/subyaglom_talk.pdf'><span>Quasi-stationary distributions for subcritical superprocesses</span></a></p><ul><li><span>The Bernoulli-IMS One World Symposium, Aug. 2020. </span></li><li><span>The 3rd Haifa Probability School, Technion, Feb. 2020.</span></li></ul></li><li><p><a href='StableSuperCLT/representation/representation.pdf'><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes</span></a></p><ul><li><span>Workshop on non-local operators and related topics, Peking University, Aug. 2019.</span></li><li><span>The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.</span></li><li><span>Probability Seminar, Beijing Normal University, Apr. 2019.</span></li></ul></li><li><p><a href='Files/2018JSNU.pdf'><span>Limit theorems for a class of critical superprocesses with stable branching</span></a><span> </span></p><ul><li><span>Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.</span></li><li><span>The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.</span></li><li><span>Probability Seminar. Beijing Jiaotong University, Sept. 2018.</span></li><li><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></li></ul></li><li><p><a href='Files/RenSongSun2018Spine.pdf'><span>Spine decompositions and limit theorems for a class of critical superprocesses</span></a></p><ul><li><span>Probability Seminar. Wuhan University, Mar. 2019.</span></li><li><span>Academic Luncheon with Math Students. Peking University, Nov. 2018.</span></li><li><span>Probability Seminar. Jiangsu Normal University, Jul. 2018.</span></li><li><span>The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.</span></li><li><span>Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.</span></li></ul></li></ul><h2 id='links'><span>Links</span></h2><ul><li><span>I am maitaining </span><a href='https://space.bilibili.com/151014650'><span>the bilibili channel</span></a><span> for </span><a href='https://www.owprobability.org'><span>the One World Probability Seminar</span></a></li><li><span>My </span><a href='https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf'><span>Phd Thesis</span></a></li><li><span>I was the teaching assistant of class </span><a href='http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm'><em><span>Stochastic processes</span></em></a><span> at Peking University, spring 2019. Here are my </span><a href='Files/HW.html'><span>Solutions to the homeworks</span></a></li><li><span>I was the organizer of the </span><a href='Files/Prob_Welcome_Seminar.html'><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></a>
 <!-- Go to www.addthis.com/dashboard to customize your tools --><span> </span><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script><span> </span></li></ul></div></div>
 </body>
 </html>
