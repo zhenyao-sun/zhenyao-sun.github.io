@@ -28,11 +28,15 @@ title: Zhenyao Sun's Home Page
 
 ## Slides
 
+* [Subcritical superprocesses conditioned on non-extinction](Files/QProcess.pdf)
+  * The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.
+
 * [On the coming down from infinity of Shiga's coalescing Brownian motions](Files/ComingDown.pdf)
-  * The 42nd Conference on Stochastic Processes and their Applications, June 2022 (upcoming)
-  * Probability Seminar, Technion, June 2022. (upcoming)
+  * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
+  * Internatinal Talents F0rum, Nankai University, June 2022.
+  * Probability Seminar, Technion, June 2022. 
   
-  * Branching system, reaction-diffusionequations and Population models, May 2022.
+  * Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.
   * From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.
   * Probability Seminar, Fujian Normal University, April 2022.
 
