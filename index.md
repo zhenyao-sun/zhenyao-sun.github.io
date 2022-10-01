@@ -33,7 +33,7 @@ title: Zhenyao Sun's Home Page
 
 * [On the coming down from infinity of Shiga's coalescing Brownian motions](Files/ComingDown.pdf)
   * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
-  * Internatinal Talents F0rum, Nankai University, June 2022.
+  * Internatinal Talents Forum, Nankai University, June 2022.
   * Probability Seminar, Technion, June 2022. 
   
   * Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.
