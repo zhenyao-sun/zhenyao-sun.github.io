@@ -28,10 +28,11 @@ title: Zhenyao Sun's Home Page
 
 ## Slides
 
-* [Subcritical superprocesses conditioned on non-extinction](Files/QProcess.pdf)
+* [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
   * The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.
 
 * [On the coming down from infinity of Shiga's coalescing Brownian motions](Files/ComingDown.pdf)
+  * Probability Seminar, Beijing Institute of Technology, Oct. 2022.
   * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
   * Internatinal Talents Forum, Nankai University, June 2022.
   * Probability Seminar, Technion, June 2022. 
@@ -39,6 +40,7 @@ title: Zhenyao Sun's Home Page
   * Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.
   * From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.
   * Probability Seminar, Fujian Normal University, April 2022.
+  
 
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
   - Probability Seminar, NanKai University, Oct. 2021.
@@ -67,6 +69,7 @@ title: Zhenyao Sun's Home Page
   - Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.
 
 ## Links
+- I am currently one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home)
 - I am maitaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
 - I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
