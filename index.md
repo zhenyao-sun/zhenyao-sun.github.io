@@ -14,8 +14,9 @@ title: Zhenyao Sun's Home Page
 - Office: 411 Cooper Building, Haifa, Israel. 
 
 ## Preprints
-1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.*](https://arxiv.org/pdf/2112.15184.pdf)
-2. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.*](https://arxiv.org/pdf/2107.09377.pdf)
+1. [C. Barnes, L. Mytnik, and Z. Sun: *On the coming down from infinity of coalescing Brownian motions.*](https://arxiv.org/pdf/2211.15298.pdf)
+2. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.*](https://arxiv.org/pdf/2112.15184.pdf)
+3. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.*](https://arxiv.org/pdf/2107.09377.pdf)
 
 ## Publications
 1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) 2022.](https://link.springer.com/article/10.1007/s10114-022-0559-y) [(arXiv version)](https://arxiv.org/abs/2005.11731)
@@ -31,7 +32,7 @@ title: Zhenyao Sun's Home Page
 * [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
   * The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.
 
-* [On the coming down from infinity of Shiga's coalescing Brownian motions](Files/ComingDown.pdf)
+* [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
   * Probability Seminar, Beijing Institute of Technology, Oct. 2022.
   * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
   * Internatinal Talents Forum, Nankai University, June 2022.
@@ -52,7 +53,7 @@ title: Zhenyao Sun's Home Page
 - [Quasi-stationary distributions for subcritical superprocesses](subyaglom/files/subyaglom_talk.pdf)
   - The Bernoulli-IMS One World Symposium, Aug. 2020. 
   - The 3rd Haifa Probability School, Technion, Feb. 2020.
-- [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](StableSuperCLT/representation/representation.pdf)
+- [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](Files/Zhenyao2020Oct.pdf)
   - Workshop on non-local operators and related topics, Peking University, Aug. 2019.
   - The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.
   - Probability Seminar, Beijing Normal University, Apr. 2019.
