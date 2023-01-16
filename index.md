@@ -22,8 +22,9 @@ title: Zhenyao Sun's Home Page
 1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) 2022.](https://link.springer.com/article/10.1007/s10114-022-0559-y) [(arXiv version)](https://arxiv.org/abs/2005.11731)
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2021.](https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051) [(arXiv version)](https://arxiv.org/abs/2001.06697)
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](https://doi.org/10.1016/j.spa.2020.01.001) [(arXiv version)](https://arxiv.org/abs/1807.02837)
+   - There is an inaccuracy when we are citing H. Kesten, P. Ney and F. Spitzer’s 1966 paper: we can not obtain (1.2) when $\sigma = \infty$. This does not affect the other part of the paper. 
 1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](https://projecteuclid.org/euclid.ejp/1576638110) [(arXiv version)](https://arxiv.org/abs/1903.03751)
-1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math 2019.](https://doi.org/10.1007/s10440-019-00243-7) [(arXiv version)](https://arxiv.org/abs/1711.09188)
+1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math 2019.](https://doi.org/10.1007/s10440-019-00243-7) [(arXiv version)](https://arxiv.org/abs/1711.09188) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](https://doi.org/10.1214/18-ECP143) [(arXiv version)](https://arxiv.org/abs/1706.07125)
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/胡2011限购.pdf)
 
@@ -71,7 +72,7 @@ title: Zhenyao Sun's Home Page
 
 ## Links
 - I am currently one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home)
-- I am maitaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
+- I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
 - I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
 - I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
