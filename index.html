@@ -495,11 +495,159 @@ table tbody+tbody {
 	border-color: #e5e5e5;
 }
 
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						} @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style><title>Zhenyao Sun&#39;s Home Page</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='zhenyao-suns-home-page'><span>Zhenyao Sun&#39;s Home Page</span></h1><ul><li><img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/><span>I am a Postdoc student of </span><a href='https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html'><span>The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology</span></a><span> hosted by </span><a href='https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/'><span>Prof. Leonid Mytnik</span></a><span>. </span></li><li><span>Before, I got my Ph.D. at the </span><a href='https://www.math.pku.edu.cn/puremath_en/'><span>School of Mathematical Sciences at Peking University</span></a><span> under the supervision of </span><a href='http://www.math.pku.edu.cn/teachers/renyx/indexE.htm'><span>Prof. Yan-Xia Ren</span></a><span>. </span></li><li><span>I also visited </span><a href='https://faculty.math.illinois.edu/~rsong/'><span>Prof. Renming Song</span></a><span> as a joint Ph.D. student at </span><a href='https://math.illinois.edu/'><span>Mathematics at the University of Illinois at Urbana-Champaign</span></a><span>. </span></li><li><span>I got my B.S. at the School of Mathematical Sciences at Peking University. </span></li><li><span>My research interest is probability theory, with a focus on models related to population dynamics. </span></li><li><span>Email: zhenyao dot sun at gmail dot com</span></li><li><span>Office: 411 Cooper Building, Haifa, Israel. </span></li></ul><h2 id='preprints'><span>Preprints</span></h2><ol start='' ><li><a href='https://arxiv.org/pdf/2211.15298.pdf'><span>C. Barnes, L. Mytnik, and Z. Sun: </span><em><span>On the coming down from infinity of coalescing Brownian motions.</span></em></a></li><li><a href='https://arxiv.org/pdf/2112.15184.pdf'><span>R. Liu, Y.-X. Ren, R. Song, and Z. Sun: </span><em><span>Subcritical superprocesses conditioned on non-extinction.</span></em></a></li><li><a href='https://arxiv.org/pdf/2107.09377.pdf'><span>C. Barnes, L. Mytnik, and Z. Sun: </span><em><span>Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.</span></em></a></li></ol><h2 id='publications'><span>Publications</span></h2><ol start='' ><li><a href='https://link.springer.com/article/10.1007/s10114-022-0559-y'><span>Y.-X. Ren, R. Song, Z. Sun and J. Zhao: </span><em><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.</span></em><span> Acta Math. Sin. (Engl. Ser.) 2022.</span></a><span> </span><a href='https://arxiv.org/abs/2005.11731'><span>(arXiv version)</span></a></li><li><a href='https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051'><span>R. Liu, Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Quasi-stationary distributions for subcritical superprocesses.</span></em><span> Stochastic Process. Appl. 2021.</span></a><span> </span><a href='https://arxiv.org/abs/2001.06697'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1016/j.spa.2020.01.001'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Limit theorems for a class of critical superprocesses with stable branching.</span></em><span> Stochastic Process. Appl. 2020.</span></a><span> </span><a href='https://arxiv.org/abs/1807.02837'><span>(arXiv version)</span></a></li><li><a href='https://projecteuclid.org/euclid.ejp/1576638110'><span>Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: </span><em><span>Stable central limit theorems for super Ornstein-Uhlenbeck processes</span></em><span>. Electron. J. Probab. 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1903.03751'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1007/s10440-019-00243-7'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></em><span> Acta Appl Math 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1711.09188'><span>(arXiv version)</span></a></li><li><a href='https://doi.org/10.1214/18-ECP143'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom&#39;s theorem.</span></em><span> Electron. Commun. Probab. 2018.</span></a><span> </span><a href='https://arxiv.org/abs/1706.07125'><span>(arXiv version)</span></a></li><li><a href='Files/胡2011限购.pdf'><span>T. Hu and Z. Sun: </span><em><span>Purchase limit policy and social welfare: A theoretical exploration.</span></em><span>  Economic Science. 2011. (In Chinese)</span></a></li></ol><h2 id='slides'><span>Slides</span></h2><ul><li><p><a href='Files/Qprocess.pdf'><span>Subcritical superprocesses conditioned on non-extinction</span></a></p><ul><li><span>The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.</span></li></ul></li><li><p><a href='Files/ComingDown.pdf'><span>On the coming down from infinity of coalescing Brownian motions</span></a></p><ul><li><span>Probability Seminar, Beijing Institute of Technology, Oct. 2022.</span></li><li><span>The 42nd Conference on Stochastic Processes and their Applications, June 2022. </span></li><li><span>Internatinal Talents Forum, Nankai University, June 2022.</span></li><li><span>Probability Seminar, Technion, June 2022. </span></li><li><span>Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.</span></li><li><span>From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.</span></li><li><span>Probability Seminar, Fujian Normal University, April 2022.</span></li></ul></li></ul><ul><li><p><a href='Files/WaveSpeed.pdf'><span>Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift</span></a></p><ul><li><span>Probability Seminar, NanKai University, Oct. 2021.</span></li><li><span>The 6th Bath-Beijing-Paris meeting on Branching Structure, University of Bath, Sept. 2021.</span></li><li><span>The 7th Workshop on Branching Markov Processes and Relative Topics, Peking University, June. 2021.</span></li><li><span>The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.</span></li><li><span>Probability seminar, Wuhan University, Mar. 2021.</span></li><li><span>Probability seminar, THU-PKU-BNU Joint Probability Webinar, Nov. 2020.</span></li></ul></li><li><p><a href='subyaglom/files/subyaglom_talk.pdf'><span>Quasi-stationary distributions for subcritical superprocesses</span></a></p><ul><li><span>The Bernoulli-IMS One World Symposium, Aug. 2020. </span></li><li><span>The 3rd Haifa Probability School, Technion, Feb. 2020.</span></li></ul></li><li><p><a href='Files/Zhenyao2020Oct.pdf'><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes</span></a></p><ul><li><span>Workshop on non-local operators and related topics, Peking University, Aug. 2019.</span></li><li><span>The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.</span></li><li><span>Probability Seminar, Beijing Normal University, Apr. 2019.</span></li></ul></li><li><p><a href='Files/2018JSNU.pdf'><span>Limit theorems for a class of critical superprocesses with stable branching</span></a><span> </span></p><ul><li><span>Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.</span></li><li><span>The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.</span></li><li><span>Probability Seminar. Beijing Jiaotong University, Sept. 2018.</span></li><li><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></li></ul></li><li><p><a href='Files/RenSongSun2018Spine.pdf'><span>Spine decompositions and limit theorems for a class of critical superprocesses</span></a></p><ul><li><span>Probability Seminar. Wuhan University, Mar. 2019.</span></li><li><span>Academic Luncheon with Math Students. Peking University, Nov. 2018.</span></li><li><span>Probability Seminar. Jiangsu Normal University, Jul. 2018.</span></li><li><span>The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.</span></li><li><span>Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.</span></li></ul></li></ul><h2 id='links'><span>Links</span></h2><ul><li><span>I am currently one of the organizers of the </span><a href='https://probability.technion.ac.il/seminar/'><span>Technion probability seminar</span></a><span> jointly with </span><a href='https://sites.google.com/view/maximilianfels/home'><span>Maximilian Fels</span></a></li><li><span>I am maitaining </span><a href='https://space.bilibili.com/151014650'><span>the bilibili channel</span></a><span> for </span><a href='https://www.owprobability.org'><span>the One World Probability Seminar</span></a></li><li><span>My </span><a href='https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf'><span>Phd Thesis</span></a></li><li><span>I was the teaching assistant of class </span><a href='http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm'><em><span>Stochastic processes</span></em></a><span> at Peking University, spring 2019. Here are my </span><a href='Files/HW.html'><span>Solutions to the homeworks</span></a></li><li><span>I was the organizer of the </span><a href='Files/Prob_Welcome_Seminar.html'><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></a>
+<div id='write'  class=''><h1 id='zhenyao-suns-home-page'><span>Zhenyao Sun&#39;s Home Page</span></h1><ul><li><img src="selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/><span>I am a Postdoc student of </span><a href='https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html'><span>The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology</span></a><span> hosted by </span><a href='https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/'><span>Prof. Leonid Mytnik</span></a><span>. </span></li><li><span>Before, I got my Ph.D. at the </span><a href='https://www.math.pku.edu.cn/puremath_en/'><span>School of Mathematical Sciences at Peking University</span></a><span> under the supervision of </span><a href='http://www.math.pku.edu.cn/teachers/renyx/indexE.htm'><span>Prof. Yan-Xia Ren</span></a><span>. </span></li><li><span>I also visited </span><a href='https://faculty.math.illinois.edu/~rsong/'><span>Prof. Renming Song</span></a><span> as a joint Ph.D. student at </span><a href='https://math.illinois.edu/'><span>Mathematics at the University of Illinois at Urbana-Champaign</span></a><span>. </span></li><li><span>I got my B.S. at the School of Mathematical Sciences at Peking University. </span></li><li><span>My research interest is probability theory, with a focus on models related to population dynamics. </span></li><li><span>Email: zhenyao dot sun at gmail dot com</span></li><li><span>Office: 411 Cooper Building, Haifa, Israel. </span></li></ul><h2 id='preprints'><span>Preprints</span></h2><ol start='' ><li><a href='https://arxiv.org/pdf/2211.15298.pdf'><span>C. Barnes, L. Mytnik, and Z. Sun: </span><em><span>On the coming down from infinity of coalescing Brownian motions.</span></em></a></li><li><a href='https://arxiv.org/pdf/2112.15184.pdf'><span>R. Liu, Y.-X. Ren, R. Song, and Z. Sun: </span><em><span>Subcritical superprocesses conditioned on non-extinction.</span></em></a></li><li><a href='https://arxiv.org/pdf/2107.09377.pdf'><span>C. Barnes, L. Mytnik, and Z. Sun: </span><em><span>Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.</span></em></a></li></ol><h2 id='publications'><span>Publications</span></h2><ol start='' ><li><p><a href='https://link.springer.com/article/10.1007/s10114-022-0559-y'><span>Y.-X. Ren, R. Song, Z. Sun and J. Zhao: </span><em><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.</span></em><span> Acta Math. Sin. (Engl. Ser.) 2022.</span></a><span> </span><a href='https://arxiv.org/abs/2005.11731'><span>(arXiv version)</span></a></p></li><li><p><a href='https://www.sciencedirect.com/science/article/abs/pii/S0304414920304051'><span>R. Liu, Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Quasi-stationary distributions for subcritical superprocesses.</span></em><span> Stochastic Process. Appl. 2021.</span></a><span> </span><a href='https://arxiv.org/abs/2001.06697'><span>(arXiv version)</span></a></p></li><li><p><a href='https://doi.org/10.1016/j.spa.2020.01.001'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Limit theorems for a class of critical superprocesses with stable branching.</span></em><span> Stochastic Process. Appl. 2020.</span></a><span> </span><a href='https://arxiv.org/abs/1807.02837'><span>(arXiv version)</span></a></p><ul><li><span>There is an inaccuracy when we are citing H. Kesten, P. Ney and F. Spitzer’s 1966 paper: we can not obtain (1.2) when </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="6.571ex" height="1.505ex" role="img" focusable="false" viewBox="0 -583 2904.6 665" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.186ex;"><defs><path id="MJX-1-TEX-I-1D70E" d="M184 -11Q116 -11 74 34T31 147Q31 247 104 333T274 430Q275 431 414 431H552Q553 430 555 429T559 427T562 425T565 422T567 420T569 416T570 412T571 407T572 401Q572 357 507 357Q500 357 490 357T476 358H416L421 348Q439 310 439 263Q439 153 359 71T184 -11ZM361 278Q361 358 276 358Q152 358 115 184Q114 180 114 178Q106 141 106 117Q106 67 131 47T188 26Q242 26 287 73Q316 103 334 153T356 233T361 278Z"></path><path id="MJX-1-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-1-TEX-N-221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D70E" xlink:href="#MJX-1-TEX-I-1D70E"></use></g><g data-mml-node="mo" transform="translate(848.8,0)"><use data-c="3D" xlink:href="#MJX-1-TEX-N-3D"></use></g><g data-mml-node="mi" transform="translate(1904.6,0)"><use data-c="221E" xlink:href="#MJX-1-TEX-N-221E"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>σ</mi><mo>=</mo><mi mathvariant="normal">∞</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">\sigma = \infty</script><span>. This does not affect the other part of the paper. </span></li></ul></li><li><p><a href='https://projecteuclid.org/euclid.ejp/1576638110'><span>Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: </span><em><span>Stable central limit theorems for super Ornstein-Uhlenbeck processes</span></em><span>. Electron. J. Probab. 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1903.03751'><span>(arXiv version)</span></a></p></li><li><p><a href='https://doi.org/10.1007/s10440-019-00243-7'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>Spine decompositions and limit theorems for a class of critical superprocesses.</span></em><span> Acta Appl Math 2019.</span></a><span> </span><a href='https://arxiv.org/abs/1711.09188'><span>(arXiv version)</span></a><span> </span></p></li><li><p><a href='https://doi.org/10.1214/18-ECP143'><span>Y.-X. Ren, R. Song and Z. Sun: </span><em><span>A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom&#39;s theorem.</span></em><span> Electron. Commun. Probab. 2018.</span></a><span> </span><a href='https://arxiv.org/abs/1706.07125'><span>(arXiv version)</span></a></p></li><li><p><a href='Files/胡2011限购.pdf'><span>T. Hu and Z. Sun: </span><em><span>Purchase limit policy and social welfare: A theoretical exploration.</span></em><span>  Economic Science. 2011. (In Chinese)</span></a></p></li></ol><h2 id='slides'><span>Slides</span></h2><ul><li><p><a href='Files/Qprocess.pdf'><span>Subcritical superprocesses conditioned on non-extinction</span></a></p><ul><li><span>The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.</span></li></ul></li><li><p><a href='Files/ComingDown.pdf'><span>On the coming down from infinity of coalescing Brownian motions</span></a></p><ul><li><span>Probability Seminar, Beijing Institute of Technology, Oct. 2022.</span></li><li><span>The 42nd Conference on Stochastic Processes and their Applications, June 2022. </span></li><li><span>Internatinal Talents Forum, Nankai University, June 2022.</span></li><li><span>Probability Seminar, Technion, June 2022. </span></li><li><span>Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.</span></li><li><span>From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.</span></li><li><span>Probability Seminar, Fujian Normal University, April 2022.</span></li></ul></li></ul><ul><li><p><a href='Files/WaveSpeed.pdf'><span>Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift</span></a></p><ul><li><span>Probability Seminar, NanKai University, Oct. 2021.</span></li><li><span>The 6th Bath-Beijing-Paris meeting on Branching Structure, University of Bath, Sept. 2021.</span></li><li><span>The 7th Workshop on Branching Markov Processes and Relative Topics, Peking University, June. 2021.</span></li><li><span>The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.</span></li><li><span>Probability seminar, Wuhan University, Mar. 2021.</span></li><li><span>Probability seminar, THU-PKU-BNU Joint Probability Webinar, Nov. 2020.</span></li></ul></li><li><p><a href='subyaglom/files/subyaglom_talk.pdf'><span>Quasi-stationary distributions for subcritical superprocesses</span></a></p><ul><li><span>The Bernoulli-IMS One World Symposium, Aug. 2020. </span></li><li><span>The 3rd Haifa Probability School, Technion, Feb. 2020.</span></li></ul></li><li><p><a href='Files/Zhenyao2020Oct.pdf'><span>Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes</span></a></p><ul><li><span>Workshop on non-local operators and related topics, Peking University, Aug. 2019.</span></li><li><span>The 6th International Conference on Random Dynamical Systems, Shanghai Normal University, Jul. 2019.</span></li><li><span>Probability Seminar, Beijing Normal University, Apr. 2019.</span></li></ul></li><li><p><a href='Files/2018JSNU.pdf'><span>Limit theorems for a class of critical superprocesses with stable branching</span></a><span> </span></p><ul><li><span>Beijing-Tianjin-Hebei Youth Probability Statistics Symposium, University of International Business and Economics, June, 2019.</span></li><li><span>The 2nd Conference on Probability and Statistics for Chinese Young Scholars. Jiangsu Normal University, Oct. 2018.</span></li><li><span>Probability Seminar. Beijing Jiaotong University, Sept. 2018.</span></li><li><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></li></ul></li><li><p><a href='Files/RenSongSun2018Spine.pdf'><span>Spine decompositions and limit theorems for a class of critical superprocesses</span></a></p><ul><li><span>Probability Seminar. Wuhan University, Mar. 2019.</span></li><li><span>Academic Luncheon with Math Students. Peking University, Nov. 2018.</span></li><li><span>Probability Seminar. Jiangsu Normal University, Jul. 2018.</span></li><li><span>The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.</span></li><li><span>Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.</span></li></ul></li></ul><h2 id='links'><span>Links</span></h2><ul><li><span>I am currently one of the organizers of the </span><a href='https://probability.technion.ac.il/seminar/'><span>Technion probability seminar</span></a><span> jointly with </span><a href='https://sites.google.com/view/maximilianfels/home'><span>Maximilian Fels</span></a></li><li><span>I am maintaining </span><a href='https://space.bilibili.com/151014650'><span>the bilibili channel</span></a><span> for </span><a href='https://www.owprobability.org'><span>the One World Probability Seminar</span></a></li><li><span>My </span><a href='https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf'><span>Phd Thesis</span></a></li><li><span>I was the teaching assistant of class </span><a href='http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm'><em><span>Stochastic processes</span></em></a><span> at Peking University, spring 2019. Here are my </span><a href='Files/HW.html'><span>Solutions to the homeworks</span></a></li><li><span>I was the organizer of the </span><a href='Files/Prob_Welcome_Seminar.html'><span>Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.</span></a>
 <!-- Go to www.addthis.com/dashboard to customize your tools --><span> </span><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script><span> </span></li></ul></div></div>
 </body>
 </html>
