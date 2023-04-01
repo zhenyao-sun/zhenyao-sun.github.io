@@ -5,13 +5,14 @@ title: Zhenyao Sun's Home Page
 
 # Zhenyao Sun's Home Page
 
-- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am a Postdoc student of [The Faculty of Industrial Engineering and Management at the Technion - Israel Institute of Technology](https://web.iem.technion.ac.il/en/programs/undergraduate/industrial-engineering-and-management/about.html) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
-- Before, I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
+- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathmatics and Statistics at Beijint Institute of Technology](https://math.bit.edu.cn/)
+- Before, I was a Postdoc student of [Faculty of Data and Decision Sciences at the Technion - Israel Institute of Technology](https://dds.technion.ac.il/) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
+- I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
 - I got my B.S. at the School of Mathematical Sciences at Peking University. 
 - My research interest is probability theory, with a focus on models related to population dynamics. 
 - Email: zhenyao dot sun at gmail dot com
-- Office: 411 Cooper Building, Haifa, Israel. 
+- Office: 411B Wen-Cui building E, Beijing Institute of Technology Liangxiang, Beijing. 
 
 ## Preprints
 1. [L. Qian, and Z. Sun: *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
@@ -52,7 +53,7 @@ title: Zhenyao Sun's Home Page
   - The 8th Student Probability Day in Memory of Oded Schramm, Weizmann, May 2021.
   - Probability seminar, Wuhan University, Mar. 2021.
   - Probability seminar, THU-PKU-BNU Joint Probability Webinar, Nov. 2020.
-- [Quasi-stationary distributions for subcritical superprocesses](subyaglom/files/subyaglom_talk.pdf)
+- [Quasi-stationary distributions for subcritical superprocesses](Files/subyaglom_talk.pdf)
   - The Bernoulli-IMS One World Symposium, Aug. 2020. 
   - The 3rd Haifa Probability School, Technion, Feb. 2020.
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](Files/Zhenyao2020Oct.pdf)
@@ -72,8 +73,8 @@ title: Zhenyao Sun's Home Page
   - Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.
 
 ## Links
-- I am currently one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home)
 - I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
+- I was one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home) in 2022
 - My [Phd Thesis](https://zhenyao-sun.github.io/MyPkuPhdThesis/doc/example/thesis.pdf)
 - I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
 - I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
