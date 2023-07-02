@@ -5,7 +5,7 @@ title: Zhenyao Sun's Home Page
 
 # Zhenyao Sun's Home Page
 
-- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathmatics and Statistics at Beijint Institute of Technology](https://math.bit.edu.cn/)
+- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathmatics and Statistics at Beijing Institute of Technology](https://math.bit.edu.cn/)
 - Before, I was a Postdoc student of [Faculty of Data and Decision Sciences at the Technion - Israel Institute of Technology](https://dds.technion.ac.il/) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
 - I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
@@ -17,7 +17,7 @@ title: Zhenyao Sun's Home Page
 ## Preprints
 1. [L. Qian, and Z. Sun: *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
 1. [C. Barnes, L. Mytnik, and Z. Sun: *On the coming down from infinity of coalescing Brownian motions.* To appear in Ann. Probab.](Files/Papers/paper9.pdf)
-1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.* To appear in Stochastic Process. Appl.](Files/Papers/paper7.pdf)
+1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.* To appear in Stochastic Process. Appl.](Files/Papers/2112.15184v2.pdf)
 1. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* To appear in Ann. Inst. Henri Poincaré Probab. Stat.](Files/Papers/paper8.pdf)
 
 ## Publications
@@ -31,12 +31,25 @@ title: Zhenyao Sun's Home Page
 1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](Files/Papers/paper1.pdf)
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/Papers/paper0.pdf)
 
+## Links
+- I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
+- I was one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home) in 2022
+- My [Phd Thesis](Files/thesis.pdf)
+- I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
+- I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
+
 ## Slides
+
+* On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
+  * Seminar on discrete probability and related problem, Sichuan University, June-July 2023
+  * Probability Seminar, Peking University, May 2023
+  * Workshop on SPDEs and Related Fields, Yanqi Lake Beijing Institute of Mathematical Sciences and Application, April 2023
 
 * [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
   * The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.
 
 * [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
+  * Probability Seminar, Beijing Normal University, June 2023.
   * Probability Seminar, Beijing Institute of Technology, Oct. 2022.
   * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
   * Internatinal Talents Forum, Nankai University, June 2022.
@@ -73,10 +86,4 @@ title: Zhenyao Sun's Home Page
   - The 4th Workshop on Branching Processes and Related Topics. East China Normal University. May, 2018.
   - Probability Seminar, University of Illinois at Urbana-Champaign, Nov. 2017.
 
-## Links
-- I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
-- I was one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home) in 2022
-- My [Phd Thesis](Files/thesis.pdf)
-- I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
-- I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
 <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script> 
