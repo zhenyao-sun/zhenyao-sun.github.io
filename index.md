@@ -17,11 +17,12 @@ title: Zhenyao Sun's Home Page
 ## Preprints
 1. [L. Qian, and Z. Sun: *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
 1. [C. Barnes, L. Mytnik, and Z. Sun: *On the coming down from infinity of coalescing Brownian motions.* To appear in Ann. Probab.](Files/Papers/paper9.pdf)
-1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.* To appear in Stochastic Process. Appl.](Files/Papers/2112.15184v2.pdf)
 1. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* To appear in Ann. Inst. Henri Poincaré Probab. Stat.](Files/Papers/paper8.pdf)
 
 ## Publications
 
+
+1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.* Stochastic Process. Appl. 2023](Files/Papers/SPA2023.pdf)
 1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) 2022.](Files/Papers/paper5.pdf) 
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2021.](Files/Papers/paper4.pdf) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](Files/Papers/paper3.pdf) 
@@ -41,10 +42,11 @@ title: Zhenyao Sun's Home Page
 ## Slides
 
 * On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
+  * The 18th workshop on Markov Processes and Related Topics, Tianjin University, July-Aug 2023
   * Seminar on discrete probability and related problem, Sichuan University, June-July 2023
   * Probability Seminar, Peking University, May 2023
   * Workshop on SPDEs and Related Fields, Yanqi Lake Beijing Institute of Mathematical Sciences and Application, April 2023
-
+  
 * [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
   * The 8th workshop on branching Markov processes and related topics, Peking University, Aug 2022.
 
@@ -54,11 +56,11 @@ title: Zhenyao Sun's Home Page
   * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
   * Internatinal Talents Forum, Nankai University, June 2022.
   * Probability Seminar, Technion, June 2022. 
-  
+
   * Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.
   * From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.
   * Probability Seminar, Fujian Normal University, April 2022.
-  
+
 
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
   - Probability Seminar, NanKai University, Oct. 2021.
