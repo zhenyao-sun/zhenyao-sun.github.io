@@ -42,6 +42,7 @@ title: Zhenyao Sun's Home Page
 ## Slides
 
 * On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
+  * The 8th National probability Annal Meeting, Fujian Normal University, Aug 2023.
   * The 18th workshop on Markov Processes and Related Topics, Tianjin University, July-Aug 2023
   * Seminar on discrete probability and related problem, Sichuan University, June-July 2023
   * Probability Seminar, Peking University, May 2023
