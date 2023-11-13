@@ -33,6 +33,7 @@ title: Zhenyao Sun's Home Page
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/Papers/paper0.pdf)
 
 ## Links
+
 - I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
 - I was one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home) in 2022
 - My [Phd Thesis](Files/thesis.pdf)
@@ -41,7 +42,10 @@ title: Zhenyao Sun's Home Page
 
 ## Slides
 
+
 * On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
+  
+  * Youth Probability Forum, Academy of Mathematics and Systems Science, Nov 2023.
   * The 8th National probability Annal Meeting, Fujian Normal University, Aug 2023.
   * The 18th workshop on Markov Processes and Related Topics, Tianjin University, July-Aug 2023
   * Seminar on discrete probability and related problem, Sichuan University, June-July 2023
@@ -58,12 +62,10 @@ title: Zhenyao Sun's Home Page
   * The 42nd Conference on Stochastic Processes and their Applications, June 2022. 
   * Internatinal Talents Forum, Nankai University, June 2022.
   * Probability Seminar, Technion, June 2022. 
-  
+
   * Branching system, reaction-diffusionequations and Population models, Centre de Recherches Mathématiques, May 2022.
   * From Birth-Death processes and Brownian Motions to Superprocesses, Xiangtan University, April 2022.
   * Probability Seminar, Fujian Normal University, April 2022.
-  
-
 
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
   - Probability Seminar, NanKai University, Oct. 2021.
