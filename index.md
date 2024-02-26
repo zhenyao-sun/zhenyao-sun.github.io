@@ -10,21 +10,22 @@
 - Office: 411B Wen-Cui building E, Beijing Institute of Technology Liangxiang, Beijing. 
 
 ## Preprints
-1. [L. Qian, and Z. Sun: *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
-1. [C. Barnes, L. Mytnik, and Z. Sun: *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* To appear in Ann. Inst. Henri Poincaré Probab. Stat.](Files/Papers/paper8.pdf)
+1. [C. Barnes, L. Mytnik, and Z. Sun, *Wright-Fisher stochastic heat equations with irregular drifts.*](Files/Papers/paper11.pdf)
+1. [L. Qian, and Z. Sun, *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
+1. [C. Barnes, L. Mytnik, and Z. Sun, *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* To appear in Ann. Inst. Henri Poincaré Probab. Stat.](Files/Papers/paper8.pdf)
 
 ## Publications
 
-1. [C. Barnes, L. Mytnik, and Z. Sun: *On the coming down from infinity of coalescing Brownian motions.* Ann. Probab. 2024](Files/Papers/paper9.pdf)
-1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun: *Subcritical superprocesses conditioned on non-extinction.* Stochastic Process. Appl. 2023](Files/Papers/SPA2023.pdf)
-1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) 2022.](Files/Papers/paper5.pdf) 
-1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. 2021.](Files/Papers/paper4.pdf) 
-1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. 2020.](Files/Papers/paper3.pdf) 
+1. [C. Barnes, L. Mytnik, and Z. Sun, *On the coming down from infinity of coalescing Brownian motions.* Ann. Probab. **52** (2024), no. 1, 67-92](Files/Papers/paper9.pdf)
+1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun, *Subcritical superprocesses conditioned on non-extinction.* Stochastic Process. Appl. **163** (2023), 498-534.](Files/Papers/SPA2023.pdf)
+1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) **38** (2022), no. 3, 487-498.](Files/Papers/paper5.pdf) 
+1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. **132** (2021), 108-134.](Files/Papers/paper4.pdf) 
+1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. **130** (2020), no. 7, 4358-4391.](Files/Papers/paper3.pdf) 
    - There is a mistake when we cite H. Kesten, P. Ney and F. Spitzer’s 1966 paper: we can not obtain (1.2) when $\sigma = \infty$. This does not affect the other part of the paper. 
-1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. 2019.](Files/Papers/paper6.pdf) 
-1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta Appl Math 2019.](Files/Papers/paper2.pdf) 
-1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. 2018.](Files/Papers/paper1.pdf)
-1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. 2011. (In Chinese)](Files/Papers/paper0.pdf)
+1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. **24** (2019), Paper no. 141, 42 pp.](Files/Papers/paper6.pdf) 
+1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta. Appl. Math. **165** (2020), 91-131.](Files/Papers/paper2.pdf) 
+1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. **23** (2018), Paper no. 42, 12 pp.](Files/Papers/paper1.pdf)
+1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. **6** (2011), 42-50, in Chinese.](Files/Papers/paper0.pdf)
 
 ## Links
 
@@ -36,7 +37,7 @@
 
 ## Slides
 
-- On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
+- [Wright-Fisher stochastic heat equations with irregular drifts.](Files/Irregular.pdf)
 - [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
 - [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
