@@ -1,6 +1,5 @@
 ---
 title: Zhenyao Sun's Home Page
-
 ---
 
 # Zhenyao Sun's Home Page
@@ -53,5 +52,3 @@ title: Zhenyao Sun's Home Page
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](Files/Zhenyao2020Oct.pdf)
 - [Limit theorems for a class of critical superprocesses with stable branching](Files/2018JSNU.pdf) 
 - [Spine decompositions and limit theorems for a class of critical superprocesses](Files/RenSongSun2018Spine.pdf)
-
-<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f27a8ff1558d6f"></script> 
