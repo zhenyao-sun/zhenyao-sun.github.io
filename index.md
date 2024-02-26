@@ -1,7 +1,3 @@
----
-title: Zhenyao Sun's Home Page
----
-
 # Zhenyao Sun's Home Page
 
 - <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathmatics and Statistics at Beijing Institute of Technology](https://math.bit.edu.cn/)
@@ -40,13 +36,9 @@ title: Zhenyao Sun's Home Page
 
 ## Slides
 
-
-* On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
-  
-* [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
-  
-* [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
-
+- On the regularisation of reaction-diffusion equations by Wight-Fisher white noise
+- [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
+- [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
 - [Quasi-stationary distributions for subcritical superprocesses](Files/subyaglom_talk.pdf)
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](Files/Zhenyao2020Oct.pdf)
