@@ -5,7 +5,7 @@
 - I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
 - I got my B.S. at the School of Mathematical Sciences at Peking University. 
-- My research interest is probability theory, with a focus on models related to population dynamics. 
+- My research interest is probability theory, with a focus on models related to branching processes. 
 - Email: zhenyao dot sun at gmail dot com
 - Office: 411B Wen-Cui building E, Beijing Institute of Technology Liangxiang, Beijing. 
 
@@ -37,7 +37,7 @@
 
 ## Slides
 
-- [Wright-Fisher stochastic heat equations with irregular drifts.](Files/Irregular.pdf)
+- [Wright-Fisher stochastic heat equations with irregular drifts](Files/Irregular.pdf)
 - [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
 - [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
