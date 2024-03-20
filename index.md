@@ -27,14 +27,6 @@
 1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. **23** (2018), Paper no. 42, 12 pp.](Files/Papers/paper1.pdf)
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. **6** (2011), 42-50, in Chinese.](Files/Papers/paper0.pdf)
 
-## Links
-
-- I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
-- I was one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home) in 2022
-- My [Phd Thesis](Files/thesis.pdf)
-- I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
-- I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
-
 ## Slides
 
 - [Wright-Fisher stochastic heat equations with irregular drifts](Files/Irregular.pdf)
@@ -45,3 +37,20 @@
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](Files/Zhenyao2020Oct.pdf)
 - [Limit theorems for a class of critical superprocesses with stable branching](Files/2018JSNU.pdf) 
 - [Spine decompositions and limit theorems for a class of critical superprocesses](Files/RenSongSun2018Spine.pdf)
+
+## Events
+
+
+- [2024 Mar. 21-27, Beijing, Workshop on Interactive Particle Systems and Stochastic Analysis](https://www.bimsa.cn/newsinfo/902811.html)
+- [2024 July 8-12, Chicago, Two-Dimensional Random Geometry](https://www.imsi.institute/activities/two-dimensional-random-geometry/)
+- [2024 July 15-19, Chicago, Recent Progress in Stochastic Analysis and its Applications](https://sites.google.com/view/rpsaa2024/home)
+- [2024 Aug. 12-16, Bochum, 11th World Congress in Probability and Statistics](https://www.bernoulli-ims-worldcongress2024.org/)
+- 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
+
+## Links
+
+- I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
+- I was one of the organizers of the [Technion probability seminar](https://probability.technion.ac.il/seminar/) jointly with [Maximilian Fels](https://sites.google.com/view/maximilianfels/home) in 2022
+- My [Phd Thesis](Files/thesis.pdf)
+- I was the teaching assistant of class [*Stochastic processes*](http://www.math.pku.edu.cn/teachers/dayue/Homepage/instruction.htm) at Peking University, spring 2019. Here are my [Solutions to the homeworks](Files/HW.html)
+- I was the organizer of the [Welcome Workshop for New Students in Probability Group, Peking University, Sept. 2018.](Files/Prob_Welcome_Seminar.html)
