@@ -42,6 +42,7 @@
 
 - [2024 July 8-12, Chicago, Two-Dimensional Random Geometry](https://www.imsi.institute/activities/two-dimensional-random-geometry/)
 - [2024 July 15-19, Chicago, Recent Progress in Stochastic Analysis and its Applications](https://sites.google.com/view/rpsaa2024/home)
+- [2024 Aug. 5-9, Washington D.C., Summer School: PDE and Randomness](https://brinmrc.umd.edu/programs/schools/summer24/summer24-school-random.html)
 - [2024 Aug. 12-16, Bochum, 11th World Congress in Probability and Statistics](https://www.bernoulli-ims-worldcongress2024.org/)
 - 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
 
