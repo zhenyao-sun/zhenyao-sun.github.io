@@ -46,6 +46,11 @@
 - [2024 Aug. 12-16, Bochum, 11th World Congress in Probability and Statistics](https://www.bernoulli-ims-worldcongress2024.org/)
 - 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
 
+## Teaching
+
+* 2024 Fall, Topics in Probability theory, Beijing Institute of Technology 
+* 2023 Fall, Topics in Probability theory, Beijing Institute of Technology 
+
 ## Links
 
 - I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
