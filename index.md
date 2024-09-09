@@ -40,13 +40,16 @@
 
 ## Events
 
-- [2024 Aug. 12-16, Bochum, 11th World Congress in Probability and Statistics](https://www.bernoulli-ims-worldcongress2024.org/)
 - 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
 
 ## Teaching
 
 * 2024 Fall, Topics in Probability theory, Beijing Institute of Technology 
-* 2023 Fall, Topics in Probability theory, Beijing Institute of Technology 
+  * [教学大纲.doc](Classes/概率论选讲教学大纲.doc) (包含考核标准)
+  * [教学日历.doc](Classes/概率论选讲教学日历.doc) (包含上课时间地点、学术报告提交截止日期)
+  * [1_Measure_Theory.pdf](Classes/1_Measure_Theory.pdf)
+
+* 2023 Fall, Topics in Probability theory, Beijing Institute of Technology
 
 ## Links
 
