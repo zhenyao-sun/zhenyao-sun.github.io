@@ -41,6 +41,7 @@
 ## Events
 
 - 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
+- [2024 Dec. 16-20, Abu Dhubi, The 14th AIMS conference](https://www.aimsconference.org/conferences/2024/index.html)
 
 ## Teaching
 
