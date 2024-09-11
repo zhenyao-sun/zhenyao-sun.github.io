@@ -40,10 +40,12 @@
 
 ## Events
 
+- 2024 Nov. 7-10, Xiamen, 第十三届全国概率统计会议
 - 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
 - [2024 Dec. 16-20, Abu Dhubi, The 14th AIMS conference](https://www.aimsconference.org/conferences/2024/index.html)
+- 2025 Sept. 8-12, Bucharest,12th international conference on stochastic analysis and its applications
 
-## Teaching
+## Teachings
 
 * 2024 Fall, Topics in Probability theory, Beijing Institute of Technology 
   * 上课时间地点：周一和周三 15:15--17:40 文萃楼 F202
