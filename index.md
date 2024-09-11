@@ -47,11 +47,12 @@
 
 * 2024 Fall, Topics in Probability theory, Beijing Institute of Technology 
   * 上课时间地点：周一和周三 15:15--17:40 文萃楼 F202
-  * 答疑时间地点：周二 14:00--17:00 文萃楼E 411
+  * 答疑时间地点：周二 14:00--17:00 文萃楼 E411
   * [教学大纲.doc](Classes/概率论选讲教学大纲.doc) (含考核标准)
   * [教学日历.doc](Classes/概率论选讲教学日历.doc) (含具体上课、答疑日期和学术报告提交截止日期)
-  * [1_Measure_Theory.pdf](Classes/1_Measure_Theory.pdf)
-
+  * [1_Measure_Theory.pdf](Classes/1_Measure_Theory.pdf) and [Two envelopes problem](https://en.wikipedia.org/wiki/Two_envelopes_problem)
+  * [2_Independence.pdf](Classes/2_Independence.pdf) and [Why does the Cauchy distribution have no mean?](https://stats.stackexchange.com/questions/36027/why-does-the-cauchy-distribution-have-no-mean)
+  
 * 2023 Fall, Topics in Probability theory, Beijing Institute of Technology
 
 ## Links
