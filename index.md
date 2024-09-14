@@ -54,7 +54,7 @@
   * [教学日历.doc](Classes/概率论选讲教学日历.doc) (含具体上课、答疑日期和学术报告提交截止日期)
   * [1_Measure_Theory.pdf](Classes/1_Measure_Theory.pdf) and [Two envelopes problem](https://en.wikipedia.org/wiki/Two_envelopes_problem)
   * [2_Independence.pdf](Classes/2_Independence.pdf) and [Why does the Cauchy distribution have no mean?](https://stats.stackexchange.com/questions/36027/why-does-the-cauchy-distribution-have-no-mean)
-  * [3_Martingales.pdf](https://zhenyao-sun.github.io/Classes/3_Martingales.pdf) and [Martingale betting strategy](https://en.wikipedia.org/wiki/Martingale_(betting_system))
+  * [3_Martingales.pdf](Classes/3_Martingales.pdf) and [Martingale betting strategy](https://en.wikipedia.org/wiki/Martingale_(betting_system))
   
 * 2023 Fall, Topics in Probability theory, Beijing Institute of Technology
 
