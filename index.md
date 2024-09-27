@@ -42,8 +42,9 @@
 
 - 2024 Nov. 7-10, Xiamen, 第十三届全国概率统计会议
 - 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
+- 2024 Nov. 22-24, Beijing, 北京数学会学术年会 
 - [2024 Dec. 16-20, Abu Dhubi, The 14th AIMS conference](https://www.aimsconference.org/conferences/2024/index.html)
-- 2025 Sept. 8-12, Bucharest,12th international conference on stochastic analysis and its applications
+- 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
 
 ## Teachings
 
@@ -58,8 +59,9 @@
   * [4_Markov_Process.pdf](Classes/4_Markov_Process.pdf) and Why do we need regularly conditional distribution?
   * [5_Brownian_Motion.pdf](Classes/5_Brownian_Motion.pdf) and [Evidence for Atoms](https://chem.libretexts.org/Courses/Southeast_Missouri_State_University/CH185%3A_General_Chemistry_(Ragain)/02%3A_Atoms_and_Elements/2.01%3A_Brownian_Motion_-_Evidence_for_Atoms)
   * [6_Ito_calculus.pdf](Classes/6_Ito_calculus.pdf) and [Trillon dollars equations](https://www.bilibili.com/video/BV1CF4m157Zv/?spm_id_from=333.337.search-card.all.click&vd_source=59bcf31c74f9c0f807c705c965b4411e)
-  * 
-  
+  * 7_Large_Deviation
+  * 8_Ergodic_Theory
+  * 9_Random_Measures
 * 2023 Fall, Topics in Probability theory, Beijing Institute of Technology
 
 ## Links
