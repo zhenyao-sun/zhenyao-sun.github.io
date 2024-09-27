@@ -56,6 +56,9 @@
   * [2_Independence.pdf](Classes/2_Independence.pdf) and [Why does the Cauchy distribution have no mean?](https://stats.stackexchange.com/questions/36027/why-does-the-cauchy-distribution-have-no-mean)
   * [3_Martingales.pdf](Classes/3_Martingales.pdf) and [Martingale betting strategy](https://en.wikipedia.org/wiki/Martingale_(betting_system))
   * [4_Markov_Process.pdf](Classes/4_Markov_Process.pdf) and Why do we need regularly conditional distribution?
+  * [5_Brownian_Motion.pdf](Classes/5_Brownian_Motion.pdf) and [Evidence for Atoms](https://chem.libretexts.org/Courses/Southeast_Missouri_State_University/CH185%3A_General_Chemistry_(Ragain)/02%3A_Atoms_and_Elements/2.01%3A_Brownian_Motion_-_Evidence_for_Atoms)
+  * [6_Ito_calculus.pdf](Classes/6_Ito_calculus.pdf) and [Trillon dollars equations](https://www.bilibili.com/video/BV1CF4m157Zv/?spm_id_from=333.337.search-card.all.click&vd_source=59bcf31c74f9c0f807c705c965b4411e)
+  * 
   
 * 2023 Fall, Topics in Probability theory, Beijing Institute of Technology
 
