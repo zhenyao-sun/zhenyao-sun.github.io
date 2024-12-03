@@ -12,11 +12,11 @@
 ## Preprints
 1. [C. Barnes, L. Mytnik, and Z. Sun, *Wright-Fisher stochastic heat equations with irregular drifts.*](Files/Papers/paper11.pdf)
 1. [L. Qian, and Z. Sun, *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
-1. [C. Barnes, L. Mytnik, and Z. Sun, *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* To appear in Ann. Inst. Henri Poincaré Probab. Stat.](Files/Papers/paper8.pdf)
 
 ## Publications
 
-1. [C. Barnes, L. Mytnik, and Z. Sun, *On the coming down from infinity of coalescing Brownian motions.* Ann. Probab. **52** (2024), no. 1, 67-92](Files/Papers/paper9.pdf)
+1. [C. Barnes, L. Mytnik, and Z. Sun, *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* Ann. Inst. H. Poincaré Probab. Statist. **60** (2024), no. 4, 2382-2414](Files/Papers/2024AIHP.pdf)
+2. [C. Barnes, L. Mytnik, and Z. Sun, *On the coming down from infinity of coalescing Brownian motions.* Ann. Probab. **52** (2024), no. 1, 67-92](Files/Papers/paper9.pdf)
 1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun, *Subcritical superprocesses conditioned on non-extinction.* Stochastic Process. Appl. **163** (2023), 498-534.](Files/Papers/SPA2023.pdf)
 1. [Y.-X. Ren, R. Song, Z. Sun and J. Zhao: *Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes, II.* Acta Math. Sin. (Engl. Ser.) **38** (2022), no. 3, 487-498.](Files/Papers/paper5.pdf) 
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. **132** (2021), 108-134.](Files/Papers/paper4.pdf) 
@@ -40,10 +40,9 @@
 
 ## Events
 
-- 2024 Nov. 7-10, Xiamen, 第十三届全国概率统计会议
-- 2024 Nov. 11-15, Shenzhen, The 10th Workshop on Branching Processes and Related Topics
-- 2024 Nov. 22-24, Beijing, 北京数学会学术年会 
 - [2024 Dec. 16-20, Abu Dhubi, The 14th AIMS conference](https://www.aimsconference.org/conferences/2024/index.html)
+- 2025 Jan. 6-10, Sanya, Conference on Probability and Statistical Physics
+- 2025 May, Kyoto, 3rd China-Japan-Korea Joint Probability Workshop
 - 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
 
 ## Teachings
