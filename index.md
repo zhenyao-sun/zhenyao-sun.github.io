@@ -10,6 +10,7 @@
 - Office: 411B Wen-Cui building E, Beijing Institute of Technology Liangxiang, Beijing. 
 
 ## Preprints
+1. [H. Hou and Z. Sun, *On the subcritical self-catalytic branching Brownian motions.*](Files/Papers/paper12.pdf)
 1. [C. Barnes, L. Mytnik, and Z. Sun, *Wright-Fisher stochastic heat equations with irregular drifts.*](Files/Papers/paper11.pdf)
 1. [L. Qian, and Z. Sun, *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/paper10.pdf)
 
@@ -29,6 +30,7 @@
 
 ## Slides
 
+- [On the Subcritical Self-Catalytic Branching Brownian Motions](Files/2024HouSunPresentation.pdf)
 - [Wright-Fisher stochastic heat equations with irregular drifts](Files/Irregular.pdf)
 - [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
 - [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
@@ -40,28 +42,14 @@
 
 ## Events
 
-- [2024 Dec. 16-20, Abu Dhubi, The 14th AIMS conference](https://www.aimsconference.org/conferences/2024/index.html)
-- 2025 Jan. 6-10, Sanya, Conference on Probability and Statistical Physics
 - 2025 May, Kyoto, 3rd China-Japan-Korea Joint Probability Workshop
 - 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
 
 ## Teachings
 
-* 2024 Fall, Topics in Probability theory, Beijing Institute of Technology 
-  * 上课时间地点：周一和周三 15:15--17:40 文萃楼 F202
-  * 答疑时间地点：周二 14:00--17:00 文萃楼 E411
-  * [教学大纲.doc](Classes/概率论选讲教学大纲.doc) (含考核标准)
-  * [教学日历.doc](Classes/概率论选讲教学日历.doc) (含具体上课、答疑日期和学术报告提交截止日期)
-  * [1_Measure_Theory.pdf](Classes/1_Measure_Theory.pdf) and [Two envelopes problem](https://en.wikipedia.org/wiki/Two_envelopes_problem)
-  * [2_Independence.pdf](Classes/2_Independence.pdf) and [Why does the Cauchy distribution have no mean?](https://stats.stackexchange.com/questions/36027/why-does-the-cauchy-distribution-have-no-mean)
-  * [3_Martingales.pdf](Classes/3_Martingales.pdf) and [Martingale betting strategy](https://en.wikipedia.org/wiki/Martingale_(betting_system))
-  * [4_Markov_Process.pdf](Classes/4_Markov_Process.pdf) and Why do we need regularly conditional distribution?
-  * [5_Brownian_Motion.pdf](Classes/5_Brownian_Motion.pdf) and [Evidence for Atoms](https://chem.libretexts.org/Courses/Southeast_Missouri_State_University/CH185%3A_General_Chemistry_(Ragain)/02%3A_Atoms_and_Elements/2.01%3A_Brownian_Motion_-_Evidence_for_Atoms)
-  * [6_Ito_calculus.pdf](Classes/6_Ito_calculus.pdf) and [Trillon dollars equations](https://www.bilibili.com/video/BV1CF4m157Zv/?spm_id_from=333.337.search-card.all.click&vd_source=59bcf31c74f9c0f807c705c965b4411e)
-  * 7_Large_Deviation
-  * 8_Ergodic_Theory
-  * 9_Random_Measures
-* 2023 Fall, Topics in Probability theory, Beijing Institute of Technology
+* 2025 Spring, Advanced Probbaility Theory, Beijing Institute of Technology
+* 2024 Fall, Topics in Probability Theory, Beijing Institute of Technology 
+* 2023 Fall, Topics in Probability Theory, Beijing Institute of Technology
 
 ## Links
 
