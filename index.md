@@ -42,8 +42,8 @@
 
 ## Events
 
-- 2025 May, Kyoto, 3rd China-Japan-Korea Joint Probability Workshop
 - 2025 Jun. 12-15, Changsha, Probability Annual Conference
+- [2025 July 1-4, Beijing, Stochastic Summer Seminar Series 2025](Events/SSSS2025.pdf)
 - 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
 
 ## Teachings
