@@ -1,6 +1,6 @@
 # Zhenyao Sun's Home Page
 
-- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathmatics and Statistics at Beijing Institute of Technology](https://math.bit.edu.cn/)
+- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathematics and Statistics at Beijing Institute of Technology](https://math.bit.edu.cn/)
 - Before, I was a Postdoc student of [Faculty of Data and Decision Sciences at the Technion - Israel Institute of Technology](https://dds.technion.ac.il/) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
 - I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
@@ -42,8 +42,7 @@
 
 ## Events
 
-- 2025 Jun. 12-15, Changsha, Probability Annual Conference
-- [2025 July 1-4, Beijing, Stochastic Summer Seminar Series 2025](Events/SSSS2025.pdf)
+- 2025 July 11-13, Chengdu, Probability workshop
 - 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
 
 ## Teachings
