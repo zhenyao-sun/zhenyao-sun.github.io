@@ -5,7 +5,7 @@
 - I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
 - I got my B.S. at the School of Mathematical Sciences at Peking University. 
-- My research interest is probability theory, with a focus on models related to branching processes. 
+- My research interest is probability theory, with a focus on models related to stochastic heat equations. 
 - Email: zhenyao dot sun at gmail dot com
 - Office: 411B Wen-Cui building E, Beijing Institute of Technology Liangxiang, Beijing. 
 
@@ -43,9 +43,13 @@
 ## Events
 
 - 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
+- 2025 Oct. 11-13, Beijing, Probability and A.I. workshop
+- 2025 Nov. 2-8, Kunming, Stochastic Analysis and its Applications 
 
 ## Teachings
 
+* 2025 Fall, Advanced Probbaility Theory, Beijing Institute of Technology
+* 2025 Fall, Probability Theory, Beijing Institute of Technology 
 * 2025 Spring, Advanced Probbaility Theory, Beijing Institute of Technology
 * 2024 Fall, Topics in Probability Theory, Beijing Institute of Technology 
 * 2023 Fall, Topics in Probability Theory, Beijing Institute of Technology
