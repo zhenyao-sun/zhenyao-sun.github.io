@@ -42,17 +42,13 @@
 
 ## Events
 
-- 2025 Sept. 8-12, Bucharest, 12th international conference on stochastic analysis and its applications
-- 2025 Oct. 11-13, Beijing, Probability and A.I. workshop
-- 2025 Nov. 2-8, Kunming, Stochastic Analysis and its Applications 
+- 2025 Dec. 12, Academy of Science, Probability seminar
+- 2025 Dec. 28-29, Beijing Institute of Technology, Workshop on Measure-valued Markov processes
 
 ## Teachings
 
 * 2025 Fall, Advanced Probbaility Theory, Beijing Institute of Technology
 * 2025 Fall, Probability Theory, Beijing Institute of Technology 
-* 2025 Spring, Advanced Probbaility Theory, Beijing Institute of Technology
-* 2024 Fall, Topics in Probability Theory, Beijing Institute of Technology 
-* 2023 Fall, Topics in Probability Theory, Beijing Institute of Technology
 
 ## Links
 
