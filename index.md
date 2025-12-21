@@ -44,6 +44,9 @@
 
 - 2025 Dec. 12, Academy of Science, Probability seminar
 - 2025 Dec. 28-29, Beijing Institute of Technology, Workshop on Measure-valued Markov processes
+- 2026 Jan. 08-11, Harbin Institute of Technology, Workshop on Probability Theory
+- 2026 Jun. 01-19, Peking University, Summer School on Quntum Fields Theory
+- 2026 July 06-10, National and Kapodistrian University of Athens, The 15th AIMS conference
 
 ## Teachings
 
