@@ -708,7 +708,7 @@
 
                 } catch (err) {
                     console.error("Modal fetch error:", err);
-                    list.innerHTML = '<div style="text-align: center; color: #ff6b6b; padding: 30px 0; font-size: 14px;">网络连接断开或无法触达云端</div>';
+                    list.innerHTML = '<div style="text-align: center; color: #ff6b6b; padding: 30px 0; font-size: 14px;">网络连接断开或无法触达云端<br><br><span onclick="handleAuthError()" style="color:#f6d365; text-decoration:underline; cursor:pointer;">[🔑 秘钥失效？点击重新登录]</span></div>';
                 }
             });
         });
@@ -857,7 +857,7 @@
                 }
             } catch (err) {
                 console.error("Calendar JS execution error:", err);
-                list.innerHTML = '<div style="color: #ff6b6b; font-size: 14px; text-align: center; padding: 10px 0;">网络连接断开</div>';
+                list.innerHTML = '<div style="color: #ff6b6b; font-size: 14px; text-align: center; padding: 10px 0;">网络连接断开<br><br><span onclick="handleAuthError()" style="color:#f6d365; text-decoration:underline; cursor:pointer; font-size:12px;">[🔑 重新登录]</span></div>';
             }
         };
 
@@ -989,7 +989,7 @@
                 }
             } catch (err) {
                 console.error("Countdown JS exec error:", err);
-                list.innerHTML = '<div style="color: #ff6b6b; font-size: 14px; text-align: center; padding: 10px 0;">网络连接断开</div>';
+                list.innerHTML = '<div style="color: #ff6b6b; font-size: 14px; text-align: center; padding: 10px 0;">网络连接断开<br><br><span onclick="handleAuthError()" style="color:#f6d365; text-decoration:underline; cursor:pointer; font-size:12px;">[🔑 重新登录]</span></div>';
             }
         };
 
