@@ -475,6 +475,14 @@
         // Secure Token Management via LocalStorage
         let TODOIST_TOKEN = localStorage.getItem('gtd_todoist_token');
 
+        const handleAuthError = () => {
+            localStorage.removeItem('gtd_todoist_token');
+            TODOIST_TOKEN = null;
+            document.getElementById('auth-modal').style.display = 'flex';
+            document.getElementById('auth-error').innerText = '密钥已失效，请重新输入';
+            document.getElementById('auth-error').style.display = 'block';
+        };
+
         const initApp = () => {
             loadCalendarEvents();
             loadCountdownEvents();
@@ -623,6 +631,7 @@
                         headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                     });
                     
+                    if (response.status === 401) return handleAuthError();
                     if (!response.ok) throw new Error("API Limit or Network Error");
                     const data = await response.json();
                     let tasks = Array.isArray(data) ? data : (data.results || []);
@@ -733,6 +742,8 @@
                 const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
+                
+                if (response.status === 401) return handleAuthError();
                 
                 if (response.ok) {
                     const data = await response.json();
@@ -868,6 +879,8 @@
                 const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
+                
+                if (response.status === 401) return handleAuthError();
                 
                 if (response.ok) {
                     const data = await response.json();
