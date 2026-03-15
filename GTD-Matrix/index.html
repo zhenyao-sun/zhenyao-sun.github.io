@@ -691,7 +691,7 @@
                         // Deep link complex editor logic
                         const editBtn = item.querySelector('.task-edit-btn');
                         editBtn.addEventListener('click', () => {
-                            window.location.href = `todoist://task?id=${t.id}`;
+                            window.location.href = `https://todoist.com/app/task/${t.id}`;
                         });
                         
                         list.appendChild(item);
@@ -819,7 +819,7 @@
                             
                             const editBtn = eventDiv.querySelector('.task-edit-btn');
                             editBtn.addEventListener('click', () => {
-                                window.location.href = `todoist://task?id=${t.id}`;
+                                window.location.href = `https://todoist.com/app/task/${t.id}`;
                             });
                             
                             list.appendChild(eventDiv);
@@ -949,7 +949,7 @@
                             
                             const editBtn = eventDiv.querySelector('.task-edit-btn');
                             editBtn.addEventListener('click', () => {
-                                window.location.href = `todoist://task?id=${t.id}`;
+                                window.location.href = `https://todoist.com/app/task/${t.id}`;
                             });
 
                             list.appendChild(eventDiv);
