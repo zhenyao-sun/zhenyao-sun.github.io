@@ -649,10 +649,38 @@
                         // 3. Must be due today, or overdue (due.date < todayStr, or no date but has labels implies it's in inbox)
                         const localDateStr = t.due && t.due.date ? t.due.date.split('T')[0] : "";
                         const isTodayOrOverdue = (t.due && localDateStr <= todayStr) || !t.due;
-                        
+
                         return hasLoc && hasTime && isTodayOrOverdue;
                     });
-                    
+
+                    // Sort tasks by relevance: Label match score + Role priority
+                    const rolePriority = { "运动员": 1, "数学家": 2, "教授": 3 };
+                    const fallbackLocs = ["任意地点"];
+                    const fallbackTimes = ["任意时间"];
+
+                    tasks.sort((a, b) => {
+                        // Calculate label match score for task A (0, 1, or 2)
+                        const aHasSpecificLoc = a.labels.some(l => allowedLocs.includes(l) && !fallbackLocs.includes(l));
+                        const aHasSpecificTime = a.labels.some(l => allowedTimes.includes(l) && !fallbackTimes.includes(l));
+                        const aScore = (aHasSpecificLoc ? 1 : 0) + (aHasSpecificTime ? 1 : 0);
+
+                        // Calculate label match score for task B
+                        const bHasSpecificLoc = b.labels.some(l => allowedLocs.includes(l) && !fallbackLocs.includes(l));
+                        const bHasSpecificTime = b.labels.some(l => allowedTimes.includes(l) && !fallbackTimes.includes(l));
+                        const bScore = (bHasSpecificLoc ? 1 : 0) + (bHasSpecificTime ? 1 : 0);
+
+                        // First sort by label match score (descending)
+                        if (bScore !== aScore) return bScore - aScore;
+
+                        // Within same score, sort by role priority
+                        const aRole = a.labels.find(l => ["运动员", "数学家", "教授"].includes(l)) || "";
+                        const bRole = b.labels.find(l => ["运动员", "数学家", "教授"].includes(l)) || "";
+                        const aRolePriority = rolePriority[aRole] || 999;
+                        const bRolePriority = rolePriority[bRole] || 999;
+
+                        return aRolePriority - bRolePriority;
+                    });
+
                     // Render Tasks
                     if (tasks.length === 0) {
                         list.innerHTML = '<div style="text-align: center; color: #555; padding: 40px 0; font-size: 14px;">☕️ 此时此地，完美清空</div>';
