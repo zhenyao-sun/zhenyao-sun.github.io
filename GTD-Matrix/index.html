@@ -299,10 +299,49 @@
             padding: 5px;
             transition: color 0.2s;
         }
-        
+
         .task-edit-btn:active {
             color: #eee;
             transform: scale(0.9);
+        }
+
+        .task-labels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .task-label {
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.1);
+            color: #aaa;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .task-label.location { background: rgba(52, 152, 219, 0.2); color: #5dade2; border-color: rgba(52, 152, 219, 0.3); }
+        .task-label.time { background: rgba(230, 126, 34, 0.2); color: #e67e22; border-color: rgba(230, 126, 34, 0.3); }
+        .task-label.role { background: rgba(155, 89, 182, 0.2); color: #9b59b6; border-color: rgba(155, 89, 182, 0.3); }
+        .task-label.action { background: rgba(46, 204, 113, 0.2); color: #2ecc71; border-color: rgba(46, 204, 113, 0.3); }
+        .task-label.other { background: rgba(255,255,255,0.05); color: #888; }
+
+        .widget-labels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+
+        .widget-label {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.08);
+            color: #999;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -691,10 +730,33 @@
                     tasks.forEach(t => {
                         const item = document.createElement('div');
                         item.className = 'task-item';
+
+                        // Generate label badges
+                        const locationLabels = ["办公室", "健身房", "良乡家", "六里桥家", "任意地点"];
+                        const timeLabels = ["早上", "中午", "下午", "晚上", "任意时间"];
+                        const roleLabels = ["教授", "数学家", "运动员", "其它角色"];
+                        const actionLabels = ["日程", "截止", "等待", "行动"];
+
+                        const labelHtml = t.labels && t.labels.length > 0 ? `
+                            <div class="task-labels">
+                                ${t.labels.map(label => {
+                                    let category = 'other';
+                                    if (locationLabels.includes(label)) category = 'location';
+                                    else if (timeLabels.includes(label)) category = 'time';
+                                    else if (roleLabels.includes(label)) category = 'role';
+                                    else if (actionLabels.includes(label)) category = 'action';
+                                    return `<span class="task-label ${category}">${label}</span>`;
+                                }).join('')}
+                            </div>
+                        ` : '';
+
                         item.innerHTML = `
                             <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                ${t.content}
+                            <div style="flex: 1;">
+                                <div class="task-content">
+                                    ${t.content}
+                                </div>
+                                ${labelHtml}
                             </div>
                             <button class="task-edit-btn">✏️</button>
                         `;
@@ -821,12 +883,33 @@
                                 const match = t.due.string.match(/\d+:\d+/)[0];
                                 timeStr = `<span style="color: #f6d365; font-weight: 600; margin-right: 10px; font-size: 13px; white-space: nowrap; margin-top: 1px;">${match}</span>`;
                             }
-                            
+
+                            // Generate widget label badges
+                            const locationLabels = ["办公室", "健身房", "良乡家", "六里桥家", "任意地点"];
+                            const timeLabels = ["早上", "中午", "下午", "晚上", "任意时间"];
+                            const roleLabels = ["教授", "数学家", "运动员", "其它角色"];
+                            const actionLabels = ["日程", "截止", "等待", "行动"];
+
+                            const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
+                                <div class="widget-labels">
+                                    ${t.labels.map(label => {
+                                        let category = '';
+                                        if (locationLabels.includes(label)) category = 'location';
+                                        else if (timeLabels.includes(label)) category = 'time';
+                                        else if (roleLabels.includes(label)) category = 'role';
+                                        else if (actionLabels.includes(label)) category = 'action';
+                                        const colorStyle = category ? `style="background: rgba(255,255,255,0.1); color: #bbb;"` : '';
+                                        return `<span class="widget-label" ${colorStyle}>${label}</span>`;
+                                    }).join('')}
+                                </div>
+                            ` : '';
+
                             eventDiv.innerHTML = `
                                 <div class="task-checkbox widget-checkbox" style="margin-right: 12px; flex-shrink: 0; margin-top: -2px;" data-id="${t.id}"></div>
                                 <div style="flex: 1; padding-right:10px;">
                                     ${datePrefix}${timeStr}
                                     <span class="widget-task-content" style="line-height: 1.4; word-break: break-word;">${t.content}</span>
+                                    ${widgetLabelHtml}
                                 </div>
                                 <button class="task-edit-btn widget-edit" style="flex-shrink: 0;" data-id="${t.id}">✏️</button>
                             `;
@@ -955,10 +1038,33 @@
                             // Visual color indicators based on urgency
                             let daysColor = t._daysLeft <= 3 ? '#ff6b6b' : (t._daysLeft <= 7 ? '#f6d365' : '#888');
                             let daysText = t._daysLeft === 0 ? '今天截止' : `剩 ${t._daysLeft} 天`;
-                            
+
+                            // Generate widget label badges
+                            const locationLabels = ["办公室", "健身房", "良乡家", "六里桥家", "任意地点"];
+                            const timeLabels = ["早上", "中午", "下午", "晚上", "任意时间"];
+                            const roleLabels = ["教授", "数学家", "运动员", "其它角色"];
+                            const actionLabels = ["日程", "截止", "等待", "行动"];
+
+                            const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
+                                <div class="widget-labels" style="margin-right: 10px;">
+                                    ${t.labels.map(label => {
+                                        let category = '';
+                                        if (locationLabels.includes(label)) category = 'location';
+                                        else if (timeLabels.includes(label)) category = 'time';
+                                        else if (roleLabels.includes(label)) category = 'role';
+                                        else if (actionLabels.includes(label)) category = 'action';
+                                        const colorStyle = category ? `style="background: rgba(255,255,255,0.1); color: #bbb;"` : '';
+                                        return `<span class="widget-label" ${colorStyle}>${label}</span>`;
+                                    }).join('')}
+                                </div>
+                            ` : '';
+
                             eventDiv.innerHTML = `
                                 <div class="task-checkbox widget-checkbox" style="margin-right: 15px; flex-shrink: 0;" data-id="${t.id}"></div>
-                                <span class="widget-task-content" style="line-height: 1.4; word-break: break-word; flex: 1; padding-right: 10px;">${t.content}</span>
+                                <div style="flex: 1; padding-right: 10px;">
+                                    <span class="widget-task-content" style="line-height: 1.4; word-break: break-word;">${t.content}</span>
+                                    ${widgetLabelHtml}
+                                </div>
                                 <span style="color: ${daysColor}; font-weight: 700; font-size: 14px; white-space: nowrap; background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 8px; margin-right: 10px; flex-shrink: 0;">${daysText}</span>
                                 <button class="task-edit-btn widget-edit" style="flex-shrink: 0;" data-id="${t.id}">✏️</button>
                             `;
