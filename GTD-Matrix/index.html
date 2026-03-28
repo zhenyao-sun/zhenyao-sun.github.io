@@ -694,8 +694,8 @@
 
                     // Sort tasks by relevance: Label match score + Role priority
                     const rolePriority = { "人物.运动员": 1, "人物.数学家": 2, "人物.教授": 3 };
-                    const fallbackLocs = ["任意地点"];
-                    const fallbackTimes = ["任意时间"];
+                    const fallbackLocs = ["地点。任意"];
+                    const fallbackTimes = ["时间。任意"];
 
                     tasks.sort((a, b) => {
                         // Calculate label match score for task A (0, 1, or 2)
