@@ -326,6 +326,7 @@
         .task-label.time { background: rgba(230, 126, 34, 0.2); color: #e67e22; border-color: rgba(230, 126, 34, 0.3); }
         .task-label.role { background: rgba(155, 89, 182, 0.2); color: #9b59b6; border-color: rgba(155, 89, 182, 0.3); }
         .task-label.action { background: rgba(46, 204, 113, 0.2); color: #2ecc71; border-color: rgba(46, 204, 113, 0.3); }
+        .task-label.recurring { background: rgba(231, 76, 60, 0.2); color: #e74c3c; border-color: rgba(231, 76, 60, 0.3); }
         .task-label.other { background: rgba(255,255,255,0.05); color: #888; }
 
         /* Edit Modal Styles */
@@ -460,6 +461,7 @@
         .label-option.time { background: rgba(230, 126, 34, 0.15); color: #e67e22; }
         .label-option.role { background: rgba(155, 89, 182, 0.15); color: #9b59b6; }
         .label-option.action { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }
+        .label-option.recurring { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
 
         .label-option.selected {
             border-color: currentColor;
@@ -787,6 +789,19 @@
                         <span class="label-option action" data-label="类型_行动">行动</span>
                     </div>
                 </div>
+
+                <!-- Recurring Labels (Single Select) -->
+                <div class="edit-field">
+                    <label class="edit-field-label">🔁 重复周期（单选）</label>
+                    <div class="label-selector" id="recurring-selector">
+                        <span class="label-option recurring" data-label="周期_每日" data-recurrence="every day">每日</span>
+                        <span class="label-option recurring" data-label="周期_每周" data-recurrence="every week">每周</span>
+                        <span class="label-option recurring" data-label="周期_每月" data-recurrence="every month">每月</span>
+                        <span class="label-option recurring" data-label="周期_每季" data-recurrence="every 3 months">每季</span>
+                        <span class="label-option recurring" data-label="周期_每年" data-recurrence="every year">每年</span>
+                        <span class="label-option recurring" data-label="周期_无">无</span>
+                    </div>
+                </div>
             </div>
             <div class="edit-modal-footer">
                 <button class="edit-btn edit-btn-cancel" id="edit-cancel">取消</button>
@@ -984,15 +999,54 @@
                 option.classList.toggle('selected', taskLabels.includes(label));
             });
 
+            // Populate recurring label (check both label and due.recur)
+            const recurringLabels = ['周期_每日', '周期_每周', '周期_每月', '周期_每季', '周期_每年'];
+            const hasRecurringLabel = taskLabels.find(l => recurringLabels.includes(l));
+            
+            if (!hasRecurringLabel && task.due && task.due.recur) {
+                // No recurring label but has recurrence - infer from due.recur
+                const recurStr = task.due.recur.toLowerCase();
+                let matchingOption = null;
+                
+                if (recurStr.includes('day')) {
+                    matchingOption = document.querySelector('[data-label="周期_每日"]');
+                } else if (recurStr.includes('week')) {
+                    matchingOption = document.querySelector('[data-label="周期_每周"]');
+                } else if (recurStr.includes('month') && recurStr.includes('3')) {
+                    matchingOption = document.querySelector('[data-label="周期_每季"]');
+                } else if (recurStr.includes('month')) {
+                    matchingOption = document.querySelector('[data-label="周期_每月"]');
+                } else if (recurStr.includes('year')) {
+                    matchingOption = document.querySelector('[data-label="周期_每年"]');
+                }
+                
+                if (matchingOption) {
+                    document.querySelectorAll('#recurring-selector .label-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    matchingOption.classList.add('selected');
+                }
+            }
+
             // Show modal
             editModal.style.display = 'flex';
             setTimeout(() => editModal.classList.add('show'), 10);
         }
 
-        // Label selector toggle logic
+        // Label selector toggle logic (multi-select for most, single-select for recurring)
         document.querySelectorAll('.label-option').forEach(option => {
             option.addEventListener('click', function() {
-                this.classList.toggle('selected');
+                // Check if this is a recurring label
+                if (this.classList.contains('recurring')) {
+                    // Single-select: deselect all other recurring options
+                    document.querySelectorAll('#recurring-selector .label-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
+                } else {
+                    // Multi-select for other categories
+                    this.classList.toggle('selected');
+                }
             });
         });
 
@@ -1015,8 +1069,17 @@
 
                 // Gather labels
                 const selectedLabels = [];
+                let selectedRecurringLabel = null;
+                let selectedRecurrence = null;
+                
                 document.querySelectorAll('.label-option.selected').forEach(option => {
-                    selectedLabels.push(option.getAttribute('data-label'));
+                    const label = option.getAttribute('data-label');
+                    selectedLabels.push(label);
+                    // Check if this is a recurring label (and not "无")
+                    if (option.classList.contains('recurring') && label !== '周期_无') {
+                        selectedRecurringLabel = label;
+                        selectedRecurrence = option.getAttribute('data-recurrence');
+                    }
                 });
 
                 // Gather due date
@@ -1045,6 +1108,12 @@
                             timezone: 'Asia/Shanghai',
                             date: dueDate
                         };
+                        
+                        // Add recurrence if selected
+                        if (selectedRecurrence) {
+                            duePayload.recur = selectedRecurrence;
+                            duePayload.string = `every ${selectedRecurrence} at ${dueTime}`;
+                        }
                     } else {
                         // Date only
                         duePayload = {
@@ -1052,7 +1121,26 @@
                             string: dueDate,
                             timezone: 'Asia/Shanghai'
                         };
+                        
+                        // Add recurrence if selected
+                        if (selectedRecurrence) {
+                            duePayload.recur = selectedRecurrence;
+                            duePayload.string = `every ${selectedRecurrence}`;
+                        }
                     }
+                } else if (selectedRecurrence && !dueDate) {
+                    // Recurrence without a specific date - set a default start date
+                    const today = new Date();
+                    const year = today.getFullYear();
+                    const month = String(today.getMonth() + 1).padStart(2, '0');
+                    const day = String(today.getDate()).padStart(2, '0');
+                    
+                    duePayload = {
+                        date: `${year}-${month}-${day}`,
+                        recur: selectedRecurrence,
+                        string: `every ${selectedRecurrence}`,
+                        timezone: 'Asia/Shanghai'
+                    };
                 }
 
                 // Build update payload
@@ -1210,6 +1298,7 @@
                         const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
                         const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
                         const actionLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动"];
+                        const recurringLabels = ["周期_每日", "周期_每周", "周期_每月", "周期_每季", "周期_每年", "周期_无"];
 
                         const labelHtml = t.labels && t.labels.length > 0 ? `
                             <div class="task-labels">
@@ -1219,6 +1308,7 @@
                                     else if (timeLabels.includes(label)) category = 'time';
                                     else if (roleLabels.includes(label)) category = 'role';
                                     else if (actionLabels.includes(label)) category = 'action';
+                                    else if (recurringLabels.includes(label)) category = 'recurring';
                                     return `<span class="task-label ${category}">${label}</span>`;
                                 }).join('')}
                             </div>
@@ -1364,6 +1454,7 @@
                             const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
                             const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
                             const actionLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动"];
+                            const recurringLabels = ["周期_每日", "周期_每周", "周期_每月", "周期_每季", "周期_每年", "周期_无"];
 
                             const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
                                 <div class="widget-labels">
@@ -1373,6 +1464,7 @@
                                         else if (timeLabels.includes(label)) category = 'time';
                                         else if (roleLabels.includes(label)) category = 'role';
                                         else if (actionLabels.includes(label)) category = 'action';
+                                        else if (recurringLabels.includes(label)) category = 'recurring';
                                         const colorStyle = category ? `style="background: rgba(255,255,255,0.1); color: #bbb;"` : '';
                                         return `<span class="widget-label" ${colorStyle}>${label}</span>`;
                                     }).join('')}
