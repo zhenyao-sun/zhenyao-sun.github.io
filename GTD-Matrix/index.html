@@ -1160,34 +1160,28 @@
                     labels: selectedLabels
                 };
                 
-                // Build Sync API command for updating task
-                const updateArgs = {
-                    id: currentEditTaskId,
+                // Build update payload for REST API
+                const updatePayload = {
                     content: newContent,
                     labels: selectedLabels
                 };
                 if (duePayload) {
-                    if (duePayload.date) updateArgs.due_date = duePayload.date;
-                    if (duePayload.datetime) updateArgs.due_datetime = duePayload.datetime;
-                    if (duePayload.recur) updateArgs.due_recur = duePayload.recur;
+                    updatePayload.due = duePayload;
                 }
-
-                const command = {
-                    type: 'item_update',
-                    uuid: `${Date.now()}`,
-                    args: updateArgs
-                };
 
                 // Debug log
                 console.log('Updating task:', currentEditTaskId);
-                console.log('Command:', JSON.stringify(command, null, 2));
+                console.log('Payload:', JSON.stringify(updatePayload, null, 2));
                 console.log('Token present:', !!TODOIST_TOKEN);
 
-                // Use Sync API (supports CORS)
-                const response = await fetch('https://api.todoist.com/sync/v9/sync', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: `commands=${encodeURIComponent(JSON.stringify([command]))}&token=${TODOIST_TOKEN}`
+                // Use REST API v1 PUT to update task
+                const response = await fetch(`https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${TODOIST_TOKEN}`
+                    },
+                    body: JSON.stringify(updatePayload)
                 });
 
                 console.log('Response status:', response.status);
@@ -1262,11 +1256,12 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    // Use Todoist Sync API (supports CORS)
-                    const response = await fetch('https://api.todoist.com/sync/v9/sync', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: `sync_token=*&resource_types=%5B%22items%22%5D&token=${TODOIST_TOKEN}`
+                    // Use Todoist REST API v1 (no CORS issues with proper headers)
+                    const response = await fetch('https://api.todoist.com/rest/v1/tasks', {
+                        method: 'GET',
+                        headers: { 
+                            'Authorization': `Bearer ${TODOIST_TOKEN}`
+                        }
                     });
 
                     if (response.status === 401) return handleAuthError();
@@ -1278,7 +1273,7 @@
                     }
                     
                     const data = await response.json();
-                    let tasks = data.items || [];
+                    let tasks = Array.isArray(data) ? data : [];
                     console.log('Fetched tasks:', tasks.length);
                     
                     // Local Javascript Boolean Filtering
@@ -1371,10 +1366,9 @@
                             checkbox.classList.add('checked');
                             item.classList.add('completed');
 
-                            fetch(`https://api.todoist.com/sync/v9/sync`, {
+                            fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
                                 method: 'POST',
-                                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                                body: `commands=%5B%7B%22type%22%3A%22item_close%22%2C%22uuid%22%3A%22${Date.now()}%22%2C%22args%22%3A%7B%22id%22%3A%22${t.id}%22%7D%7D%5D&token=${TODOIST_TOKEN}`
+                                headers: { 'Authorization': `Bearer ${TODOIST_TOKEN}` }
                             }).catch(err => console.error("Could not close task:", err));
 
                             setTimeout(() => {
@@ -1429,18 +1423,16 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                // Use Todoist Sync API (supports CORS)
-                const response = await fetch('https://api.todoist.com/sync/v9/sync', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: `sync_token=*&resource_types=%5B%22items%22%5D&token=${TODOIST_TOKEN}`
+                const response = await fetch('https://api.todoist.com/rest/v1/tasks', {
+                    method: 'GET',
+                    headers: { 'Authorization': `Bearer ${TODOIST_TOKEN}` }
                 });
 
                 if (response.status === 401) return handleAuthError();
 
                 if (response.ok) {
                     const data = await response.json();
-                    let tasks = data.items || [];
+                    let tasks = Array.isArray(data) ? data : [];
                     
                     // Local precise filtering: label includes '日程' AND due date strictly 'today' or future
                     const d = new Date();
@@ -1595,18 +1587,16 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                // Use Todoist Sync API (supports CORS)
-                const response = await fetch('https://api.todoist.com/sync/v9/sync', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: `sync_token=*&resource_types=%5B%22items%22%5D&token=${TODOIST_TOKEN}`
+                const response = await fetch('https://api.todoist.com/rest/v1/tasks', {
+                    method: 'GET',
+                    headers: { 'Authorization': `Bearer ${TODOIST_TOKEN}` }
                 });
 
                 if (response.status === 401) return handleAuthError();
 
                 if (response.ok) {
                     const data = await response.json();
-                    let tasks = data.items || [];
+                    let tasks = Array.isArray(data) ? data : [];
                     
                     const d = new Date();
                     d.setHours(0,0,0,0); // normalize local today midnight
