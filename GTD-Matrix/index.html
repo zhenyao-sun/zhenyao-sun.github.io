@@ -1168,12 +1168,15 @@
                 console.log('Payload:', JSON.stringify(updatePayload, null, 2));
                 console.log('Token present:', !!TODOIST_TOKEN);
 
-                // Use REST API v1 PUT to update task
-                const response = await fetch(`https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`, {
+                // Use CORS proxy for Todoist REST API v1 PUT
+                const corsProxy = 'https://corsproxy.io/?';
+                const todoistUrl = encodeURIComponent(`https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`);
+                const response = await fetch(corsProxy + todoistUrl, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${TODOIST_TOKEN}`
+                        'Authorization': `Bearer ${TODOIST_TOKEN}`,
+                        'X-Forwarded-For': '127.0.0.1'
                     },
                     body: JSON.stringify(updatePayload)
                 });
@@ -1250,11 +1253,14 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    // Use Todoist REST API v1 (no CORS issues with proper headers)
-                    const response = await fetch('https://api.todoist.com/rest/v1/tasks', {
+                    // Use CORS proxy for Todoist API (personal use only)
+                    const corsProxy = 'https://corsproxy.io/?';
+                    const todoistUrl = encodeURIComponent('https://api.todoist.com/rest/v1/tasks');
+                    const response = await fetch(corsProxy + todoistUrl, {
                         method: 'GET',
                         headers: { 
-                            'Authorization': `Bearer ${TODOIST_TOKEN}`
+                            'Authorization': `Bearer ${TODOIST_TOKEN}`,
+                            'X-Forwarded-For': '127.0.0.1'
                         }
                     });
 
@@ -1360,9 +1366,15 @@
                             checkbox.classList.add('checked');
                             item.classList.add('completed');
 
-                            fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
+                            // Use CORS proxy to close task
+                            const corsProxy = 'https://corsproxy.io/?';
+                            const todoistUrl = encodeURIComponent(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`);
+                            fetch(corsProxy + todoistUrl, {
                                 method: 'POST',
-                                headers: { 'Authorization': `Bearer ${TODOIST_TOKEN}` }
+                                headers: { 
+                                    'Authorization': `Bearer ${TODOIST_TOKEN}`,
+                                    'X-Forwarded-For': '127.0.0.1'
+                                }
                             }).catch(err => console.error("Could not close task:", err));
 
                             setTimeout(() => {
@@ -1417,9 +1429,14 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                const response = await fetch('https://api.todoist.com/rest/v1/tasks', {
+                const corsProxy = 'https://corsproxy.io/?';
+                const todoistUrl = encodeURIComponent('https://api.todoist.com/rest/v1/tasks');
+                const response = await fetch(corsProxy + todoistUrl, {
                     method: 'GET',
-                    headers: { 'Authorization': `Bearer ${TODOIST_TOKEN}` }
+                    headers: { 
+                        'Authorization': `Bearer ${TODOIST_TOKEN}`,
+                        'X-Forwarded-For': '127.0.0.1'
+                    }
                 });
 
                 if (response.status === 401) return handleAuthError();
@@ -1581,9 +1598,14 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                const response = await fetch('https://api.todoist.com/rest/v1/tasks', {
+                const corsProxy = 'https://corsproxy.io/?';
+                const todoistUrl = encodeURIComponent('https://api.todoist.com/rest/v1/tasks');
+                const response = await fetch(corsProxy + todoistUrl, {
                     method: 'GET',
-                    headers: { 'Authorization': `Bearer ${TODOIST_TOKEN}` }
+                    headers: { 
+                        'Authorization': `Bearer ${TODOIST_TOKEN}`,
+                        'X-Forwarded-For': '127.0.0.1'
+                    }
                 });
 
                 if (response.status === 401) return handleAuthError();
