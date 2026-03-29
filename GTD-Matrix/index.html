@@ -1160,9 +1160,8 @@
                     updatePayload.due = duePayload;
                 }
 
-                // API call to update task via CORS proxy (use GET method to avoid preflight, then POST via proxy)
-                const proxyUrl = 'https://api.codetabs.com/v1/proxy?url=' + encodeURIComponent(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`);
-                const response = await fetch(proxyUrl, {
+                // API call to update task (same as Quick Add - direct API call)
+                const response = await fetch(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
