@@ -787,11 +787,11 @@
                         <span class="label-option action" data-label="类型_截止" data-recurrence="">截止</span>
                         <span class="label-option action" data-label="类型_等待" data-recurrence="">等待</span>
                         <span class="label-option action" data-label="类型_行动" data-recurrence="">行动</span>
-                        <span class="label-option recurring" data-label="周期_每日" data-recurrence="every day">每日 🔁</span>
-                        <span class="label-option recurring" data-label="周期_每周" data-recurrence="every week">每周 🔁</span>
-                        <span class="label-option recurring" data-label="周期_每月" data-recurrence="every month">每月 🔁</span>
-                        <span class="label-option recurring" data-label="周期_每季" data-recurrence="every 3 months">每季 🔁</span>
-                        <span class="label-option recurring" data-label="周期_每年" data-recurrence="every year">每年 🔁</span>
+                        <span class="label-option recurring" data-label="类型_每日" data-recurrence="every day">每日 🔁</span>
+                        <span class="label-option recurring" data-label="类型_每周" data-recurrence="every week">每周 🔁</span>
+                        <span class="label-option recurring" data-label="类型_每月" data-recurrence="every month">每月 🔁</span>
+                        <span class="label-option recurring" data-label="类型_每季" data-recurrence="every 3 months">每季 🔁</span>
+                        <span class="label-option recurring" data-label="类型_每年" data-recurrence="every year">每年 🔁</span>
                     </div>
                 </div>
             </div>
@@ -986,7 +986,7 @@
 
             // Populate labels (excluding type labels - handled separately below)
             const taskLabels = task.labels || [];
-            const typeLabels = ['类型_日程', '类型_截止', '类型_等待', '类型_行动', '周期_每日', '周期_每周', '周期_每月', '周期_每季', '周期_每年'];
+            const typeLabels = ['类型_日程', '类型_截止', '类型_等待', '类型_行动', '类型_每日', '类型_每周', '类型_每月', '类型_每季', '类型_每年'];
             
             document.querySelectorAll('.label-option').forEach(option => {
                 const label = option.getAttribute('data-label');
@@ -1007,15 +1007,15 @@
                 const recurStr = task.due.recur.toLowerCase();
                 
                 if (recurStr.includes('day')) {
-                    selectedTypeOption = document.querySelector('[data-label="周期_每日"]');
+                    selectedTypeOption = document.querySelector('[data-label="类型_每日"]');
                 } else if (recurStr.includes('week')) {
-                    selectedTypeOption = document.querySelector('[data-label="周期_每周"]');
+                    selectedTypeOption = document.querySelector('[data-label="类型_每周"]');
                 } else if (recurStr.includes('month') && recurStr.includes('3')) {
-                    selectedTypeOption = document.querySelector('[data-label="周期_每季"]');
+                    selectedTypeOption = document.querySelector('[data-label="类型_每季"]');
                 } else if (recurStr.includes('month')) {
-                    selectedTypeOption = document.querySelector('[data-label="周期_每月"]');
+                    selectedTypeOption = document.querySelector('[data-label="类型_每月"]');
                 } else if (recurStr.includes('year')) {
-                    selectedTypeOption = document.querySelector('[data-label="周期_每年"]');
+                    selectedTypeOption = document.querySelector('[data-label="类型_每年"]');
                 }
             }
             
@@ -1068,7 +1068,7 @@
 
                 // Gather labels (excluding type labels - handled separately)
                 const selectedLabels = [];
-                const typeLabels = ['类型_日程', '类型_截止', '类型_等待', '类型_行动', '周期_每日', '周期_每周', '周期_每月', '周期_每季', '周期_每年'];
+                const typeLabels = ['类型_日程', '类型_截止', '类型_等待', '类型_行动', '类型_每日', '类型_每周', '类型_每月', '类型_每季', '类型_每年'];
                 let selectedRecurrence = null;
                 
                 document.querySelectorAll('.label-option.selected').forEach(option => {
@@ -1305,7 +1305,7 @@
                         const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                         const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
                         const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
-                        const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "周期_每日", "周期_每周", "周期_每月", "周期_每季", "周期_每年"];
+                        const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
                         const labelHtml = t.labels && t.labels.length > 0 ? `
                             <div class="task-labels">
@@ -1463,7 +1463,7 @@
                             const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                             const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
                             const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
-                            const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "周期_每日", "周期_每周", "周期_每月", "周期_每季", "周期_每年"];
+                            const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
                             const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
                                 <div class="widget-labels">
