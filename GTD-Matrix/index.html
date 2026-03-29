@@ -1166,10 +1166,12 @@
                 // Debug log
                 console.log('Updating task:', currentEditTaskId);
                 console.log('Payload:', JSON.stringify(updatePayload, null, 2));
+                console.log('Token present:', !!TODOIST_TOKEN);
+                console.log('API URL:', `https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`);
 
-                // API call to update task
+                // Try REST API v1 with PUT method (update task)
                 const response = await fetch(`https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`, {
-                    method: 'POST',
+                    method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${TODOIST_TOKEN}`
@@ -1177,21 +1179,48 @@
                     body: JSON.stringify(updatePayload)
                 });
 
+                console.log('Response status:', response.status);
+                console.log('Response headers:', [...response.headers.entries()]);
+
                 if (response.status === 401) {
+                    console.error('401 Unauthorized - token invalid');
                     handleAuthError();
                     return;
                 }
 
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    console.error('Update failed:', errorData);
-                    alert('保存失败：' + (errorData.error || '未知错误'));
+                if (response.status === 404) {
+                    console.error('404 Not Found - task may not exist');
+                    alert('保存失败：任务不存在 (404)');
                     saveBtn.textContent = originalText;
                     saveBtn.disabled = false;
                     return;
                 }
 
-                const result = await response.json();
+                const responseText = await response.text();
+                console.log('Response body:', responseText);
+
+                if (!response.ok) {
+                    let errorData = {};
+                    try {
+                        errorData = JSON.parse(responseText);
+                    } catch (e) {
+                        console.error('Failed to parse error response');
+                    }
+                    console.error('Update failed:', errorData);
+                    const errorMsg = errorData.error || errorData.message || `HTTP ${response.status}`;
+                    alert('保存失败：' + errorMsg);
+                    saveBtn.textContent = originalText;
+                    saveBtn.disabled = false;
+                    return;
+                }
+
+                let result;
+                try {
+                    result = JSON.parse(responseText);
+                } catch (e) {
+                    console.error('Failed to parse success response');
+                    result = {};
+                }
                 console.log('Update successful:', result);
 
                 // Success: close modal and refresh
@@ -1246,104 +1275,114 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    const response = await fetch(`https://api.todoist.com/rest/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
-                        headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
+                    // Use Todoist Sync API to fetch tasks (returns all tasks)
+                    const response = await fetch(`https://api.todoist.com/sync/v9/projects/get_data`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${TODOIST_TOKEN}`
+                        },
+                        body: JSON.stringify({
+                            sync_token: '*',
+                            resource_types: JSON.stringify(['items'])
+                        })
                     });
                     
                     if (response.status === 401) return handleAuthError();
-                    if (!response.ok) throw new Error("API Limit or Network Error");
-                    const data = await response.json();
-                    let tasks = Array.isArray(data) ? data : (data.results || []);
                     
-                    // Local Javascript Boolean Filtering
-                    const d = new Date();
-                    d.setHours(0,0,0,0);
-                    const todayStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+                    if (response.ok) {
+                        const data = await response.json();
+                        let tasks = data.items || [];
                     
-                    tasks = tasks.filter(t => {
-                        // 1. Must match at least one Location label
-                        const hasLoc = allowedLocs.some(loc => t.labels && t.labels.includes(loc));
-                        // 2. Must match at least one Time label
-                        const hasTime = allowedTimes.some(tm => t.labels && t.labels.includes(tm));
-                        // 3. Must be due today, or overdue (due.date < todayStr, or no date but has labels implies it's in inbox)
-                        const localDateStr = t.due && t.due.date ? t.due.date.split('T')[0] : "";
-                        const isTodayOrOverdue = (t.due && localDateStr <= todayStr) || !t.due;
+                        // Local Javascript Boolean Filtering
+                        const d = new Date();
+                        d.setHours(0,0,0,0);
+                        const todayStr = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+                        
+                        tasks = tasks.filter(t => {
+                            // 1. Must match at least one Location label
+                            const hasLoc = allowedLocs.some(loc => t.labels && t.labels.includes(loc));
+                            // 2. Must match at least one Time label
+                            const hasTime = allowedTimes.some(tm => t.labels && t.labels.includes(tm));
+                            // 3. Must be due today, or overdue (due.date < todayStr, or no date but has labels implies it's in inbox)
+                            const localDateStr = t.due && t.due.date ? t.due.date.split('T')[0] : "";
+                            const isTodayOrOverdue = (t.due && localDateStr <= todayStr) || !t.due;
 
-                        return hasLoc && hasTime && isTodayOrOverdue;
-                    });
+                            return hasLoc && hasTime && isTodayOrOverdue;
+                        });
 
-                    // Sort tasks by relevance: Label match score + Role priority
-                    const rolePriority = { "人物_运动员": 1, "人物_数学家": 2, "人物_教授": 3 };
-                    const fallbackLocs = ["地点。任意"];
-                    const fallbackTimes = ["时间。任意"];
+                        // Sort tasks by relevance: Label match score + Role priority
+                        const rolePriority = { "人物_运动员": 1, "人物_数学家": 2, "人物_教授": 3 };
+                        const fallbackLocs = ["地点_任意"];
+                        const fallbackTimes = ["时间_任意"];
 
-                    tasks.sort((a, b) => {
-                        // Calculate label match score for task A (0, 1, or 2)
-                        const aHasSpecificLoc = a.labels.some(l => allowedLocs.includes(l) && !fallbackLocs.includes(l));
-                        const aHasSpecificTime = a.labels.some(l => allowedTimes.includes(l) && !fallbackTimes.includes(l));
-                        const aScore = (aHasSpecificLoc ? 1 : 0) + (aHasSpecificTime ? 1 : 0);
+                        tasks.sort((a, b) => {
+                            // Calculate label match score for task A (0, 1, or 2)
+                            const aHasSpecificLoc = a.labels.some(l => allowedLocs.includes(l) && !fallbackLocs.includes(l));
+                            const aHasSpecificTime = a.labels.some(l => allowedTimes.includes(l) && !fallbackTimes.includes(l));
+                            const aScore = (aHasSpecificLoc ? 1 : 0) + (aHasSpecificTime ? 1 : 0);
 
-                        // Calculate label match score for task B
-                        const bHasSpecificLoc = b.labels.some(l => allowedLocs.includes(l) && !fallbackLocs.includes(l));
-                        const bHasSpecificTime = b.labels.some(l => allowedTimes.includes(l) && !fallbackTimes.includes(l));
-                        const bScore = (bHasSpecificLoc ? 1 : 0) + (bHasSpecificTime ? 1 : 0);
+                            // Calculate label match score for task B
+                            const bHasSpecificLoc = b.labels.some(l => allowedLocs.includes(l) && !fallbackLocs.includes(l));
+                            const bHasSpecificTime = b.labels.some(l => allowedTimes.includes(l) && !fallbackTimes.includes(l));
+                            const bScore = (bHasSpecificLoc ? 1 : 0) + (bHasSpecificTime ? 1 : 0);
 
-                        // First sort by label match score (descending)
-                        if (bScore !== aScore) return bScore - aScore;
+                            // First sort by label match score (descending)
+                            if (bScore !== aScore) return bScore - aScore;
 
-                        // Within same score, sort by role priority
-                        const aRole = a.labels.find(l => ["人物_运动员", "人物_数学家", "人物_教授"].includes(l)) || "";
-                        const bRole = b.labels.find(l => ["人物_运动员", "人物_数学家", "人物_教授"].includes(l)) || "";
-                        const aRolePriority = rolePriority[aRole] || 999;
-                        const bRolePriority = rolePriority[bRole] || 999;
+                            // Within same score, sort by role priority
+                            const aRole = a.labels.find(l => ["人物_运动员", "人物_数学家", "人物_教授"].includes(l)) || "";
+                            const bRole = b.labels.find(l => ["人物_运动员", "人物_数学家", "人物_教授"].includes(l)) || "";
+                            const aRolePriority = rolePriority[aRole] || 999;
+                            const bRolePriority = rolePriority[bRole] || 999;
 
-                        return aRolePriority - bRolePriority;
-                    });
+                            return aRolePriority - bRolePriority;
+                        });
 
-                    // Render Tasks
-                    if (tasks.length === 0) {
-                        list.innerHTML = '<div style="text-align: center; color: #555; padding: 40px 0; font-size: 14px;">☕️ 此时此地，完美清空</div>';
-                        return;
-                    }
-                    
-                    list.innerHTML = '';
-                    tasks.forEach(t => {
-                        const item = document.createElement('div');
-                        item.className = 'task-item';
+                        // Render Tasks
+                        if (tasks.length === 0) {
+                            list.innerHTML = '<div style="text-align: center; color: #555; padding: 40px 0; font-size: 14px;">☕️ 此时此地，完美清空</div>';
+                            return;
+                        }
 
-                        // Generate label badges
-                        const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
-                        const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
-                        const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
-                        const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
+                        list.innerHTML = '';
+                        tasks.forEach(t => {
+                            const item = document.createElement('div');
+                            item.className = 'task-item';
 
-                        const labelHtml = t.labels && t.labels.length > 0 ? `
-                            <div class="task-labels">
-                                ${t.labels.map(label => {
-                                    let category = 'other';
-                                    if (locationLabels.includes(label)) category = 'location';
-                                    else if (timeLabels.includes(label)) category = 'time';
-                                    else if (roleLabels.includes(label)) category = 'role';
-                                    else if (typeLabels.includes(label)) {
-                                        // Recurring types (类型_每*) get red, action types get green
-                                        if (label.startsWith('类型_每')) category = 'recurring';
-                                        else category = 'action';
-                                    }
-                                    return `<span class="task-label ${category}">${label}</span>`;
-                                }).join('')}
-                            </div>
-                        ` : '';
+                            // Generate label badges
+                            const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
+                            const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
+                            const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
+                            const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
-                        item.innerHTML = `
-                            <div class="task-checkbox"></div>
-                            <div style="flex: 1;">
-                                <div class="task-content">
-                                    ${t.content}
+                            const labelHtml = t.labels && t.labels.length > 0 ? `
+                                <div class="task-labels">
+                                    ${t.labels.map(label => {
+                                        let category = 'other';
+                                        if (locationLabels.includes(label)) category = 'location';
+                                        else if (timeLabels.includes(label)) category = 'time';
+                                        else if (roleLabels.includes(label)) category = 'role';
+                                        else if (typeLabels.includes(label)) {
+                                            // Recurring types (类型_每*) get red, action types get green
+                                            if (label.startsWith('类型_每')) category = 'recurring';
+                                            else category = 'action';
+                                        }
+                                        return `<span class="task-label ${category}">${label}</span>`;
+                                    }).join('')}
                                 </div>
-                                ${labelHtml}
-                            </div>
-                            <button class="task-edit-btn">✏️</button>
-                        `;
+                            ` : '';
+
+                            item.innerHTML = `
+                                <div class="task-checkbox"></div>
+                                <div style="flex: 1;">
+                                    <div class="task-content">
+                                        ${t.content}
+                                    </div>
+                                    ${labelHtml}
+                                </div>
+                                <button class="task-edit-btn">✏️</button>
+                            `;
                         
                         // Checkbox completeness logic
                         const checkbox = item.querySelector('.task-checkbox');
