@@ -772,10 +772,10 @@
                 <div class="edit-field">
                     <label class="edit-field-label">👤 角色</label>
                     <div class="label-selector" id="role-selector">
-                        <span class="label-option role" data-label="人物_教授">教授</span>
-                        <span class="label-option role" data-label="人物_数学家">数学家</span>
-                        <span class="label-option role" data-label="人物_运动员">运动员</span>
-                        <span class="label-option role" data-label="角色_其它">其它角色</span>
+                        <span class="label-option role" data-label="角色_教授">教授</span>
+                        <span class="label-option role" data-label="角色_数学家">数学家</span>
+                        <span class="label-option role" data-label="角色_运动员">运动员</span>
+                        <span class="label-option role" data-label="角色_其它">其它</span>
                     </div>
                 </div>
 
@@ -1263,7 +1263,7 @@
                     });
 
                     // Sort tasks by relevance: Label match score + Role priority
-                    const rolePriority = { "人物_运动员": 1, "人物_数学家": 2, "人物_教授": 3 };
+                    const rolePriority = { "角色_运动员": 1, "角色_数学家": 2, "角色_教授": 3 };
                     const fallbackLocs = ["地点。任意"];
                     const fallbackTimes = ["时间。任意"];
 
@@ -1282,8 +1282,8 @@
                         if (bScore !== aScore) return bScore - aScore;
 
                         // Within same score, sort by role priority
-                        const aRole = a.labels.find(l => ["人物_运动员", "人物_数学家", "人物_教授"].includes(l)) || "";
-                        const bRole = b.labels.find(l => ["人物_运动员", "人物_数学家", "人物_教授"].includes(l)) || "";
+                        const aRole = a.labels.find(l => ["角色_运动员", "角色_数学家", "角色_教授"].includes(l)) || "";
+                        const bRole = b.labels.find(l => ["角色_运动员", "角色_数学家", "角色_教授"].includes(l)) || "";
                         const aRolePriority = rolePriority[aRole] || 999;
                         const bRolePriority = rolePriority[bRole] || 999;
 
@@ -1304,7 +1304,7 @@
                         // Generate label badges
                         const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                         const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
-                        const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
+                        const roleLabels = ["角色_教授", "角色_数学家", "角色_运动员", "人物_角色"];
                         const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
                         const labelHtml = t.labels && t.labels.length > 0 ? `
@@ -1462,7 +1462,7 @@
                             // Generate widget label badges
                             const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                             const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
-                            const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
+                            const roleLabels = ["角色_教授", "角色_数学家", "角色_运动员", "人物_角色"];
                             const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
                             const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
@@ -1621,7 +1621,7 @@
                             // Generate widget label badges
                             const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                             const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
-                            const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
+                            const roleLabels = ["角色_教授", "角色_数学家", "角色_运动员", "人物_角色"];
                             const actionLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动"];
 
                             const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
