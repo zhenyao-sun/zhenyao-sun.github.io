@@ -1170,9 +1170,9 @@
 
                 // Use CORS proxy for Todoist REST API v1 PUT
                 const corsProxy = 'https://corsproxy.io/?';
-                const todoistUrl = encodeURIComponent(`https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`);
+                const todoistUrl = encodeURIComponent(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`);
                 const response = await fetch(corsProxy + todoistUrl, {
-                    method: 'PUT',
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${TODOIST_TOKEN}`,
@@ -1253,28 +1253,20 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    // Use CORS proxy for Todoist API (personal use only)
+                    // Use CORS proxy for Todoist API
                     const corsProxy = 'https://corsproxy.io/?';
-                    const todoistUrl = encodeURIComponent('https://api.todoist.com/rest/v1/tasks');
+                    const todoistUrl = encodeURIComponent('https://api.todoist.com/api/v1/tasks?limit=200');
                     const response = await fetch(corsProxy + todoistUrl, {
-                        method: 'GET',
-                        headers: { 
+                        headers: {
                             'Authorization': `Bearer ${TODOIST_TOKEN}`,
                             'X-Forwarded-For': '127.0.0.1'
                         }
                     });
 
                     if (response.status === 401) return handleAuthError();
-                    
-                    if (!response.ok) {
-                        const errText = await response.text();
-                        console.error('Fetch tasks failed:', response.status, errText);
-                        throw new Error(`HTTP ${response.status}: ${errText}`);
-                    }
-                    
+                    if (!response.ok) throw new Error("API Limit or Network Error");
                     const data = await response.json();
-                    let tasks = Array.isArray(data) ? data : [];
-                    console.log('Fetched tasks:', tasks.length);
+                    let tasks = Array.isArray(data) ? data : (data.results || []);
                     
                     // Local Javascript Boolean Filtering
                     const d = new Date();
@@ -1430,20 +1422,15 @@
             
             try {
                 const corsProxy = 'https://corsproxy.io/?';
-                const todoistUrl = encodeURIComponent('https://api.todoist.com/rest/v1/tasks');
+                const todoistUrl = encodeURIComponent('https://api.todoist.com/api/v1/tasks?limit=200');
                 const response = await fetch(corsProxy + todoistUrl, {
-                    method: 'GET',
-                    headers: { 
-                        'Authorization': `Bearer ${TODOIST_TOKEN}`,
-                        'X-Forwarded-For': '127.0.0.1'
-                    }
+                    headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
 
                 if (response.status === 401) return handleAuthError();
-
-                if (response.ok) {
-                    const data = await response.json();
-                    let tasks = Array.isArray(data) ? data : [];
+                if (!response.ok) throw new Error("API Limit or Network Error");
+                const data = await response.json();
+                let tasks = Array.isArray(data) ? data : (data.results || []);
                     
                     // Local precise filtering: label includes '日程' AND due date strictly 'today' or future
                     const d = new Date();
@@ -1533,7 +1520,9 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
+                                const corsProxy = 'https://corsproxy.io/?';
+                                const todoistUrl = encodeURIComponent(`https://api.todoist.com/api/v1/tasks/${t.id}/close`);
+                                fetch(corsProxy + todoistUrl, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                                 }).catch(err => console.error(err));
@@ -1599,20 +1588,15 @@
             
             try {
                 const corsProxy = 'https://corsproxy.io/?';
-                const todoistUrl = encodeURIComponent('https://api.todoist.com/rest/v1/tasks');
+                const todoistUrl = encodeURIComponent('https://api.todoist.com/api/v1/tasks?limit=200');
                 const response = await fetch(corsProxy + todoistUrl, {
-                    method: 'GET',
-                    headers: { 
-                        'Authorization': `Bearer ${TODOIST_TOKEN}`,
-                        'X-Forwarded-For': '127.0.0.1'
-                    }
+                    headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
 
                 if (response.status === 401) return handleAuthError();
-
-                if (response.ok) {
-                    const data = await response.json();
-                    let tasks = Array.isArray(data) ? data : [];
+                if (!response.ok) throw new Error("API Limit or Network Error");
+                const data = await response.json();
+                let tasks = Array.isArray(data) ? data : (data.results || []);
                     
                     const d = new Date();
                     d.setHours(0,0,0,0); // normalize local today midnight
@@ -1699,7 +1683,9 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
+                                const corsProxy = 'https://corsproxy.io/?';
+                                const todoistUrl = encodeURIComponent(`https://api.todoist.com/api/v1/tasks/${t.id}/close`);
+                                fetch(corsProxy + todoistUrl, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                                 }).catch(err => console.error(err));
