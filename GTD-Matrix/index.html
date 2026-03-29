@@ -1151,13 +1151,23 @@
                     };
                 }
 
-                // Build update payload
+                // Build update payload for Todoist API v1
                 const updatePayload = {
                     content: newContent,
                     labels: selectedLabels
                 };
+                
+                // Add due date and recurrence at top level (Todoist API v1 format)
                 if (duePayload) {
-                    updatePayload.due = duePayload;
+                    if (duePayload.date) {
+                        updatePayload.due_date = duePayload.date;
+                    }
+                    if (duePayload.recur) {
+                        updatePayload.due_recur = duePayload.recur;
+                    }
+                    if (duePayload.string) {
+                        updatePayload.due_string = duePayload.string;
+                    }
                 }
 
                 // API call to update task (same as Quick Add - direct API call)
