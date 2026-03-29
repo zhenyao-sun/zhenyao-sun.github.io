@@ -1160,6 +1160,10 @@
                     updatePayload.due = duePayload;
                 }
 
+                // Debug log
+                console.log('Updating task:', currentEditTaskId);
+                console.log('Payload:', JSON.stringify(updatePayload, null, 2));
+
                 // API call to update task via CORS proxy
                 const response = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`), {
                     method: 'POST',
@@ -1169,6 +1173,8 @@
                     },
                     body: JSON.stringify(updatePayload)
                 });
+
+                console.log('Response status:', response.status);
 
                 if (response.status === 401) {
                     handleAuthError();
