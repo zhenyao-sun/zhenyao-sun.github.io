@@ -1160,12 +1160,13 @@
                     updatePayload.due = duePayload;
                 }
 
-                // API call to update task
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`, {
+                // API call to update task via CORS proxy
+                const response = await fetch('https://corsproxy.io/?' + `https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${TODOIST_TOKEN}`
+                        'Authorization': `Bearer ${TODOIST_TOKEN}`,
+                        'X-Forwarded-For': '127.0.0.1'
                     },
                     body: JSON.stringify(updatePayload)
                 });
