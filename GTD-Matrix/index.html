@@ -882,7 +882,7 @@
             inputField.disabled = true;
             
             try {
-                const response = await fetch("https://api.todoist.com/api/v1/tasks", {
+                const response = await fetch("https://api.todoist.com/rest/v1/tasks", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -1101,14 +1101,14 @@
                         const [hours, minutes] = dueTime.split(':');
                         const dateObj = new Date(dueDate);
                         dateObj.setHours(parseInt(hours), parseInt(minutes), 0, 0);
-                        
+
                         // Format as ISO string with timezone
                         const year = dateObj.getFullYear();
                         const month = String(dateObj.getMonth() + 1).padStart(2, '0');
                         const day = String(dateObj.getDate()).padStart(2, '0');
                         const hh = String(dateObj.getHours()).padStart(2, '0');
                         const mm = String(dateObj.getMinutes()).padStart(2, '0');
-                        
+
                         // Use Beijing timezone (UTC+8)
                         duePayload = {
                             datetime: `${year}-${month}-${day}T${hh}:${mm}:00+08:00`,
@@ -1116,7 +1116,7 @@
                             timezone: 'Asia/Shanghai',
                             date: dueDate
                         };
-                        
+
                         // Add recurrence if selected
                         if (selectedRecurrence) {
                             duePayload.recur = selectedRecurrence;
@@ -1129,7 +1129,7 @@
                             string: dueDate,
                             timezone: 'Asia/Shanghai'
                         };
-                        
+
                         // Add recurrence if selected
                         if (selectedRecurrence) {
                             duePayload.recur = selectedRecurrence;
@@ -1142,13 +1142,16 @@
                     const year = today.getFullYear();
                     const month = String(today.getMonth() + 1).padStart(2, '0');
                     const day = String(today.getDate()).padStart(2, '0');
-                    
+
                     duePayload = {
                         date: `${year}-${month}-${day}`,
                         recur: selectedRecurrence,
                         string: `every ${selectedRecurrence}`,
                         timezone: 'Asia/Shanghai'
                     };
+                } else {
+                    // No due date and no recurrence - explicitly set due to null to clear it
+                    duePayload = null;
                 }
 
                 // Build update payload
@@ -1156,12 +1159,16 @@
                     content: newContent,
                     labels: selectedLabels
                 };
-                if (duePayload) {
-                    updatePayload.due = duePayload;
-                }
+                
+                // Always include due field (even if null to clear it)
+                updatePayload.due = duePayload;
+
+                // Debug log
+                console.log('Updating task:', currentEditTaskId);
+                console.log('Payload:', JSON.stringify(updatePayload, null, 2));
 
                 // API call to update task
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`, {
+                const response = await fetch(`https://api.todoist.com/rest/v1/tasks/${currentEditTaskId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -1178,11 +1185,14 @@
                 if (!response.ok) {
                     const errorData = await response.json();
                     console.error('Update failed:', errorData);
-                    alert('保存失败，请重试');
+                    alert('保存失败：' + (errorData.error || '未知错误'));
                     saveBtn.textContent = originalText;
                     saveBtn.disabled = false;
                     return;
                 }
+
+                const result = await response.json();
+                console.log('Update successful:', result);
 
                 // Success: close modal and refresh
                 closeEditModal();
@@ -1236,7 +1246,7 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
+                    const response = await fetch(`https://api.todoist.com/rest/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                         headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                     });
                     
@@ -1344,7 +1354,7 @@
                             item.classList.add('completed');
                             
                             // Fire HTTP Close API quietly
-                            fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
+                            fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
                                 method: 'POST',
                                 headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                             }).catch(err => console.error("Could not close task:", err));
@@ -1404,7 +1414,7 @@
             try {
                 // The underlying /api/v1/tasks sync endpoint ignores URL filters. 
                 // We fetch all minimal tasks and filter them locally.
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
+                const response = await fetch(`https://api.todoist.com/rest/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
                 
@@ -1502,7 +1512,7 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
+                                fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                                 }).catch(err => console.error(err));
@@ -1567,7 +1577,7 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
+                const response = await fetch(`https://api.todoist.com/rest/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
                 
@@ -1623,7 +1633,7 @@
                             const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                             const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
                             const roleLabels = ["人物_教授", "人物_数学家", "人物_运动员", "人物_角色"];
-                            const actionLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动"];
+                            const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
                             const widgetLabelHtml = t.labels && t.labels.length > 0 ? `
                                 <div class="widget-labels" style="margin-right: 10px;">
@@ -1632,7 +1642,11 @@
                                         if (locationLabels.includes(label)) category = 'location';
                                         else if (timeLabels.includes(label)) category = 'time';
                                         else if (roleLabels.includes(label)) category = 'role';
-                                        else if (actionLabels.includes(label)) category = 'action';
+                                        else if (typeLabels.includes(label)) {
+                                            // Recurring types (类型_每*) get red, action types get green
+                                            if (label.startsWith('类型_每')) category = 'recurring';
+                                            else category = 'action';
+                                        }
                                         const colorStyle = category ? `style="background: rgba(255,255,255,0.1); color: #bbb;"` : '';
                                         return `<span class="widget-label" ${colorStyle}>${label}</span>`;
                                     }).join('')}
@@ -1658,7 +1672,7 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
+                                fetch(`https://api.todoist.com/rest/v1/tasks/${t.id}/close`, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                                 }).catch(err => console.error(err));
