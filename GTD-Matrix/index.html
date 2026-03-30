@@ -880,15 +880,12 @@
             quickAddSubmit.disabled = true;
             
             try {
-                // Create task via CORS proxy
-                const proxy = 'https://corsproxy.io/?';
-                const target = 'https://api.todoist.com/api/v1/tasks';
-                const response = await fetch(proxy + target, {
+                // Create task directly (same as edit modal)
+                const response = await fetch('https://api.todoist.com/api/v1/tasks', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'Bearer ' + TODOIST_TOKEN,
-                        'X-Forwarded-For': '127.0.0.1'
+                        'Authorization': 'Bearer ' + TODOIST_TOKEN
                     },
                     body: JSON.stringify({ content: taskContent })
                 });
