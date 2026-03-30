@@ -658,12 +658,10 @@
     </div>
     
     <div style="width: 100%; max-width: 600px; margin-top: 25px;">
-        <div id="quick-add-container" style="display: flex; gap: 10px; width: 100%;">
-            <input type="text" id="quick-add-input" placeholder="💡 随时记录新想法..." autocomplete="off" style="flex: 1; padding: 15px 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-size: 16px; outline: none; box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);">
-            <button id="quick-add-submit" style="padding: 0 25px; border-radius: 20px; border: none; background: var(--color-night); color: white; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
-                放入Inbox
-            </button>
-        </div>
+        <button id="quick-add-btn" style="width: 100%; padding: 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
+            <span style="font-size: 20px;">➕</span>
+            <span>添加新任务</span>
+        </button>
     </div>
 
     <!-- Dashboard Widgets Section (Calendar & Countdown) -->
@@ -956,175 +954,10 @@
             }
         });
 
-        // Quick Add: Open modal on input click
-        const quickAddInput = document.getElementById('quick-add-input');
-        const quickAddModal = document.getElementById('quick-add-modal');
+        // Quick Add Button: Open modal on click
+        const quickAddBtn = document.getElementById('quick-add-btn');
         
-        quickAddInput.addEventListener('click', function() {
-            // Open modal
-            quickAddModal.style.display = 'flex';
-            setTimeout(() => quickAddModal.classList.add('show'), 10);
-            // Focus on content field
-            setTimeout(() => document.getElementById('quick-add-content').focus(), 100);
-        });
-
-        // Quick Add Modal: Close Logic
-        const closeQuickAddModal = () => {
-            quickAddModal.classList.remove('show');
-            setTimeout(() => quickAddModal.style.display = 'none', 300);
-        };
-
-        document.getElementById('quick-add-modal-close').addEventListener('click', closeQuickAddModal);
-        document.getElementById('quick-add-cancel').addEventListener('click', closeQuickAddModal);
-
-        // Quick Add Modal: Type selector single-select logic
-        document.querySelectorAll('#quick-add-type-selector .label-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('#quick-add-type-selector .label-option').forEach(opt => {
-                    opt.classList.remove('selected');
-                });
-                this.classList.add('selected');
-            });
-        });
-
-        // Quick Add: Save task with full details
-        const saveQuickAddTask = async () => {
-            const contentField = document.getElementById('quick-add-content');
-            const saveBtn = document.getElementById('quick-add-save');
-            const taskContent = contentField.value.trim();
-
-            if (!taskContent) {
-                alert('任务内容不能为空');
-                return;
-            }
-
-            const originalText = saveBtn.textContent;
-            saveBtn.textContent = '保存中...';
-            saveBtn.disabled = true;
-
-            try {
-                // Gather labels
-                const selectedLabels = [];
-                document.querySelectorAll('.label-option.selected').forEach(option => {
-                    selectedLabels.push(option.getAttribute('data-label'));
-                });
-
-                // Gather due date
-                const dueDate = document.getElementById('quick-add-due-date').value;
-                const dueTime = document.getElementById('quick-add-due-time').value;
-                
-                let duePayload = null;
-                if (dueDate) {
-                    if (dueTime) {
-                        const [hours, minutes] = dueTime.split(':');
-                        const dateObj = new Date(dueDate);
-                        dateObj.setHours(parseInt(hours), parseInt(minutes), 0, 0);
-                        
-                        const year = dateObj.getFullYear();
-                        const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-                        const day = String(dateObj.getDate()).padStart(2, '0');
-                        const hh = String(dateObj.getHours()).padStart(2, '0');
-                        const mm = String(dateObj.getMinutes()).padStart(2, '0');
-                        
-                        duePayload = {
-                            datetime: `${year}-${month}-${day}T${hh}:${mm}:00+08:00`,
-                            string: `${dueDate} at ${dueTime}`,
-                            timezone: 'Asia/Shanghai',
-                            date: dueDate
-                        };
-                        
-                        // Check for recurrence
-                        const selectedTypeOption = document.querySelector('#quick-add-type-selector .label-option.selected');
-                        if (selectedTypeOption) {
-                            const recurrence = selectedTypeOption.getAttribute('data-recurrence');
-                            if (recurrence) {
-                                duePayload.recur = recurrence;
-                                duePayload.string = `every ${recurrence} at ${dueTime}`;
-                            }
-                        }
-                    } else {
-                        duePayload = {
-                            date: dueDate,
-                            string: dueDate,
-                            timezone: 'Asia/Shanghai'
-                        };
-                        
-                        const selectedTypeOption = document.querySelector('#quick-add-type-selector .label-option.selected');
-                        if (selectedTypeOption) {
-                            const recurrence = selectedTypeOption.getAttribute('data-recurrence');
-                            if (recurrence) {
-                                duePayload.recur = recurrence;
-                                duePayload.string = `every ${recurrence}`;
-                            }
-                        }
-                    }
-                }
-
-                // Build payload for Todoist API v1
-                const createPayload = {
-                    content: taskContent,
-                    labels: selectedLabels
-                };
-                
-                if (duePayload) {
-                    if (duePayload.date) createPayload.due_date = duePayload.date;
-                    if (duePayload.recur) createPayload.due_recur = duePayload.recur;
-                    if (duePayload.string) createPayload.due_string = duePayload.string;
-                }
-
-                // Create task via CORS proxy
-                const proxy = 'https://corsproxy.io/?';
-                const target = 'https://api.todoist.com/api/v1/tasks';
-                const response = await fetch(proxy + target, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer ' + TODOIST_TOKEN,
-                        'X-Forwarded-For': '127.0.0.1'
-                    },
-                    body: JSON.stringify(createPayload)
-                });
-
-                if (response.ok) {
-                    // Success: close modal and clear fields
-                    closeQuickAddModal();
-                    contentField.value = '';
-                    document.getElementById('quick-add-due-date').value = '';
-                    document.getElementById('quick-add-due-time').value = '';
-                    document.querySelectorAll('#quick-add-location-selector .label-option').forEach(opt => opt.classList.remove('selected'));
-                    document.querySelectorAll('#quick-add-time-selector .label-option').forEach(opt => opt.classList.remove('selected'));
-                    document.querySelectorAll('#quick-add-role-selector .label-option').forEach(opt => opt.classList.remove('selected'));
-                    document.querySelectorAll('#quick-add-type-selector .label-option').forEach(opt => opt.classList.remove('selected'));
-                    
-                    // Show success feedback on button
-                    const submitBtn = document.getElementById('quick-add-submit');
-                    submitBtn.textContent = '✅ 完毕';
-                    setTimeout(() => {
-                        submitBtn.textContent = '放入 Inbox';
-                    }, 1500);
-                } else {
-                    const errorData = await response.json();
-                    console.error('Failed to add task:', errorData);
-                    alert('保存失败，请重试');
-                    saveBtn.textContent = originalText;
-                    saveBtn.disabled = false;
-                }
-            } catch (err) {
-                console.error('Network error on quick add:', err);
-                alert('网络错误，请检查连接后重试');
-                saveBtn.textContent = originalText;
-                saveBtn.disabled = false;
-            }
-        };
-
-        document.getElementById('quick-add-submit').addEventListener('click', function() {
-            // Open modal instead of directly submitting
-            quickAddInput.click();
-        });
-        
-        document.getElementById('quick-add-save').addEventListener('click', saveQuickAddTask);
-        
-        quickAddInput.addEventListener('keypress', function(e) {
+        quickAddBtn.addEventListener('click', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 quickAddInput.click();
