@@ -1311,22 +1311,28 @@
                         const item = document.createElement('div');
                         item.className = 'task-item';
 
-                        // Generate label badges
+                        // Generate label badges with custom order: Time → Location → Role → Type
                         const locationLabels = ["地点_办公室", "地点_健身房", "地点_良乡家", "地点_六里桥家", "地点_任意"];
                         const timeLabels = ["时间_早上", "时间_中午", "时间_下午", "时间_晚上", "时间_任意"];
                         const roleLabels = ["角色_教授", "角色_数学家", "角色_运动员", "人物_角色"];
                         const typeLabels = ["类型_日程", "类型_截止", "类型_等待", "类型_行动", "类型_每日", "类型_每周", "类型_每月", "类型_每季", "类型_每年"];
 
-                        const labelHtml = t.labels && t.labels.length > 0 ? `
+                        // Sort labels: Time(0) → Location(1) → Role(2) → Type(3)
+                        const labelPriority = { 'time': 0, 'location': 1, 'role': 2, 'action': 3, 'recurring': 3, 'other': 4 };
+                        const sortedLabels = [...t.labels].sort((a, b) => {
+                            const getCat = (l) => locationLabels.includes(l) ? 'location' : timeLabels.includes(l) ? 'time' : roleLabels.includes(l) ? 'role' : typeLabels.includes(l) ? (l.startsWith('类型_每') ? 'recurring' : 'action') : 'other';
+                            return labelPriority[getCat(a)] - labelPriority[getCat(b)];
+                        });
+
+                        const labelHtml = sortedLabels && sortedLabels.length > 0 ? `
                             <div class="task-labels">
-                                ${t.labels.map(label => {
+                                ${sortedLabels.map(label => {
                                     let category = 'other';
                                     if (locationLabels.includes(label)) category = 'location';
                                     else if (timeLabels.includes(label)) category = 'time';
                                     else if (roleLabels.includes(label)) category = 'role';
                                     else if (typeLabels.includes(label)) {
-                                        // Recurring types get red, action types get green
-                                        if (label.startsWith('周期_')) category = 'recurring';
+                                        if (label.startsWith('类型_每')) category = 'recurring';
                                         else category = 'action';
                                     }
                                     return `<span class="task-label ${category}">${label}</span>`;
