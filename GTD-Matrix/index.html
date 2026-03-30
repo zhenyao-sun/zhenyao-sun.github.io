@@ -956,12 +956,14 @@
 
         // Quick Add Button: Open modal on click
         const quickAddBtn = document.getElementById('quick-add-btn');
+        const quickAddModal = document.getElementById('quick-add-modal');
         
-        quickAddBtn.addEventListener('click', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                quickAddInput.click();
-            }
+        quickAddBtn.addEventListener('click', function() {
+            // Open modal
+            quickAddModal.style.display = 'flex';
+            setTimeout(() => quickAddModal.classList.add('show'), 10);
+            // Focus on content field
+            setTimeout(() => document.getElementById('quick-add-content').focus(), 100);
         });
 
         // Close Modal Logic
