@@ -350,11 +350,6 @@
             opacity: 1 !important;
         }
 
-        #quick-add-modal.show {
-            display: flex !important;
-            opacity: 1 !important;
-        }
-
         .edit-modal-content {
             background: rgba(30, 30, 30, 0.95);
             border: 1px solid rgba(255,255,255,0.1);
@@ -663,10 +658,12 @@
     </div>
     
     <div style="width: 100%; max-width: 600px; margin-top: 25px;">
-        <button id="quick-add-btn" style="width: 100%; padding: 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
-            <span style="font-size: 20px;">➕</span>
-            <span>添加新任务</span>
-        </button>
+        <div id="quick-add-container" style="display: flex; gap: 10px; width: 100%;">
+            <input type="text" id="quick-add-input" placeholder="💡 随时记录新想法..." autocomplete="off" style="flex: 1; padding: 15px 20px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; font-size: 16px; outline: none; box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);">
+            <button id="quick-add-submit" style="padding: 0 25px; border-radius: 20px; border: none; background: var(--color-night); color: white; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s;">
+                放入 Inbox
+            </button>
+        </div>
     </div>
 
     <!-- Dashboard Widgets Section (Calendar & Countdown) -->
@@ -805,94 +802,6 @@
         </div>
     </div>
 
-    <!-- Quick Add Modal Overlay -->
-    <div id="quick-add-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 2000; justify-content: center; align-items: center; padding: 20px; opacity: 0; transition: opacity 0.3s ease;">
-        <div class="edit-modal-content" style="max-width: 500px;">
-            <div class="edit-modal-header">
-                <div class="edit-modal-title">
-                    <span>➕</span>
-                    <span>快速添加任务</span>
-                </div>
-                <button class="close-btn" id="quick-add-modal-close">✕</button>
-            </div>
-            <div class="edit-modal-body">
-                <!-- Content Field -->
-                <div class="edit-field">
-                    <label class="edit-field-label">📝 任务内容</label>
-                    <textarea id="quick-add-content" class="edit-input" placeholder="输入任务内容..." style="min-height: 60px;"></textarea>
-                </div>
-
-                <!-- Due Date Field -->
-                <div class="edit-field">
-                    <label class="edit-field-label">📅 截止日期（可选）</label>
-                    <div class="datetime-row">
-                        <div class="date-input-wrapper">
-                            <input type="date" id="quick-add-due-date">
-                        </div>
-                        <div class="date-input-wrapper">
-                            <input type="time" id="quick-add-due-time">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Location Labels -->
-                <div class="edit-field">
-                    <label class="edit-field-label">📍 地点（可选）</label>
-                    <div class="label-selector" id="quick-add-location-selector">
-                        <span class="label-option location" data-label="地点_办公室">办公室</span>
-                        <span class="label-option location" data-label="地点_健身房">健身房</span>
-                        <span class="label-option location" data-label="地点_良乡家">良乡家</span>
-                        <span class="label-option location" data-label="地点_六里桥家">六里桥家</span>
-                        <span class="label-option location" data-label="地点_任意">任意地点</span>
-                    </div>
-                </div>
-
-                <!-- Time Labels -->
-                <div class="edit-field">
-                    <label class="edit-field-label">⏰ 时间（可选）</label>
-                    <div class="label-selector" id="quick-add-time-selector">
-                        <span class="label-option time" data-label="时间_早上">早上</span>
-                        <span class="label-option time" data-label="时间_中午">中午</span>
-                        <span class="label-option time" data-label="时间_下午">下午</span>
-                        <span class="label-option time" data-label="时间_晚上">晚上</span>
-                        <span class="label-option time" data-label="时间_任意">任意时间</span>
-                    </div>
-                </div>
-
-                <!-- Role Labels -->
-                <div class="edit-field">
-                    <label class="edit-field-label">👤 角色（可选）</label>
-                    <div class="label-selector" id="quick-add-role-selector">
-                        <span class="label-option role" data-label="角色_教授">教授</span>
-                        <span class="label-option role" data-label="角色_数学家">数学家</span>
-                        <span class="label-option role" data-label="角色_运动员">运动员</span>
-                        <span class="label-option role" data-label="角色_其它">其它</span>
-                    </div>
-                </div>
-
-                <!-- Task Type Labels -->
-                <div class="edit-field">
-                    <label class="edit-field-label">🎯 任务类型（单选，可选）</label>
-                    <div class="label-selector" id="quick-add-type-selector">
-                        <span class="label-option action" data-label="类型_日程" data-recurrence="">日程</span>
-                        <span class="label-option action" data-label="类型_截止" data-recurrence="">截止</span>
-                        <span class="label-option action" data-label="类型_等待" data-recurrence="">等待</span>
-                        <span class="label-option action" data-label="类型_行动" data-recurrence="">行动</span>
-                        <span class="label-option recurring" data-label="类型_每日" data-recurrence="every day">每日 🔁</span>
-                        <span class="label-option recurring" data-label="类型_每周" data-recurrence="every week">每周 🔁</span>
-                        <span class="label-option recurring" data-label="类型_每月" data-recurrence="every month">每月 🔁</span>
-                        <span class="label-option recurring" data-label="类型_每季" data-recurrence="every 3 months">每季 🔁</span>
-                        <span class="label-option recurring" data-label="类型_每年" data-recurrence="every year">每年 🔁</span>
-                    </div>
-                </div>
-            </div>
-            <div class="edit-modal-footer">
-                <button class="edit-btn edit-btn-cancel" id="quick-add-cancel">取消</button>
-                <button class="edit-btn edit-btn-save" id="quick-add-save">放入 Inbox</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Global Auth Overlay -->
     <div id="auth-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 9999; justify-content: center; align-items: center; padding: 20px;">
         <div style="background: rgba(30, 30, 30, 0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; width: 100%; max-width: 400px; padding: 30px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
@@ -959,123 +868,18 @@
             }
         });
 
-        // Quick Add Button: Open modal on click
-        const quickAddBtn = document.getElementById('quick-add-btn');
-        const quickAddModal = document.getElementById('quick-add-modal');
+        // Quick Add: Create task immediately and open edit modal
+        const quickAddInput = document.getElementById('quick-add-input');
+        const quickAddSubmit = document.getElementById('quick-add-submit');
         
-        quickAddBtn.addEventListener('click', function() {
-            // Open modal
-            quickAddModal.style.display = 'flex';
-            setTimeout(() => quickAddModal.classList.add('show'), 10);
-            // Focus on content field
-            setTimeout(() => document.getElementById('quick-add-content').focus(), 100);
-        });
-
-        // Quick Add Modal: Close Logic
-        const closeQuickAddModal = () => {
-            quickAddModal.classList.remove('show');
-            setTimeout(() => quickAddModal.style.display = 'none', 300);
-        };
-
-        document.getElementById('quick-add-modal-close').addEventListener('click', closeQuickAddModal);
-        document.getElementById('quick-add-cancel').addEventListener('click', closeQuickAddModal);
-
-        // Quick Add Modal: Type selector single-select logic
-        document.querySelectorAll('#quick-add-type-selector .label-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('#quick-add-type-selector .label-option').forEach(opt => {
-                    opt.classList.remove('selected');
-                });
-                this.classList.add('selected');
-            });
-        });
-
-        // Quick Add: Save task with full details
-        document.getElementById('quick-add-save').addEventListener('click', async function() {
-            const saveBtn = this;
-            const originalText = saveBtn.textContent;
-            saveBtn.textContent = '保存中...';
-            saveBtn.disabled = true;
-
+        quickAddSubmit.addEventListener('click', async function() {
+            const taskContent = quickAddInput.value.trim() || '新任务';
+            
+            // Show loading state
+            quickAddSubmit.textContent = '...';
+            quickAddSubmit.disabled = true;
+            
             try {
-                // Gather content
-                const contentField = document.getElementById('quick-add-content');
-                const taskContent = contentField.value.trim();
-                if (!taskContent) {
-                    alert('任务内容不能为空');
-                    saveBtn.textContent = originalText;
-                    saveBtn.disabled = false;
-                    return;
-                }
-
-                // Gather labels
-                const selectedLabels = [];
-                document.querySelectorAll('#quick-add-location-selector .label-option.selected, #quick-add-time-selector .label-option.selected, #quick-add-role-selector .label-option.selected, #quick-add-type-selector .label-option.selected').forEach(option => {
-                    selectedLabels.push(option.getAttribute('data-label'));
-                });
-
-                // Gather due date
-                const dueDate = document.getElementById('quick-add-due-date').value;
-                const dueTime = document.getElementById('quick-add-due-time').value;
-                
-                let duePayload = null;
-                if (dueDate) {
-                    if (dueTime) {
-                        const [hours, minutes] = dueTime.split(':');
-                        const dateObj = new Date(dueDate);
-                        dateObj.setHours(parseInt(hours), parseInt(minutes), 0, 0);
-                        
-                        const year = dateObj.getFullYear();
-                        const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-                        const day = String(dateObj.getDate()).padStart(2, '0');
-                        const hh = String(dateObj.getHours()).padStart(2, '0');
-                        const mm = String(dateObj.getMinutes()).padStart(2, '0');
-                        
-                        duePayload = {
-                            datetime: `${year}-${month}-${day}T${hh}:${mm}:00+08:00`,
-                            string: `${dueDate} at ${dueTime}`,
-                            timezone: 'Asia/Shanghai',
-                            date: dueDate
-                        };
-                        
-                        const selectedTypeOption = document.querySelector('#quick-add-type-selector .label-option.selected');
-                        if (selectedTypeOption) {
-                            const recurrence = selectedTypeOption.getAttribute('data-recurrence');
-                            if (recurrence) {
-                                duePayload.recur = recurrence;
-                                duePayload.string = `every ${recurrence} at ${dueTime}`;
-                            }
-                        }
-                    } else {
-                        duePayload = {
-                            date: dueDate,
-                            string: dueDate,
-                            timezone: 'Asia/Shanghai'
-                        };
-                        
-                        const selectedTypeOption = document.querySelector('#quick-add-type-selector .label-option.selected');
-                        if (selectedTypeOption) {
-                            const recurrence = selectedTypeOption.getAttribute('data-recurrence');
-                            if (recurrence) {
-                                duePayload.recur = recurrence;
-                                duePayload.string = `every ${recurrence}`;
-                            }
-                        }
-                    }
-                }
-
-                // Build payload for Todoist API v1
-                const createPayload = {
-                    content: taskContent,
-                    labels: selectedLabels
-                };
-                
-                if (duePayload) {
-                    if (duePayload.date) createPayload.due_date = duePayload.date;
-                    if (duePayload.recur) createPayload.due_recur = duePayload.recur;
-                    if (duePayload.string) createPayload.due_string = duePayload.string;
-                }
-
                 // Create task via CORS proxy
                 const proxy = 'https://corsproxy.io/?';
                 const target = 'https://api.todoist.com/api/v1/tasks';
@@ -1086,39 +890,40 @@
                         'Authorization': 'Bearer ' + TODOIST_TOKEN,
                         'X-Forwarded-For': '127.0.0.1'
                     },
-                    body: JSON.stringify(createPayload)
+                    body: JSON.stringify({ content: taskContent })
                 });
-
+                
                 if (response.ok) {
-                    // Success: close modal and clear fields
-                    closeQuickAddModal();
-                    contentField.value = '';
-                    document.getElementById('quick-add-due-date').value = '';
-                    document.getElementById('quick-add-due-time').value = '';
-                    document.querySelectorAll('#quick-add-location-selector .label-option, #quick-add-time-selector .label-option, #quick-add-role-selector .label-option, #quick-add-type-selector .label-option').forEach(opt => opt.classList.remove('selected'));
+                    const newTask = await response.json();
                     
-                    // Show success feedback
-                    const submitBtn = document.getElementById('quick-add-btn');
-                    submitBtn.textContent = '✅ 完毕';
+                    // Clear input
+                    quickAddInput.value = '';
+                    quickAddSubmit.textContent = '✅';
+                    
+                    // Open edit modal with the new task
                     setTimeout(() => {
-                        submitBtn.textContent = '添加新任务';
-                    }, 1500);
+                        openEditModal(newTask);
+                        quickAddSubmit.textContent = '放入 Inbox';
+                        quickAddSubmit.disabled = false;
+                    }, 300);
                 } else {
-                    const errorData = await response.json();
-                    console.error('Failed to add task:', errorData);
-                    alert('保存失败，请重试');
-                    saveBtn.textContent = originalText;
-                    saveBtn.disabled = false;
+                    throw new Error('Failed to create task');
                 }
             } catch (err) {
-                console.error('Network error on quick add:', err);
-                alert('网络错误，请检查连接后重试');
-                saveBtn.textContent = originalText;
-                saveBtn.disabled = false;
+                console.error('Quick add error:', err);
+                alert('创建任务失败，请重试');
+                quickAddSubmit.textContent = '放入 Inbox';
+                quickAddSubmit.disabled = false;
             }
         });
-
-        // Close Modal Logic
+        
+        // Also allow pressing Enter to create task
+        quickAddInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                quickAddSubmit.click();
+            }
+        });
         const modal = document.getElementById('task-modal');
         document.getElementById('modal-close').addEventListener('click', () => {
             modal.classList.remove('show');
