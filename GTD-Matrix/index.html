@@ -43,6 +43,7 @@
             text-align: center;
             background: -webkit-linear-gradient(#eee, #333);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -109,10 +110,10 @@
         }
 
         /* Time based accents */
-        .btn[data-time="morning"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-morning); }
-        .btn[data-time="noon"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-noon); }
-        .btn[data-time="afternoon"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-afternoon); }
-        .btn[data-time="night"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-night); }
+        .btn[data-time-tag="morning"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-morning); }
+        .btn[data-time-tag="noon"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-noon); }
+        .btn[data-time-tag="afternoon"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-afternoon); }
+        .btn[data-time-tag="night"]::before { content: ""; position: absolute; top:0; left:0; right:0; height: 3px; background: var(--color-night); }
 
         .btn-icon {
             font-size: 24px;
@@ -463,6 +464,11 @@
         .label-option.action { background: rgba(46, 204, 113, 0.15); color: #2ecc71; }
         .label-option.recurring { background: rgba(231, 76, 60, 0.15); color: #e74c3c; }
 
+        .label-option.priority[data-priority="4"] { border-left: 3px solid #ff6b6b; color: #ff6b6b; background: rgba(255, 107, 107, 0.05); }
+        .label-option.priority[data-priority="3"] { border-left: 3px solid #f6d365; color: #f6d365; background: rgba(246, 211, 101, 0.05); }
+        .label-option.priority[data-priority="2"] { border-left: 3px solid #5dade2; color: #5dade2; background: rgba(52, 152, 219, 0.05); }
+        .label-option.priority[data-priority="1"] { border-left: 3px solid #888; color: #ccc; background: rgba(255, 255, 255, 0.05); }
+
         .label-option.selected {
             border-color: currentColor;
             box-shadow: 0 0 10px rgba(255,255,255,0.2);
@@ -744,6 +750,17 @@
                     </div>
                 </div>
 
+                <!-- Priority Field -->
+                <div class="edit-field">
+                    <label class="edit-field-label">🚨 优先级</label>
+                    <div class="label-selector" id="priority-selector">
+                        <span class="label-option priority" data-priority="4">P4 紧急</span>
+                        <span class="label-option priority" data-priority="3">P3 高</span>
+                        <span class="label-option priority" data-priority="2">P2 中</span>
+                        <span class="label-option priority" data-priority="1" class="selected">P1 常规</span>
+                    </div>
+                </div>
+
                 <!-- Location Labels -->
                 <div class="edit-field">
                     <label class="edit-field-label">📍 地点</label>
@@ -846,7 +863,7 @@
             btn.style.opacity = '0.7';
 
             try {
-                const res = await fetch("https://api.todoist.com/api/v1/projects", {
+                const res = await fetch("https://api.todoist.com/rest/v2/projects", {
                     headers: { "Authorization": `Bearer ${token}` }
                 });
                 
@@ -881,7 +898,7 @@
             
             try {
                 // Create task directly (same as edit modal)
-                const response = await fetch('https://api.todoist.com/api/v1/tasks', {
+                const response = await fetch('https://api.todoist.com/rest/v2/tasks', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -978,6 +995,12 @@
             document.getElementById('edit-due-date').value = dateValue;
             document.getElementById('edit-due-time').value = timeValue;
 
+            // Populate Priority
+            const pValue = task.priority || 1;
+            document.querySelectorAll('#priority-selector .label-option').forEach(opt => {
+                opt.classList.toggle('selected', parseInt(opt.getAttribute('data-priority')) === pValue);
+            });
+
             // Populate labels (excluding type labels - handled separately below)
             const taskLabels = task.labels || [];
             const typeLabels = ['类型_日程', '类型_截止', '类型_等待', '类型_行动', '类型_每日', '类型_每周', '类型_每月', '类型_每季', '类型_每年'];
@@ -1029,10 +1052,10 @@
         // Label selector toggle logic (single-select for type, multi-select for others)
         document.querySelectorAll('.label-option').forEach(option => {
             option.addEventListener('click', function() {
-                // Check if this is a type label (in the type-selector)
-                if (this.parentElement.id === 'type-selector') {
-                    // Single-select: deselect all other type options
-                    document.querySelectorAll('#type-selector .label-option').forEach(opt => {
+                // Check if this is a type label or priority (single-select)
+                if (this.parentElement.id === 'type-selector' || this.parentElement.id === 'priority-selector') {
+                    // Single-select: deselect all other options in this group
+                    this.parentElement.querySelectorAll('.label-option').forEach(opt => {
                         opt.classList.remove('selected');
                     });
                     this.classList.add('selected');
@@ -1151,6 +1174,11 @@
                     labels: selectedLabels
                 };
                 
+                const selectedPriorityOpt = document.querySelector('#priority-selector .label-option.selected');
+                if (selectedPriorityOpt) {
+                    updatePayload.priority = parseInt(selectedPriorityOpt.getAttribute('data-priority'));
+                }
+                
                 // Add due date and recurrence at top level (Todoist API v1 format)
                 if (duePayload) {
                     if (duePayload.date) {
@@ -1165,7 +1193,7 @@
                 }
 
                 // API call to update task (same as Quick Add - direct API call)
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`, {
+                const response = await fetch(`https://api.todoist.com/rest/v2/tasks/${currentEditTaskId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -1240,7 +1268,7 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
+                    const response = await fetch(`https://api.todoist.com/rest/v2/tasks?limit=200&bypassCache=${Math.random()}`, {
                         headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                     });
                     
@@ -1354,7 +1382,7 @@
                             item.classList.add('completed');
                             
                             // Fire HTTP Close API quietly
-                            fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
+                            fetch(`https://api.todoist.com/rest/v2/tasks/${t.id}/close`, {
                                 method: 'POST',
                                 headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                             }).catch(err => console.error("Could not close task:", err));
@@ -1414,7 +1442,7 @@
             try {
                 // The underlying /api/v1/tasks sync endpoint ignores URL filters. 
                 // We fetch all minimal tasks and filter them locally.
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
+                const response = await fetch(`https://api.todoist.com/rest/v2/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
                 
@@ -1499,11 +1527,14 @@
                                 </div>
                             ` : '';
 
+                            const priorityFlags = {4: '🔴 ', 3: '🟠 ', 2: '🔵 ', 1: ''};
+                            const pFlag = t.priority && t.priority > 1 ? `<span style="font-size: 13px;">${priorityFlags[t.priority]}</span>` : '';
+
                             eventDiv.innerHTML = `
                                 <div class="task-checkbox widget-checkbox" style="margin-right: 12px; flex-shrink: 0; margin-top: -2px;" data-id="${t.id}"></div>
                                 <div style="flex: 1; padding-right:10px;">
                                     ${datePrefix}${timeStr}
-                                    <span class="widget-task-content" style="line-height: 1.4; word-break: break-word;">${t.content}</span>
+                                    <span class="widget-task-content" style="line-height: 1.4; word-break: break-word;">${pFlag}${t.content}</span>
                                     ${widgetLabelHtml}
                                 </div>
                                 <button class="task-edit-btn widget-edit" style="flex-shrink: 0;" data-id="${t.id}">✏️</button>
@@ -1518,10 +1549,11 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
+                                fetch(`https://api.todoist.com/rest/v2/tasks/${t.id}/close`, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
-                                }).catch(err => console.error(err));
+                                }).then(res => { if (!res.ok) console.error("Close Error:", res.status, res.statusText); })
+                                  .catch(err => console.error("Could not close task:", err));
                                 
                                 setTimeout(() => {
                                     eventDiv.style.transform = 'scale(0.9) translateY(-10px)';
@@ -1583,7 +1615,7 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
+                const response = await fetch(`https://api.todoist.com/rest/v2/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
                 
@@ -1665,10 +1697,13 @@
                                 </div>
                             ` : '';
 
+                            const priorityFlags = {4: '🔴 ', 3: '🟠 ', 2: '🔵 ', 1: ''};
+                            const pFlag = t.priority && t.priority > 1 ? `<span style="font-size: 13px;">${priorityFlags[t.priority]}</span>` : '';
+
                             eventDiv.innerHTML = `
                                 <div class="task-checkbox widget-checkbox" style="margin-right: 15px; flex-shrink: 0;" data-id="${t.id}"></div>
                                 <div style="flex: 1; padding-right: 10px;">
-                                    <span class="widget-task-content" style="line-height: 1.4; word-break: break-word;">${t.content}</span>
+                                    <span class="widget-task-content" style="line-height: 1.4; word-break: break-word;">${pFlag}${t.content}</span>
                                     ${widgetLabelHtml}
                                 </div>
                                 <span style="color: ${daysColor}; font-weight: 700; font-size: 14px; white-space: nowrap; background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 8px; margin-right: 10px; flex-shrink: 0;">${daysText}</span>
@@ -1684,10 +1719,11 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
+                                fetch(`https://api.todoist.com/rest/v2/tasks/${t.id}/close`, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
-                                }).catch(err => console.error(err));
+                                }).then(res => { if (!res.ok) console.error("Close Error:", res.status, res.statusText); })
+                                  .catch(err => console.error("Could not close task:", err));
                                 
                                 setTimeout(() => {
                                     eventDiv.style.transform = 'scale(0.9) translateY(-10px)';
