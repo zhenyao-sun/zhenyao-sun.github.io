@@ -863,7 +863,7 @@
             btn.style.opacity = '0.7';
 
             try {
-                const res = await fetch("https://api.todoist.com/rest/v2/projects", {
+                const res = await fetch("https://api.todoist.com/api/v1/projects", {
                     headers: { "Authorization": `Bearer ${token}` }
                 });
                 
@@ -898,7 +898,7 @@
             
             try {
                 // Create task directly (same as edit modal)
-                const response = await fetch('https://api.todoist.com/rest/v2/tasks', {
+                const response = await fetch('https://api.todoist.com/api/v1/tasks', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -1193,7 +1193,7 @@
                 }
 
                 // API call to update task (same as Quick Add - direct API call)
-                const response = await fetch(`https://api.todoist.com/rest/v2/tasks/${currentEditTaskId}`, {
+                const response = await fetch(`https://api.todoist.com/api/v1/tasks/${currentEditTaskId}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -1268,7 +1268,7 @@
                 setTimeout(() => modal.classList.add('show'), 10);
                 
                 try {
-                    const response = await fetch(`https://api.todoist.com/rest/v2/tasks?limit=200&bypassCache=${Math.random()}`, {
+                    const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                         headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                     });
                     
@@ -1382,7 +1382,7 @@
                             item.classList.add('completed');
                             
                             // Fire HTTP Close API quietly
-                            fetch(`https://api.todoist.com/rest/v2/tasks/${t.id}/close`, {
+                            fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
                                 method: 'POST',
                                 headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                             }).catch(err => console.error("Could not close task:", err));
@@ -1442,7 +1442,7 @@
             try {
                 // The underlying /api/v1/tasks sync endpoint ignores URL filters. 
                 // We fetch all minimal tasks and filter them locally.
-                const response = await fetch(`https://api.todoist.com/rest/v2/tasks?limit=200&bypassCache=${Math.random()}`, {
+                const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
                 
@@ -1549,7 +1549,7 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/rest/v2/tasks/${t.id}/close`, {
+                                fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                                 }).then(res => { if (!res.ok) console.error("Close Error:", res.status, res.statusText); })
@@ -1615,7 +1615,7 @@
             list.innerHTML = '<div style="color: #666; font-size: 14px; text-align: center; padding: 10px 0;">加载中...</div>';
             
             try {
-                const response = await fetch(`https://api.todoist.com/rest/v2/tasks?limit=200&bypassCache=${Math.random()}`, {
+                const response = await fetch(`https://api.todoist.com/api/v1/tasks?limit=200&bypassCache=${Math.random()}`, {
                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                 });
                 
@@ -1719,7 +1719,7 @@
                                 eventDiv.querySelector('.widget-task-content').style.textDecoration = 'line-through';
                                 eventDiv.querySelector('.widget-task-content').style.color = '#888';
                                 
-                                fetch(`https://api.todoist.com/rest/v2/tasks/${t.id}/close`, {
+                                fetch(`https://api.todoist.com/api/v1/tasks/${t.id}/close`, {
                                     method: 'POST',
                                     headers: { "Authorization": `Bearer ${TODOIST_TOKEN}` }
                                 }).then(res => { if (!res.ok) console.error("Close Error:", res.status, res.statusText); })
