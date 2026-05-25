@@ -1,6 +1,6 @@
 # Zhenyao Sun's Home Page
 
-- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assitant Professor at [School of Mathematics and Statistics at Beijing Institute of Technology](https://math.bit.edu.cn/)
+- <img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I am an Assistant Professor at [School of Mathematics and Statistics at Beijing Institute of Technology](https://math.bit.edu.cn/)
 - Before, I was a Postdoc student of [Faculty of Data and Decision Sciences at the Technion - Israel Institute of Technology](https://dds.technion.ac.il/) hosted by [Prof. Leonid Mytnik](https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/). 
 - I got my Ph.D. at the [School of Mathematical Sciences at Peking University](https://www.math.pku.edu.cn/puremath_en/) under the supervision of [Prof. Yan-Xia Ren](http://www.math.pku.edu.cn/teachers/renyx/indexE.htm). 
 - I also visited [Prof. Renming Song](https://faculty.math.illinois.edu/~rsong/) as a joint Ph.D. student at [Mathematics at the University of Illinois at Urbana-Champaign](https://math.illinois.edu/). 
@@ -11,7 +11,7 @@
 
 ## Preprints
 1. [H. Hou and Z. Sun, *On the subcritical self-catalytic branching Brownian motions.*](Files/Papers/2025arXiv.pdf)
-1. [L. Qian, and Z. Sun, *On the spetral radius of of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/2023arXiv.pdf)
+1. [L. Qian, and Z. Sun, *On the spectral radius of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/2023arXiv.pdf)
 
 ## Publications
 
@@ -35,6 +35,7 @@
 - [Subcritical superprocesses conditioned on non-extinction](Files/Qprocess.pdf)
 - [On the coming down from infinity of coalescing Brownian motions](Files/ComingDown.pdf)
 - [Effect of small noise on the speed of  reaction-diffusion equation with non-Lipschitz drift](Files/WaveSpeed.pdf)
+- [Effect of small noise on the speed of reaction-diffusion equations (YMSC Probability Seminar)](Files/BD-conjecture-story.pdf)
 - [Quasi-stationary distributions for subcritical superprocesses](Files/subyaglom_talk.pdf)
 - [Stable Central Limit Theorems for Super Ornstein-Uhlenbeck Processes](Files/Zhenyao2020Oct.pdf)
 - [Limit theorems for a class of critical superprocesses with stable branching](Files/2018JSNU.pdf) 
@@ -42,8 +43,8 @@
 
 ## Events
 
-- 2026 April 17, Westlake University, Probability Seminars
-- 2026 June 1-19, Peking University, Probability Summer Schools
+
+- 2026 June 1-5, Southern University of Science and Technology, Workshop on SPDEs and Mathematical Physics; June 1-19, Peking University, Probability Summer Schools
 - 2026 June 7-12, Institute for Advanced Study in Mathematics (IASM) in Hangzhou, Workshop on Properties of Enhanced Branching Structures
 - 2026 July 06-10, National and Kapodistrian University of Athens, The 15th AIMS conference
 - 2026 August 17-21, the Chinese Academy of Sciences, Chinese-Italian Conference on Stochastic Analysis
@@ -53,6 +54,6 @@
 ## Links
 
 - Bing Map for [Beijing Institute of Technology--Liangxiang](https://cn.bing.com/maps?ty=18&q=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&ss=ypid.YN4067x31518226&mb=39.737434~116.162528~39.725948~116.182028&description=Yard+No.8+Liangxiang+East+Rd,+Beijing&cardbg=#88979C&dt=1747990800000&tt=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&tsts1=%26ty%3D18%26q%3DBeijing%2520Institute%2520of%2520Technology%2520%2528Liangxiang%2520Town%2520Campus%2529%26ss%3Dypid.YN4067x31518226%26mb%3D39.737434~116.162528~39.725948~116.182028%26description%3DYard%2520No.8%2520Liangxiang%2520East%2520Rd%252C%2520Beijing%26cardbg%3D%252388979C%26dt%3D1747990800000&tstt1=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&cp=qmnrmctpdxkc&lvl=16.1&ftst=1&ftics=True&v=2&sV=2&form=S00027) and [Bosi Elegant Hotel](https://www.bing.com/maps?&ty=18&q=Building1,Yard101,YangguangNorthStreet,%20Beijing,%20Beijing&ss=ypid.YN4067x15478922572392425981&mb=39.744946~116.155293~39.732637~116.176193&description=Building1,Yard101,YangguangNorthStreet,%20Beijing,%20Beijing&cardbg=#D161C4&dt=1747990800000&tt=Bosi%20Elegant%20Hotel&tsts0=%26ty%3D18%26q%3DBuilding1%252CYard101%252CYangguangNorthStreet%252C%2520Beijing%252C%2520Beijing%26ss%3Dypid.YN4067x15478922572392425981%26mb%3D39.744946~116.155293~39.732637~116.176193%26description%3DBuilding1%252CYard101%252CYangguangNorthStreet%252C%2520Beijing%252C%2520Beijing%26cardbg%3D%2523D161C4%26dt%3D1747990800000&tstt0=Bosi%20Elegant%20Hotel&cp=39.738792~116.160421&lvl=16&pi=0&ftst=0&ftics=False&v=2&sV=2&form=S00027).
-- [Beijing Institute of Technology-Liangxiang campus map (highlighting School of Mathmatics and Statistics)](Files/Direction2BITMath.pdf)
+- [Beijing Institute of Technology-Liangxiang campus map (highlighting School of Mathematics and Statistics)](Files/Direction2BITMath.pdf)
 - I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
-- My [Phd Thesis](Files/thesis.pdf)
+- My [PhD Thesis](Files/thesis.pdf)
