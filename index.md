@@ -44,8 +44,6 @@
 ## Events
 
 
-- 2026 June 1-5, Southern University of Science and Technology, Workshop on SPDEs and Mathematical Physics; June 1-19, Peking University, Probability Summer Schools
-- 2026 June 7-12, Institute for Advanced Study in Mathematics (IASM) in Hangzhou, Workshop on Properties of Enhanced Branching Structures
 - 2026 July 06-10, National and Kapodistrian University of Athens, The 15th AIMS conference
 - 2026 August 17-21, the Chinese Academy of Sciences, Chinese-Italian Conference on Stochastic Analysis
 
