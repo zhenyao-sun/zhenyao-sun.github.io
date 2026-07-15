@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSSS 2026 — Summer Symposium on Stochastic Systems</title>
+<style>
+  :root {
+    --c-bg: #fafafa;
+    --c-text: #222;
+    --c-muted: #555;
+    --c-accent: #1a5276;
+    --c-line: #ddd;
+    --max-w: 720px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--c-bg);
+    color: var(--c-text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--c-accent);
+    color: #fff;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+  }
+  header .sub {
+    margin-top: .6rem;
+    font-size: 1.1rem;
+    opacity: .85;
+  }
+  header .name {
+    margin-top: .4rem;
+    font-size: 1rem;
+    opacity: .75;
+  }
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  section { margin-bottom: 2.4rem; }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--c-accent);
+    border-bottom: 2px solid var(--c-accent);
+    padding-bottom: .35rem;
+    margin-bottom: 1rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: .75rem;
+  }
+  .card {
+    padding: .8rem 1rem;
+    border: 1px solid var(--c-line);
+    border-radius: 6px;
+    background: #fff;
+  }
+  .card .name { font-weight: 600; }
+  .card .affil { color: var(--c-muted); font-size: .9rem; }
+  .card .role { font-size: .85rem; color: var(--c-accent); margin-top: .2rem; }
+
+  .mini-course {
+    padding: 1rem 1.2rem;
+    border-left: 4px solid var(--c-accent);
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: .75rem;
+  }
+  .mini-course .speaker { font-weight: 600; }
+  .mini-course .affil { color: var(--c-muted); font-size: .9rem; }
+  .mini-course .sessions { margin-top: .25rem; font-size: .9rem; }
+
+  .info dt { font-weight: 600; margin-top: .6rem; }
+  .info dd { color: var(--c-muted); }
+  .info a { color: var(--c-accent); }
+
+  footer {
+    text-align: center;
+    color: var(--c-muted);
+    font-size: .85rem;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--c-line);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Summer Symposium on Stochastic Systems 2026</h1>
+  <div class="sub">Random Systems · Stochastic Analysis · Interactive Dynamics</div>
+</header>
+
+<main>
+
+<section>
+  <h2>Overview</h2>
+  <p>
+    SSSS 2026 is the second edition of the Summer Symposium on Stochastic Systems, a one-week workshop
+    hosted by the Probability Group at Beijing Institute of Technology.
+    The symposium features invited research talks and mini-courses
+    on stochastic analysis, stochastic PDEs, and related topics.
+  </p>
+</section>
+
+<section>
+  <h2>Date &amp; Venue</h2>
+  <dl class="info">
+    <dt>Date</dt>
+    <dd>August 24–28, 2026</dd>
+    <dt>Venue</dt>
+    <dd>Wencui Building E 708, Beijing Institute of Technology (<a href="https://cn.bing.com/maps?ty=18&amp;q=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&amp;ss=ypid.YN4067x31518226&amp;mb=39.737434~116.162528~39.725948~116.182028&amp;description=Yard+No.8+Liangxiang+East+Rd,+Beijing&amp;cardbg=#88979C&amp;dt=1747990800000&amp;tt=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&amp;tsts1=%26ty%3D18%26q%3DBeijing%2520Institute%2520of%2520Technology%2520%2528Liangxiang%2520Town%2520Campus%2529%26ss%3Dypid.YN4067x31518226%26mb%3D39.737434~116.162528~39.725948~116.182028%26description%3DYard%2520No.8%2520Liangxiang%2520East%2520Rd%252C%2520Beijing%26cardbg%3D%252388979C%26dt%3D1747990800000&amp;tstt1=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&amp;cp=qmnrmctpdxkc&amp;lvl=16.1&amp;ftst=1&amp;ftics=True&amp;v=2&amp;sV=2&amp;form=S00027" target="_blank">Bing Map</a> · <a href="https://zhenyao-sun.github.io/Files/Direction2BITMath.pdf" target="_blank">Campus Map (PDF)</a>)</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Organizers</h2>
+  <ul class="info">
+    <li>Zhenyao Sun</li>
+    <li>Zimo Hao</li>
+    <li>Guopeng Li</li>
+    <li>Xicheng Zhang</li>
+    <li>Rongchan Zhu</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Mini-Courses</h2>
+
+  <div class="mini-course">
+    <div class="speaker">Leonardo Tolomeo</div>
+    <div class="affil">University of Edinburgh</div>
+    <div class="sessions">4 sessions</div>
+  </div>
+</section>
+
+<section>
+  <h2>Confirmed Speakers</h2>
+  <div class="cards">
+
+    <div class="card">
+      <div class="name">Deng Zhang</div>
+      <div class="affil">Shanghai Jiao Tong University</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Oleg Butkovsky</div>
+      <div class="affil">Weierstrass Institute (WIAS)</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Jian Song</div>
+      <div class="affil">Shandong University</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Soobin Cho</div>
+      <div class="affil">University of Illinois Urbana-Champaign</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Fabian Höfer</div>
+      <div class="affil">Universität Münster</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Khoa Lê</div>
+      <div class="affil">University of Leeds</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Guohuan Zhao</div>
+      <div class="affil">AMSS, Chinese Academy of Sciences</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Scott Smith</div>
+      <div class="affil">AMSS, Chinese Academy of Sciences</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Xiangchan Zhu</div>
+      <div class="affil">AMSS, Chinese Academy of Sciences</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Dejun Luo</div>
+      <div class="affil">AMSS, Chinese Academy of Sciences</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Wei Liu</div>
+      <div class="affil">Wuhan University</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Xiaobin Sun</div>
+      <div class="affil">Jiangsu Normal University</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Sizhou Wu</div>
+      <div class="affil">Shanghai University of Finance and Economics</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Chenmin Sun</div>
+      <div class="affil">CNRS, Université Paris-Est Créteil</div>
+      <div class="role">Talk</div>
+    </div>
+
+    <div class="card">
+      <div class="name">Chengcheng Ling</div>
+      <div class="affil">University of Augsburg</div>
+      <div class="role">Talk</div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2026 Probability Group, Beijing Institute of Technology
+</footer>
+
+</body>
+</html>
