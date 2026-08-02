@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>index</title>
+  <meta name="description" content="Academic homepage of Zhenyao Sun,
+Assistant Professor at Beijing Institute of Technology, working in
+probability theory and stochastic analysis." />
+  <title>Zhenyao Sun | Probability and Stochastic Analysis</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -170,37 +173,528 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zhenyao Sun | Probability and Stochastic Analysis" />
+  <meta property="og:description" content="Academic homepage of Zhenyao Sun, Assistant Professor at Beijing Institute of Technology, working in probability theory and stochastic analysis." />
+  <meta property="og:url" content="https://zhenyao-sun.github.io/" />
+  <meta name="twitter:card" content="summary" />
 </head>
 <body>
-<h1 id="zhenyao-suns-home-page">Zhenyao Sun’s Home Page</h1>
-<ul>
-<li><img src="Files/selfie2020.jpg" alt="selfie" style="float:right;zoom:7%;margin:100px 300px;"/>I
-am an Assistant Professor at <a href="https://math.bit.edu.cn/">School
-of Mathematics and Statistics at Beijing Institute of
-Technology</a></li>
-<li>Before, I was a Postdoc student of <a
-href="https://dds.technion.ac.il/">Faculty of Data and Decision Sciences
-at the Technion - Israel Institute of Technology</a> hosted by <a
-href="https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/">Prof. Leonid
-Mytnik</a>.</li>
-<li>I got my Ph.D. at the <a
-href="https://www.math.pku.edu.cn/puremath_en/">School of Mathematical
-Sciences at Peking University</a> under the supervision of <a
-href="http://www.math.pku.edu.cn/teachers/renyx/indexE.htm">Prof. Yan-Xia
-Ren</a>.</li>
-<li>I also visited <a
-href="https://faculty.math.illinois.edu/~rsong/">Prof. Renming Song</a>
-as a joint Ph.D. student at <a
-href="https://math.illinois.edu/">Mathematics at the University of
-Illinois at Urbana-Champaign</a>.</li>
-<li>I got my B.S. at the School of Mathematical Sciences at Peking
-University.</li>
-<li>My research interest is probability theory, with a focus on models
-related to stochastic heat equations.</li>
-<li>Email: zhenyao dot sun at gmail dot com</li>
-<li>Office: 411B Wen-Cui building E, Beijing Institute of Technology
-Liangxiang, Beijing.</li>
-</ul>
+<style>
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.15rem 0.8rem;
+  border-bottom: 1px solid #e0e6ec;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+}
+
+.site-nav-brand {
+  color: #172c42 !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem 1rem;
+}
+
+.site-nav-links a {
+  color: #465c70;
+  text-decoration: none;
+}
+
+.site-nav-links a:hover {
+  color: #172c42;
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.site-nav a:focus-visible {
+  border-radius: 3px;
+  outline: 2px solid #577b9d;
+  outline-offset: 4px;
+}
+
+#preprints,
+#publications {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e1e7ec;
+  color: #172c42;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+#preprints + ol,
+#publications + ol {
+  margin-top: 1.15rem;
+  padding-left: 2.15rem;
+}
+
+#preprints + ol > li,
+#publications + ol > li {
+  margin-bottom: 0.95rem;
+  padding-left: 0.3rem;
+  line-height: 1.5;
+}
+
+#preprints + ol > li::marker,
+#publications + ol > li::marker {
+  color: #6a8298;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.84em;
+  font-weight: 650;
+}
+
+#preprints + ol > li > a,
+#publications + ol > li > a {
+  color: #263f56;
+  text-decoration-color: #a9bac9;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+#preprints + ol > li > a:hover,
+#publications + ol > li > a:hover {
+  color: #123653;
+  text-decoration-color: currentColor;
+}
+
+#slides {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e1e7ec;
+  color: #172c42;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+#slides + ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.15rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+#slides + ul > li {
+  margin: 0;
+}
+
+#slides + ul > li > a {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+  min-height: 7rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid #dce4ea;
+  border-radius: 10px;
+  background: #fbfcfd;
+  color: #263f56;
+  line-height: 1.42;
+  text-decoration: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+#slides + ul > li > a::after {
+  align-self: flex-start;
+  content: "PDF";
+  padding: 0.2rem 0.42rem;
+  border-radius: 4px;
+  background: #e9f0f5;
+  color: #557088;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+#slides + ul > li > a:hover {
+  border-color: #aabccc;
+  box-shadow: 0 7px 18px rgba(24, 46, 72, 0.08);
+  transform: translateY(-2px);
+}
+
+#slides + ul > li > a:focus-visible {
+  outline: 2px solid #577b9d;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #slides + ul > li > a {
+    transition: none;
+  }
+}
+
+#events {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e1e7ec;
+  color: #172c42;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.15rem;
+}
+
+.event-card {
+  padding: 1.1rem;
+  border: 1px solid #dce4ea;
+  border-top: 3px solid #a8b7c4;
+  border-radius: 10px;
+  background: #fbfcfd;
+}
+
+.event-card.event-upcoming {
+  border-top-color: #537e69;
+  background: #f8fbf9;
+}
+
+.event-status {
+  display: inline-block;
+  margin: 0 0 0.85rem;
+  padding: 0.2rem 0.48rem;
+  border-radius: 999px;
+  background: #e8edf1;
+  color: #64798b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.event-upcoming .event-status {
+  background: #e5f0e9;
+  color: #3d6b54;
+}
+
+.event-card time {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #49637a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.event-card h3 {
+  margin: 0;
+  color: #20384f;
+  font-size: 1.06rem;
+  line-height: 1.35;
+}
+
+.event-venue {
+  margin: 0.75rem 0 0;
+  color: #536372;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.profile-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 148px;
+  grid-template-areas:
+    "copy photo"
+    "focus photo"
+    "background background";
+  gap: 1rem 2rem;
+  margin: 0 0 2.75rem;
+  padding: 2rem;
+  border: 1px solid #d8e0e8;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #f7fafc 0%, #ffffff 72%);
+  box-shadow: 0 12px 34px rgba(24, 46, 72, 0.07);
+  text-align: left;
+}
+
+.profile-copy {
+  grid-area: copy;
+  align-self: center;
+}
+
+.profile-photo {
+  grid-area: photo;
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(24, 46, 72, 0.16);
+}
+
+.profile-kicker {
+  margin: 0 0 0.55rem;
+  color: #47637f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-hero h1 {
+  margin: 0;
+  color: #172c42;
+  font-size: clamp(2.15rem, 6vw, 3.15rem);
+  line-height: 1.05;
+}
+
+.profile-role {
+  margin: 0.65rem 0 0;
+  color: #3d4c5c;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.profile-focus {
+  grid-area: focus;
+  margin: 0;
+  color: #273646;
+  font-size: 1.03rem;
+  line-height: 1.55;
+}
+
+.profile-background {
+  grid-area: background;
+  padding-top: 1.35rem;
+  border-top: 1px solid #e0e6ec;
+  color: #354555;
+}
+
+.profile-background p {
+  margin: 0;
+  line-height: 1.58;
+}
+
+.profile-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.25rem;
+  margin-top: 1rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.88rem;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.6rem;
+  margin: 0.75rem 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+}
+
+.profile-links-label {
+  color: #687a89;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.profile-links a {
+  color: #315b7c;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.profile-links-separator {
+  color: #a3afb8;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dce4ea;
+  color: #667785;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+}
+
+.site-footer a {
+  color: #315b7c;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.profile-hero a {
+  color: #244f78;
+  text-decoration-color: #a8bfd3;
+  text-underline-offset: 0.16em;
+}
+
+.profile-hero a:hover {
+  color: #123653;
+  text-decoration-color: currentColor;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .site-nav-links {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  #preprints,
+  #publications,
+  #slides,
+  #events {
+    font-size: 1.45rem;
+  }
+
+  #preprints + ol,
+  #publications + ol {
+    padding-left: 1.75rem;
+  }
+
+  #preprints + ol > li,
+  #publications + ol > li {
+    margin-bottom: 0.85rem;
+    padding-left: 0.15rem;
+  }
+
+  #slides + ul {
+    grid-template-columns: 1fr;
+  }
+
+  #slides + ul > li > a {
+    min-height: 0;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-hero {
+    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-areas:
+      "photo copy"
+      "focus focus"
+      "background background";
+    gap: 1.15rem;
+    margin-bottom: 2.25rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .profile-photo {
+    width: 104px;
+    height: 104px;
+    border-radius: 11px;
+  }
+
+  .profile-hero h1 {
+    font-size: 2rem;
+  }
+
+  .profile-kicker {
+    font-size: 0.66rem;
+  }
+
+  .profile-role {
+    font-size: 0.94rem;
+  }
+
+  .profile-focus { font-size: 0.98rem; }
+
+  .profile-background {
+    padding-top: 1rem;
+  }
+
+  .profile-contact {
+    display: grid;
+    gap: 0.55rem;
+  }
+}
+</style>
+<nav class="site-nav" aria-label="Primary navigation">
+<a class="site-nav-brand" href="#profile">Zhenyao Sun</a>
+<div class="site-nav-links">
+<a href="#preprints">Papers</a><a href="#slides">Slides</a><a href="#events">Events</a><a href="#teachings">Teaching</a><a href="#links">Links</a>
+</div>
+</nav>
+<header class="profile-hero" id="profile">
+<div class="profile-copy">
+<p class="profile-kicker">
+Probability · Stochastic Analysis
+</p>
+<h1>
+Zhenyao Sun
+</h1>
+<p class="profile-role">
+Assistant Professor at the <a href="https://math.bit.edu.cn/">School of
+Mathematics and Statistics, Beijing Institute of Technology</a>
+</p>
+</div>
+<p class="profile-focus">
+My research is in probability theory, with a focus on models related to
+stochastic heat equations.
+</p>
+<img class="profile-photo" src="Files/selfie2020.jpg" alt="Portrait of Zhenyao Sun" />
+<div class="profile-background">
+<p>
+Previously, I was a postdoctoral researcher in the
+<a href="https://dds.technion.ac.il/">Faculty of Data and Decision
+Sciences at the Technion</a>, hosted by
+<a href="https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/">Prof. Leonid
+Mytnik</a>. I received my Ph.D. from
+<a href="https://www.math.pku.edu.cn/puremath_en/">Peking University</a>
+under the supervision of
+<a href="http://www.math.pku.edu.cn/teachers/renyx/indexE.htm">Prof. Yan-Xia
+Ren</a>, and visited
+<a href="https://faculty.math.illinois.edu/~rsong/">Prof. Renming
+Song</a> at the <a href="https://math.illinois.edu/">University of
+Illinois Urbana-Champaign</a>. I also received my B.S. from Peking
+University.
+</p>
+<p class="profile-contact">
+<span><strong>Email:</strong>
+<a href="mailto:zhenyao.sun@gmail.com">zhenyao.sun@gmail.com</a></span><span><strong>Office:</strong>
+411B, Wen-Cui Building E, BIT Liangxiang Campus, Beijing</span>
+</p>
+<p class="profile-links" aria-label="Academic profiles">
+<span
+class="profile-links-label">Profiles</span><a href="https://scholar.google.com/citations?user=XHxfUSkAAAAJ&amp;hl=en">Google
+Scholar</a><span class="profile-links-separator"
+aria-hidden="true">·</span><a href="https://arxiv.org/a/sun_z_7.html">arXiv</a>
+</p>
+</div>
+</header>
 <h2 id="preprints">Preprints</h2>
 <ol type="1">
 <li><a href="Files/Papers/2025arXiv.pdf">H. Hou and Z. Sun, <em>On the
@@ -286,12 +780,32 @@ superprocesses with stable branching</a></li>
 limit theorems for a class of critical superprocesses</a></li>
 </ul>
 <h2 id="events">Events</h2>
-<ul>
-<li>2026 July 06-10, National and Kapodistrian University of Athens, The
-15th AIMS conference</li>
-<li>2026 August 17-21, the Chinese Academy of Sciences, Chinese-Italian
-Conference on Stochastic Analysis</li>
-</ul>
+<div class="events-grid">
+<article class="event-card event-upcoming">
+<p class="event-status">
+Upcoming
+</p>
+<time datetime="2026-08-17">17–21 August 2026</time>
+<h3>
+Chinese–Italian Conference on Stochastic Analysis
+</h3>
+<p class="event-venue">
+Chinese Academy of Sciences
+</p>
+</article>
+<article class="event-card">
+<p class="event-status">
+Past
+</p>
+<time datetime="2026-07-06">6–10 July 2026</time>
+<h3>
+The 15th AIMS Conference
+</h3>
+<p class="event-venue">
+National and Kapodistrian University of Athens
+</p>
+</article>
+</div>
 <h2 id="teachings">Teachings</h2>
 <h2 id="links">Links</h2>
 <ul>
@@ -308,5 +822,8 @@ bilibili channel</a> for <a href="https://www.owprobability.org">the One
 World Probability Seminar</a></li>
 <li>My <a href="Files/thesis.pdf">PhD Thesis</a></li>
 </ul>
+<footer class="site-footer">
+<span>Zhenyao Sun</span><a href="#profile">Back to top ↑</a>
+</footer>
 </body>
 </html>
