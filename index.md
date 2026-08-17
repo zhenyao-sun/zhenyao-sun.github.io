@@ -531,6 +531,12 @@ header-includes:
 <div class="events-grid">
 <article class="event-card event-upcoming">
 <p class="event-status">Upcoming</p>
+<time datetime="2026-08-24">24–28 August 2026</time>
+<h3><a href="Events/SSSS2026/">Summer Symposium on Stochastic Systems (𝒮⁴ 2026)</a></h3>
+<p class="event-venue">Beijing Institute of Technology</p>
+</article>
+<article class="event-card event-upcoming">
+<p class="event-status">Upcoming</p>
 <time datetime="2026-08-17">17–21 August 2026</time>
 <h3>Chinese–Italian Conference on Stochastic Analysis</h3>
 <p class="event-venue">Chinese Academy of Sciences</p>
