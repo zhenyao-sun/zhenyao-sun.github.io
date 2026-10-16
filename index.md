@@ -476,7 +476,7 @@ header-includes:
 
 <nav class="site-nav" aria-label="Primary navigation">
 <a class="site-nav-brand" href="#profile">Zhenyao Sun</a>
-<div class="site-nav-links"><a href="#preprints">Papers</a><a href="#slides">Slides</a><a href="#events">Events</a><a href="#teachings">Teaching</a><a href="#links">Links</a></div>
+<div class="site-nav-links"><a href="#preprints">Papers</a><a href="#slides">Slides</a><a href="#events">Events</a><a href="#links">Links</a></div>
 </nav>
 
 <header class="profile-hero" id="profile">
@@ -495,12 +495,13 @@ header-includes:
 </header>
 
 ## Preprints
+1. [L. W.-T. Fan, Z. Sun, and J. Yang, *Comparison principles for stochastic reaction-diffusion equations on metric measure spaces.*](Files/Papers/2026arXiv-comparison.pdf)
 1. [H. Hou and Z. Sun, *On the subcritical self-catalytic branching Brownian motions.*](Files/Papers/2025arXiv.pdf)
 1. [L. Qian, and Z. Sun, *On the spectral radius of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/2023arXiv.pdf)
 
 ## Publications
 
-1. [C. Barnes, L. Mytnik, and Z. Sun, *Wright-Fisher stochastic heat equations with irregular drifts.* Probab. Theory Relat. Fields (2025). ](Files/Papers/2025PTRF.pdf)
+1. [C. Barnes, L. Mytnik, and Z. Sun, *Wright-Fisher stochastic heat equations with irregular drifts.* Probab. Theory Relat. Fields **194** (2026), 1711–1786.](Files/Papers/2025PTRF.pdf)
 1. [C. Barnes, L. Mytnik, and Z. Sun, *Effect of small noise on the speed of reaction-diffusion equations with non-Lipschitz drift.* Ann. Inst. H. Poincaré Probab. Statist. **60** (2024), no. 4, 2382-2414](Files/Papers/2024AIHP.pdf)
 2. [C. Barnes, L. Mytnik, and Z. Sun, *On the coming down from infinity of coalescing Brownian motions.* Ann. Probab. **52** (2024), no. 1, 67-92](Files/Papers/2024AP.pdf)
 1. [R. Liu, Y.-X. Ren, R. Song, and Z. Sun, *Subcritical superprocesses conditioned on non-extinction.* Stochastic Process. Appl. **163** (2023), 498-534.](Files/Papers/2023SPA.pdf)
@@ -508,9 +509,9 @@ header-includes:
 1. [R. Liu, Y.-X. Ren, R. Song and Z. Sun: *Quasi-stationary distributions for subcritical superprocesses.* Stochastic Process. Appl. **132** (2021), 108-134.](Files/Papers/2021SPA.pdf) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Limit theorems for a class of critical superprocesses with stable branching.* Stochastic Process. Appl. **130** (2020), no. 7, 4358-4391.](Files/Papers/2020SPA.pdf) 
    - There is a mistake when we cite H. Kesten, P. Ney and F. Spitzer’s 1966 paper: we can not obtain (1.2) when $\sigma = \infty$. This does not affect the other part of the paper. 
-1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. **24** (2019), Paper no. 141, 42 pp.](Files/Papers/2019EJP.pdf) 
 1. [Y.-X. Ren, R. Song and Z. Sun: *Spine decompositions and limit theorems for a class of critical superprocesses.* Acta. Appl. Math. **165** (2020), 91-131.](Files/Papers/2020Acta.pdf) 
-1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Waston tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. **23** (2018), Paper no. 42, 12 pp.](Files/Papers/2018ECP.pdf)
+1. [Y.-X. Ren, R. Song, Z. Sun, and J. Zhao: *Stable central limit theorems for super Ornstein-Uhlenbeck processes*. Electron. J. Probab. **24** (2019), Paper no. 141, 42 pp.](Files/Papers/2019EJP.pdf)
+1. [Y.-X. Ren, R. Song and Z. Sun: *A 2-spine decomposition of the critical Galton-Watson tree and a probabilistic proof of Yaglom's theorem.* Electron. Commun. Probab. **23** (2018), Paper no. 42, 12 pp.](Files/Papers/2018ECP.pdf)
 1. [T. Hu and Z. Sun: *Purchase limit policy and social welfare: A theoretical exploration.*  Economic Science. **6** (2011), 42-50, in Chinese.](Files/Papers/2011jjkx.pdf)
 
 ## Slides
@@ -526,30 +527,40 @@ header-includes:
 - [Limit theorems for a class of critical superprocesses with stable branching](Files/2018JSNU.pdf) 
 - [Spine decompositions and limit theorems for a class of critical superprocesses](Files/RenSongSun2018Spine.pdf)
 
-## Events
+## Events Organized {#events}
 
 <div class="events-grid">
-<article class="event-card event-upcoming">
-<p class="event-status">Upcoming</p>
+<article class="event-card">
+<p class="event-status">Past</p>
 <time datetime="2026-08-24">24–28 August 2026</time>
 <h3><a href="Events/SSSS2026/">Summer Symposium on Stochastic Systems (𝒮⁴ 2026)</a></h3>
 <p class="event-venue">Beijing Institute of Technology</p>
 </article>
-<article class="event-card event-upcoming">
-<p class="event-status">Upcoming</p>
-<time datetime="2026-08-17">17–21 August 2026</time>
-<h3>Chinese–Italian Conference on Stochastic Analysis</h3>
-<p class="event-venue">Chinese Academy of Sciences</p>
+<article class="event-card">
+<p class="event-status">Past</p>
+<time datetime="2025-12-28">28–29 December 2025</time>
+<h3><a href="Events/Handbook2025.pdf">Workshop on Measure-Valued Markov Processes and Related Topics</a></h3>
+<p class="event-venue">Beijing Institute of Technology</p>
 </article>
 <article class="event-card">
 <p class="event-status">Past</p>
-<time datetime="2026-07-06">6–10 July 2026</time>
-<h3>The 15th AIMS Conference</h3>
-<p class="event-venue">National and Kapodistrian University of Athens</p>
+<time datetime="2025-07-01">1–4 July 2025</time>
+<h3><a href="Events/SSSS2025.pdf">Stochastic Summer Seminar Series 2025</a></h3>
+<p class="event-venue">Beijing Institute of Technology</p>
+</article>
+<article class="event-card">
+<p class="event-status">Past</p>
+<time datetime="2022">2022–2023</time>
+<h3>Probability Seminar</h3>
+<p class="event-venue">Technion — Israel Institute of Technology</p>
+</article>
+<article class="event-card">
+<p class="event-status">Past</p>
+<time datetime="2018-09-17">17 September 2018</time>
+<h3><a href="Files/Prob_Welcome_Seminar.html">Welcome Workshop for New Students in the Probability Group</a></h3>
+<p class="event-venue">Peking University</p>
 </article>
 </div>
-
-## Teachings
 
 ## Links
 
