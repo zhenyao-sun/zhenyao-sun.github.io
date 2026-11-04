@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="连接 Todoist 的个人 GTD 任务清单。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://api.todoist.com; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'self'">
+  <title>GTD · 任务清单</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand"><span class="brand-symbol" aria-hidden="true">✓</span><div><h1>GTD</h1><p id="clock">任务清单 · 北京时间</p></div></div>
+      <div class="header-actions"><button id="refresh" class="icon-button" title="刷新" aria-label="刷新任务" disabled>↻</button><button id="settings-open" class="icon-button" title="连接设置" aria-label="连接设置">⚙</button></div>
+    </header>
+    <section id="connect-panel" class="connect-panel" aria-labelledby="connect-title">
+      <span class="eyebrow">你的下一步，从这里开始</span>
+      <h2 id="connect-title">让清单跟上你的节奏。</h2>
+      <p>连接 Todoist，任务会按日期、时段、地点、类型和角色自动排序。</p>
+      <form id="connect-form"><label for="api-token">Todoist API Token</label><div class="token-field"><input id="api-token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="粘贴你的 API Token" required><button class="primary-button" type="submit">连接</button></div></form>
+      <p class="privacy-note">Token 仅保存在当前浏览器，直接连接 Todoist。<a href="https://app.todoist.com/app/settings/integrations/developer" target="_blank" rel="noopener noreferrer">获取 Token ↗</a></p>
+    </section>
+    <main>
+      <div id="toolbar" class="toolbar" hidden>
+        <div class="list-heading"><div><h2>所有任务 <span id="task-count" class="count">0</span></h2><p id="sync-state" role="status" aria-live="polite">正在连接…</p></div><button id="add-task" class="primary-button add-desktop" disabled>＋ 新任务</button></div>
+        <div class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="搜索任务或描述" aria-label="搜索任务或描述" autocomplete="off"></div>
+        <div class="location-heading"><span>当前地点</span><span id="period-hint"></span></div>
+        <div id="locations" class="location-buttons" role="group" aria-label="选择当前地点"></div>
+        <div class="legend"><span><i class="dot blue"></i>日程</span><span><i class="dot red"></i>截止</span><span class="sort-note">日期优先 · 自动排序</span></div>
+      </div>
+      <div id="error-banner" class="error-banner" role="alert" hidden><p id="error-message"></p><button id="retry" class="text-button">重试</button></div>
+      <div id="loading" class="loading" role="status" hidden><span class="spinner"></span><span>正在读取任务…</span></div>
+      <div id="task-list" class="task-list" aria-label="未完成任务"></div>
+      <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">✓</span><h3 id="empty-title">清单已清空</h3><p id="empty-text">给新的想法留一点位置。</p></div>
+    </main>
+    <footer id="footer" hidden><span>Todoist 保存 · GTD 整理</span><span>北京时间 UTC+8</span></footer>
+  </div>
+  <button id="add-floating" class="add-floating" aria-label="新增任务" hidden>＋</button>
+  <dialog id="task-dialog" class="sheet">
+    <form id="task-form">
+      <div class="sheet-header"><div><span class="eyebrow">TASK DETAILS</span><h2 id="editor-title">新任务</h2></div><button type="button" id="editor-close" class="icon-button" aria-label="关闭编辑">×</button></div>
+      <div class="sheet-body">
+        <label for="task-content">任务名称 <span class="required">*</span></label><textarea id="task-content" rows="2" maxlength="500" required placeholder="下一步，要做什么？"></textarea>
+        <label for="task-description">描述</label><textarea id="task-description" rows="4" maxlength="16384" placeholder="补充细节、具体时间或相关信息"></textarea>
+        <label for="task-date">日期 <span class="required">*</span></label><input type="date" id="task-date" required>
+        <div id="dimension-fields" class="dimension-fields"></div>
+        <p id="repeat-hint" class="field-hint">每日、每周、每月、每年任务，会从实际完成日计算下一次。</p>
+        <p id="editor-error" class="editor-error" role="alert" hidden></p>
+      </div>
+      <div class="sheet-footer"><button id="delete-task" type="button" class="danger-button" hidden>删除任务</button><button id="editor-cancel" type="button" class="secondary-button">取消</button><button id="save-task" type="submit" class="primary-button">保存任务</button></div>
+    </form>
+  </dialog>
+  <dialog id="delete-dialog" class="small-dialog"><div class="confirm-icon" aria-hidden="true">!</div><h2>删除这个任务？</h2><p>任务将从 Todoist 中删除，此操作无法撤销。</p><p id="delete-error" class="editor-error" role="alert" hidden></p><div class="confirm-actions"><button id="delete-cancel" class="secondary-button">取消</button><button id="delete-confirm" class="danger-solid">确认删除</button></div></dialog>
+  <dialog id="settings-dialog" class="small-dialog"><div class="sheet-header"><h2>连接设置</h2><button id="settings-close" class="icon-button" aria-label="关闭设置">×</button></div><p>API Token 仅保存在当前浏览器。任务始终由 Todoist 保存。</p><form id="settings-form"><label for="settings-token">Todoist API Token</label><input id="settings-token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required placeholder="输入新 Token"><button class="primary-button settings-save" type="submit">保存并连接</button></form><button id="disconnect" class="text-button disconnect">断开连接并清除本机 Token</button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden><span id="toast-message"></span><button id="undo-complete" hidden>撤销</button></div>
+</body>
+</html>
