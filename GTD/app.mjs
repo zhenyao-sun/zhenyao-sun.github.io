@@ -1,4 +1,4 @@
-import { ROLES, LOCATIONS, PERIODS, TYPES, DIMENSIONS, DEFAULTS, RECURRENCES, beijingNow, periodOrder, attributes, canonicalLabels, taskDate, sortTasks, dueFor, needsLabelRepair, recurrenceMatches } from './core.mjs';
+import { ROLES, LOCATIONS, PERIODS, TYPES, DIMENSIONS, DEFAULTS, RECURRENCES, beijingNow, periodOrder, attributes, canonicalLabels, taskDate, sortTasks, dueFor, needsLabelRepair, recurrenceMatches } from './core.mjs?v=20261104-2';
 import { TodoistAPI, command } from './api.mjs';
 
 const $ = id => document.getElementById(id);
@@ -54,7 +54,7 @@ function updateClock(force = false) {
   const dateLabel = new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', month: 'long', day: 'numeric', weekday: 'short' }).format(new Date());
   $('clock').textContent = `${dateLabel} · ${bj.time} 北京时间`;
   const order = periodOrder(bj.minutes);
-  $('period-hint').textContent = `${order[0]}优先`;
+  $('period-hint').textContent = `当前：${order[0]}`;
   const clockKey = `${bj.date}:${order.join(',')}`;
   if (force || clockKey !== state.clockKey) { state.clockKey = clockKey; if (state.loaded) renderTasks(); }
 }

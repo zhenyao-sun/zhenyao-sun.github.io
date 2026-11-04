@@ -50,11 +50,16 @@ export function taskDate(task, fallback = beijingNow().date) {
 
 export function sortTasks(tasks, { now = new Date(), location = '任意' } = {}) {
   const bj = beijingNow(now);
-  const periods = periodOrder(bj.minutes);
-  const locations = locationOrder(location);
+  const currentPeriod = periodOrder(bj.minutes)[0];
+  const periods = ['任意', '早上', '中午', '下午', '晚上'];
+  const locations = ['任意', ...LOCATIONS.filter(value => value !== '任意')];
   const tuples = tasks.map((task, index) => {
     const a = attributes(task);
-    return { task, index, key: [taskDate(task, bj.date), periods.indexOf(a['时段']), locations.indexOf(a['地点']), TYPES.indexOf(a['类型']), ROLES.indexOf(a['角色']), task.added_at || task.created_at || '', String(task.id || '')] };
+    const periodHit = a['时段'] === currentPeriod;
+    const locationHit = location !== '任意' && LOCATIONS.includes(location) && a['地点'] === location;
+    // Joint match first; a location-only match outranks a period-only match.
+    const group = locationHit ? (periodHit ? 0 : 1) : (periodHit ? 2 : 3);
+    return { task, index, key: [taskDate(task, bj.date), group, periods.indexOf(a['时段']), locations.indexOf(a['地点']), TYPES.indexOf(a['类型']), ROLES.indexOf(a['角色']), task.added_at || task.created_at || '', String(task.id || '')] };
   });
   tuples.sort((a, b) => {
     for (let i = 0; i < a.key.length; i++) {
