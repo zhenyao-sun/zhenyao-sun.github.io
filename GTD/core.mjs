@@ -5,6 +5,7 @@ export const TYPES = ['日程', '截止', '每日', '每周', '每月', '每年'
 export const DIMENSIONS = { '角色': ROLES, '地点': LOCATIONS, '时段': PERIODS, '类型': TYPES };
 export const DEFAULTS = { '角色': '其它', '地点': '任意', '时段': '任意', '类型': '行动' };
 export const RECURRENCES = { '每日': 'every! day', '每周': 'every! week', '每月': 'every! month', '每年': 'every! year' };
+const TYPE_ORDER = ['截止', '日程', '每年', '每月', '每周', '每日', '行动', '等待'];
 
 export function beijingNow(now = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -59,7 +60,15 @@ export function sortTasks(tasks, { now = new Date(), location = '任意' } = {})
     const locationHit = location !== '任意' && LOCATIONS.includes(location) && a['地点'] === location;
     // Joint match first; a location-only match outranks a period-only match.
     const group = locationHit ? (periodHit ? 0 : 1) : (periodHit ? 2 : 3);
-    return { task, index, key: [taskDate(task, bj.date), group, periods.indexOf(a['时段']), locations.indexOf(a['地点']), TYPES.indexOf(a['类型']), ROLES.indexOf(a['角色']), task.added_at || task.created_at || '', String(task.id || '')] };
+    return {
+      task,
+      index,
+      key: [
+        taskDate(task, bj.date), group, TYPE_ORDER.indexOf(a['类型']),
+        periods.indexOf(a['时段']), locations.indexOf(a['地点']), ROLES.indexOf(a['角色']),
+        task.added_at || task.created_at || '', String(task.id || ''),
+      ],
+    };
   });
   tuples.sort((a, b) => {
     for (let i = 0; i < a.key.length; i++) {

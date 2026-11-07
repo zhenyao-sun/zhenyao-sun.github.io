@@ -1,4 +1,4 @@
-import { ROLES, LOCATIONS, PERIODS, TYPES, DIMENSIONS, DEFAULTS, RECURRENCES, beijingNow, periodOrder, attributes, canonicalLabels, taskDate, sortTasks, dueFor, needsLabelRepair, recurrenceMatches } from './core.mjs?v=20261104-2';
+import { ROLES, LOCATIONS, PERIODS, TYPES, DIMENSIONS, DEFAULTS, RECURRENCES, beijingNow, periodOrder, attributes, canonicalLabels, taskDate, sortTasks, dueFor, needsLabelRepair, recurrenceMatches } from './core.mjs?v=20261107-1';
 import { TodoistAPI, command } from './api.mjs';
 
 const $ = id => document.getElementById(id);
@@ -72,14 +72,21 @@ function renderLocations() {
 function renderTasks() {
   const query = $('search').value.trim().toLocaleLowerCase();
   const matching = state.tasks.filter(task => !query || `${task.content}\n${task.description || ''}`.toLocaleLowerCase().includes(query));
-  const sorted = sortTasks(matching, { location: state.location });
-  const today = beijingNow().date;
+  const now = new Date();
+  const today = beijingNow(now).date;
+  const sorted = sortTasks(matching, { now, location: state.location });
   $('task-count').textContent = query ? `${matching.length} / ${state.tasks.length}` : String(state.tasks.length);
   const fragment = document.createDocumentFragment();
+  let previous;
   for (const task of sorted) {
     const values = attributes(task);
+    const date = taskDate(task, today);
     const row = document.createElement('article');
     row.className = `task-row${values['类型'] === '日程' ? ' schedule' : values['类型'] === '截止' ? ' deadline' : ''}`;
+    if (previous && (date !== previous.date || Object.keys(DIMENSIONS).some(name => values[name] !== previous.values[name]))) {
+      previous.row.className += ' group-end';
+    }
+    previous = { row, date, values };
     row.dataset.taskId = task.id;
     const complete = document.createElement('button');
     complete.className = 'complete-button';
@@ -98,7 +105,6 @@ function renderTasks() {
     main.append(text('h3', task.content, 'task-title'));
     if (task.description) main.append(text('p', task.description, 'task-description'));
     const meta = document.createElement('div'); meta.className = 'task-meta';
-    const date = taskDate(task);
     const dateNode = text('span', date, `task-date${date < today ? ' overdue' : ''}`);
     dateNode.title = date < today ? '日期已过，保留原日期' : '任务日期';
     meta.append(dateNode);
