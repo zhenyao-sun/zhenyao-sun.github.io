@@ -64,8 +64,8 @@ export function sortTasks(tasks, { now = new Date(), location = '任意' } = {})
       task,
       index,
       key: [
-        taskDate(task, bj.date), group, TYPE_ORDER.indexOf(a['类型']),
-        periods.indexOf(a['时段']), locations.indexOf(a['地点']), ROLES.indexOf(a['角色']),
+        taskDate(task, bj.date), group, periods.indexOf(a['时段']),
+        locations.indexOf(a['地点']), TYPE_ORDER.indexOf(a['类型']), ROLES.indexOf(a['角色']),
         task.added_at || task.created_at || '', String(task.id || ''),
       ],
     };

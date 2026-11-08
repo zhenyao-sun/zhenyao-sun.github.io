@@ -1,4 +1,4 @@
-import { ROLES, LOCATIONS, PERIODS, TYPES, DIMENSIONS, DEFAULTS, RECURRENCES, beijingNow, periodOrder, attributes, canonicalLabels, taskDate, sortTasks, dueFor, needsLabelRepair, recurrenceMatches } from './core.mjs?v=20261107-1';
+import { ROLES, LOCATIONS, PERIODS, TYPES, DIMENSIONS, DEFAULTS, RECURRENCES, beijingNow, periodOrder, attributes, canonicalLabels, taskDate, sortTasks, dueFor, needsLabelRepair, recurrenceMatches } from './core.mjs?v=20261108-1';
 import { TodoistAPI, command } from './api.mjs';
 
 const $ = id => document.getElementById(id);
