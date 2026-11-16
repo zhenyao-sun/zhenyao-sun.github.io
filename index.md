@@ -489,12 +489,14 @@ header-includes:
 <img class="profile-photo" src="Files/selfie2020.jpg" alt="Portrait of Zhenyao Sun" />
 <div class="profile-background">
 <p>Previously, I was a postdoctoral researcher in the <a href="https://dds.technion.ac.il/">Faculty of Data and Decision Sciences at the Technion</a>, hosted by <a href="https://web.iem.technion.ac.il/site/academicstaff/leonid-mytnik/">Prof. Leonid Mytnik</a>. I received my Ph.D. from <a href="https://www.math.pku.edu.cn/puremath_en/">Peking University</a> under the supervision of <a href="http://www.math.pku.edu.cn/teachers/renyx/indexE.htm">Prof. Yan-Xia Ren</a>, and visited <a href="https://faculty.math.illinois.edu/~rsong/">Prof. Renming Song</a> at the <a href="https://math.illinois.edu/">University of Illinois Urbana-Champaign</a>. I also received my B.S. from Peking University.</p>
-<p class="profile-contact"><span><strong>Email:</strong> <a href="mailto:zhenyao.sun@gmail.com">zhenyao.sun@gmail.com</a></span><span><strong>Office:</strong> 411B, Wen-Cui Building E, BIT Liangxiang Campus, Beijing</span></p>
+<p class="profile-contact"><span><strong>Email:</strong> <a href="mailto:zhenyao.sun@gmail.com">zhenyao.sun@gmail.com</a></span><span><strong>Office:</strong> 1010B, Wen-Cui Building E, BIT Liangxiang Campus, Beijing</span></p>
 <p class="profile-links" aria-label="Academic profiles"><span class="profile-links-label">Profiles</span><a href="https://scholar.google.com/citations?user=XHxfUSkAAAAJ&amp;hl=en">Google Scholar</a><span class="profile-links-separator" aria-hidden="true">·</span><a href="https://arxiv.org/a/sun_z_7.html">arXiv</a></p>
 </div>
 </header>
 
 ## Preprints
+1. [Z. Sun, *A marked scheme representation for Voronoi volumes in the Brownian map.*](https://arxiv.org/abs/2610.34255)
+1. [Z. Sun, *Critical limits of generating functions for face-constrained labelled planar maps.*](https://arxiv.org/abs/2610.25322)
 1. [L. W.-T. Fan, Z. Sun, and J. Yang, *Comparison principles for stochastic reaction-diffusion equations on metric measure spaces.*](Files/Papers/2026arXiv-comparison.pdf)
 1. [H. Hou and Z. Sun, *On the subcritical self-catalytic branching Brownian motions.*](Files/Papers/2025arXiv.pdf)
 1. [L. Qian, and Z. Sun, *On the spectral radius of the $(L,\kappa)$-lazy Markov chain.*](Files/Papers/2023arXiv.pdf)
@@ -564,6 +566,7 @@ header-includes:
 
 ## Links
 
+- [Proof2Game](https://github.com/zhenyao-sun/Proof2Game) is an open-source tool that turns mathematical manuscripts into bilingual browser games for exploring proofs step by step.
 - Bing Map for [Beijing Institute of Technology--Liangxiang](https://cn.bing.com/maps?ty=18&q=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&ss=ypid.YN4067x31518226&mb=39.737434~116.162528~39.725948~116.182028&description=Yard+No.8+Liangxiang+East+Rd,+Beijing&cardbg=#88979C&dt=1747990800000&tt=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&tsts1=%26ty%3D18%26q%3DBeijing%2520Institute%2520of%2520Technology%2520%2528Liangxiang%2520Town%2520Campus%2529%26ss%3Dypid.YN4067x31518226%26mb%3D39.737434~116.162528~39.725948~116.182028%26description%3DYard%2520No.8%2520Liangxiang%2520East%2520Rd%252C%2520Beijing%26cardbg%3D%252388979C%26dt%3D1747990800000&tstt1=Beijing+Institute+of+Technology+(Liangxiang+Town+Campus)&cp=qmnrmctpdxkc&lvl=16.1&ftst=1&ftics=True&v=2&sV=2&form=S00027) and [Bosi Elegant Hotel](https://www.bing.com/maps?&ty=18&q=Building1,Yard101,YangguangNorthStreet,%20Beijing,%20Beijing&ss=ypid.YN4067x15478922572392425981&mb=39.744946~116.155293~39.732637~116.176193&description=Building1,Yard101,YangguangNorthStreet,%20Beijing,%20Beijing&cardbg=#D161C4&dt=1747990800000&tt=Bosi%20Elegant%20Hotel&tsts0=%26ty%3D18%26q%3DBuilding1%252CYard101%252CYangguangNorthStreet%252C%2520Beijing%252C%2520Beijing%26ss%3Dypid.YN4067x15478922572392425981%26mb%3D39.744946~116.155293~39.732637~116.176193%26description%3DBuilding1%252CYard101%252CYangguangNorthStreet%252C%2520Beijing%252C%2520Beijing%26cardbg%3D%2523D161C4%26dt%3D1747990800000&tstt0=Bosi%20Elegant%20Hotel&cp=39.738792~116.160421&lvl=16&pi=0&ftst=0&ftics=False&v=2&sV=2&form=S00027).
 - [Beijing Institute of Technology-Liangxiang campus map (highlighting School of Mathematics and Statistics)](Files/Direction2BITMath.pdf)
 - I am maintaining [the bilibili channel](https://space.bilibili.com/151014650) for [the One World Probability Seminar](https://www.owprobability.org)
